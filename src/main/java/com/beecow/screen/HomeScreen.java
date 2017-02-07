@@ -18,4 +18,8 @@ public class HomeScreen extends CommonScreenObjects
     public void clickMarketTabView() {
         footerComponent.clickMarketTabView();
     }
+    public void clickProfileTabView() {
+        footerComponent.clickProfileTabView();
+    }
+
 }

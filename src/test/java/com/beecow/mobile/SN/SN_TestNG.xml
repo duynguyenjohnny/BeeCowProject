@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="SN Test Suite" verbose="3" >
+    <parameter name="config_file" value="SN.properties" />
+    <test name="The SN test suite" >
+        <classes>
+            <class name="com.beecow.mobile.SN.SNTest"/>
+        </classes>
+    </test>
+</suite>
+
