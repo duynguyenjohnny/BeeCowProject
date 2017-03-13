@@ -19,16 +19,16 @@ public class Constant {
     }
 
     //integration testLink
-    public static final String TEST_PROJECT = "Market_Android";
-    public static final String TEST_PLAN = "Market_Android_Plan_01";
-    public static final String TEST_BUILD = "Market_Android_Build_01";
-    public static final String DEVKEY ="3cc28a5f276693c9386eaeecf401b1d1";
+//    public static final String TEST_PROJECT = "Market_Android";
+//    public static final String TEST_PLAN = "Market_Android_Plan_01";
+ //   public static final String TEST_BUILD = "Market_Android_Build_01";
+    public static final String DEVKEY ="bed1de6a318ab11678ee0b96272eefba";
     public static final String URL ="http://192.168.1.124/testlink/lib/api/xmlrpc/v1/xmlrpc.php";
 
     //integration testLink for Cupid project
-    public static final String TEST_CUPID_PROJECT = "DAT";
-    public static final String TEST_CUPID_PLAN = "TestPlan_DAT";
-    public static final String TEST_CUPID_BUILD = "Build_Cupid_Sprint_1";
+  //  public static final String TEST_CUPID_PROJECT = "DAT";
+  //  public static final String TEST_CUPID_PLAN = "TestPlan_DAT";
+  //  public static final String TEST_CUPID_BUILD = "Build_Cupid_Sprint_1";
 
     //Cupid Constant
 

@@ -27,9 +27,6 @@ import java.nio.file.Paths;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
-/**
- * Created by HangPham on 12/18/2016.
- */
 public class BaseTest {
     // GENERAL
     protected static AppiumDriver driver;
@@ -57,10 +54,15 @@ public class BaseTest {
 
     @BeforeSuite
     public void GetLastAPKFile() throws Exception{
+//        System.out.println("Start Remove App if any");
+//        if (driver.isAppInstalled(Utils.getPropertyValue(GLOBALPROPERTIES, "Android_AppPackage")) == true)
+//        {
+//            driver.removeApp(Utils.getPropertyValue(GLOBALPROPERTIES, "Android_AppPackage"));
+//        }
         GLOBALPROPERTIES = Utils.initProperties(GLOBALPROPERTIESFile);
-        System.out.println("Start Get APK File from share folder");
-        Utils.GetLastAPKFile();
-        System.out.println("Done Get APK File from share folder");
+        //System.out.println("Start Get APK File from share folder");
+        //Utils.GetLastAPKFile();
+        //System.out.println("Done Get APK File from share folder");
         System.out.println("Appium is starting");
         setAppium();
         service.start();
@@ -88,9 +90,9 @@ public class BaseTest {
     @AfterSuite
     public void Stop() throws IOException, InterruptedException, Exception {
         if(driver!=null) {
-            System.out.println("Start Remove App");
-            driver.removeApp(Utils.getPropertyValue(GLOBALPROPERTIES, "Android_AppPackage"));
-            System.out.println("End Remove App");
+            //System.out.println("Start Remove App");
+            //driver.removeApp(Utils.getPropertyValue(GLOBALPROPERTIES, "Android_AppPackage"));
+            //System.out.println("End Remove App");
             System.out.println("Stopping Appium");
             service.stop();
             System.out.println("Appium is stopped");
@@ -205,7 +207,12 @@ public class BaseTest {
 
 
         capabilities.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, "100");
-        capabilities.setCapability("fullReset", false);
+        //appium version 1.4.16
+        //fullReset=false | noReset=true ==> no changes to app state
+        //fullReset=false | noReset=false ==> resets app state by clearing cache (android)
+        //fullReset=true | noReset=true ==> uninstalls app | reinstalls app | leaves app installed on session end
+        //fullReset=true | noReset=false ==> uninstalls app | reinstalls app | removes app on session end
+        capabilities.setCapability("fullReset", true);
         capabilities.setCapability("noReset", true);
         return capabilities;
     }

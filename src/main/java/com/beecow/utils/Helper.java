@@ -95,6 +95,17 @@ public class Helper {
         return e;
     }
 
+    public boolean isElementById(String id){
+        // com.mediastep.beecow:id/social_item_status_bar_ivStatus
+        Boolean isPresent = Boolean.FALSE;
+        try {
+            isPresent = driver.findElement(By.id(id)).isDisplayed();
+            return isPresent;
+        } catch (NoSuchElementException ex) {
+            return isPresent;
+        }
+    }
+
     public By byLocator(String locator){
         By e = byLocator(split(locator)[0], split(locator)[1]);
         return e;
@@ -547,12 +558,12 @@ public class Helper {
     /**
      * clearDataApp
      */
-    public void clearDataApp() {
+    public static void clearDataApp() {
         try {
             // clearing app data
             Runtime runtime = Runtime.getRuntime();
 //            runtime.exec("pm clear YOUR_APP_PACKAGE_GOES HERE");
-            runtime.exec("adb shell pm clear com.mydriver.driver.v2.alpha");
+            runtime.exec("adb shell pm clear com.mediastep.beecow");
 
         } catch (Exception e) {
             e.printStackTrace();

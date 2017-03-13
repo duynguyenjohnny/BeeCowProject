@@ -35,9 +35,9 @@ public class FooterElement {
         }
         return "ios";
     }
-    public static String getTabProfileLocator(){
+    public static String getTabMoreLocator(){
         if(Utils.getInstance().isAndroidDevice()){
-            return "text::Profile";
+            return "text::More";
         }
         return "ios";
     }

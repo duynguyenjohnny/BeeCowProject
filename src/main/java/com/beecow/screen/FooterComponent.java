@@ -33,7 +33,7 @@ public class FooterComponent extends CommonScreenObjects {
         getHelper().findElement(getTabCupidLocator()).click();
     }
 
-    public void clickProfileTabView() {
-        getHelper().findElement(getTabProfileLocator()).click();
+    public void clickMoreTabView() {
+        getHelper().findElement(getTabMoreLocator()).click();
     }
 }

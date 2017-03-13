@@ -2,9 +2,6 @@ package com.beecow.model;
 
 import com.beecow.utils.Utils;
 
-/**
- * Created by PhuocHa on 01/10/2017.
- */
 
 public class ActivityFristElement {
 
