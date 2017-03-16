@@ -1,0 +1,38 @@
+{"dts user data": {
+		"id": 1498,
+		"createdBy": 1,
+		"createdOn": 1437034258747,
+		"updatedOn": 1438166610182,
+		"username": "dtssecurity@mailinator.com",
+		"firstName": "First name",
+		"lastName": "Last name",
+		"status": "ACTIVE",
+		"phone": "342435654",
+		"countryCode": "432",
+		"email": "dtssecurity@mailinator.com",
+		"title": "DTS user",
+		"su": false,
+		"partnerId": 2,
+		"partnerName": "DTS Inc.",
+		"host": "http://devportal.dts.com/saap/ft",
+		"dtsUser": false
+	},
+"add new status": {
+	"title": "Automation Add New Status",
+	"content": "@1111 Automation Add New Status Pure Text",
+	"author": {
+		"userId": 2,
+		"displayName": "Long Long",
+		"avatarUrl": "feed/images/feed3048"
+	},
+	"statusType": "TEXT",
+	"mentionedUser": [
+		{
+			"userId": 1111,
+			"displayName": "Long Nguyen",
+			"avatarUrl": "feed/images/feed3048",
+			"mentioned": true
+		}
+	]
+}
+}

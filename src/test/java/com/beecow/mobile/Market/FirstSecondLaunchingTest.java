@@ -72,4 +72,9 @@ public class FirstSecondLaunchingTest extends BaseTest {
             throw new Exception("Failed: " + ex.getMessage());
         }
     }
+
+    @Override
+    protected void initData() {
+
+    }
 }

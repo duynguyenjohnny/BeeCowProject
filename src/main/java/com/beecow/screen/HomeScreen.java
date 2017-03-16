@@ -7,9 +7,12 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.ios.IOSDriver;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.WebElement;
 import org.testng.ITestResult;
 import org.testng.Reporter;
+
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Locale;
 
 /**
  * Created by PhuocHa on 01/10/2017.
@@ -20,6 +23,7 @@ public class HomeScreen extends CommonScreenObjects
 
     //ID resources
     public static String colordot = "com.mediastep.beecow:id/social_item_status_bar_ivStatus";
+    public static String uploadtime = "com.mediastep.beecow:id/social_item_status_bar_tvCreateTime";
 
 
     public FooterComponent footerComponent;
@@ -45,6 +49,17 @@ public class HomeScreen extends CommonScreenObjects
 
     public void clickCupidTabView() {
         footerComponent.clickCupidTabView();
+    }
+
+    public static String getDatefromMili(long milliSeconds, String dateFormat)
+    {
+        // Create a DateFormatter object for displaying date in specified format.
+        SimpleDateFormat formatter =  new SimpleDateFormat(dateFormat);
+
+        // Create a calendar object that will convert the date and time value in milliseconds to date.
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTimeInMillis(milliSeconds);
+        return formatter.format(calendar.getTime());
     }
 
     /**

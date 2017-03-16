@@ -7,7 +7,7 @@ public class Constant {
     public static final int TIME_OUT =10;
     public static final String URL_ADDRESS="http://127.0.0.1:4723/wd/hub";
     public static final String APP_PATH="c:\\Jenkins\\workspace\\BeeCow-QAAndroid\\BeeCow_1.0_DEBUG_17Jan2017.apk";//com.android.chrome.apk//FoodyVN.apk
-    public static final String APP_PACKAGE_LIVE = "com.mediastep.beecow.debug";
+    public static final String APP_PACKAGE_LIVE = "com.mediastep.beecow";
 
 //"C:\Program Files (x86)\Appium\node.exe" "C:\Program Files (x86)\Appium\node_modules\appium\lib\server\main.js" --address 127.0.0.1 --port 4723 --avd Nexus4
     public static final MOBILE_PLATFORM TYPE_PLATFORM = MOBILE_PLATFORM.ANDROID;

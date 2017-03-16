@@ -27,7 +27,7 @@ import java.nio.file.Paths;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
-public class BaseTest {
+public abstract class BaseTest {
     // GENERAL
     protected static AppiumDriver driver;
 //    public String localApp = APP_PATH;
@@ -84,6 +84,7 @@ public class BaseTest {
     public void teardown() {
         if(driver!=null){
             driver.closeApp();
+            driver.quit();;
         }
     }
 
@@ -247,4 +248,6 @@ public class BaseTest {
         capabilities.setCapability(MobileCapabilityType.UDID,"");
         return capabilities;
     }
+
+    protected abstract void initData();
 }

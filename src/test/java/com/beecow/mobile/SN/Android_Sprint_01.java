@@ -90,12 +90,13 @@ public class Android_Sprint_01 extends BaseTest {
             TestLink.updateResult(Testlink_ProjectName, Testlink_TestPlanName, "AND_SN_TC-1", Testlink_BuildName, null, TestLinkAPIResults.TEST_PASSED);
         } catch (TestLinkAPIException ex) {
             System.out.print("Can't update result to Testlink ");
-        } catch (Exception ex) {
+        } catch (AssertionError ex) {
             //Test failed
             getHelper().takeScreenshot("SN", className, "Failed_", sMethodName);
             System.out.println("Current working dir: " + new File(Android_Sprint_01.class.getProtectionDomain().getCodeSource().getLocation().getPath()));
             TestLink.updateResult(Testlink_ProjectName, Testlink_TestPlanName, "AND_SN_TC-1", Testlink_BuildName, null, TestLinkAPIResults.TEST_FAILED);
-            throw new Exception("Failed: " + ex.getMessage());
+            ex.printStackTrace();
+            //throw new Exception("Failed: " + ex.getMessage());
         }
     }
 
@@ -120,12 +121,13 @@ public class Android_Sprint_01 extends BaseTest {
             TestLink.updateResult(Testlink_ProjectName, Testlink_TestPlanName, "AND_SN_TC-2", Testlink_BuildName, null, TestLinkAPIResults.TEST_PASSED);
         } catch (TestLinkAPIException ex) {
             System.out.print("Can't update result to Testlink ");
-        } catch (Exception ex) {
+        } catch (AssertionError ex) {
             //Test failed
             getHelper().takeScreenshot("SN", className, "Failed_", sMethodName);
             System.out.println("Current working dir: " + new File(Android_Sprint_01.class.getProtectionDomain().getCodeSource().getLocation().getPath()));
             TestLink.updateResult(Testlink_ProjectName, Testlink_TestPlanName, "AND_SN_TC-2", Testlink_BuildName, null, TestLinkAPIResults.TEST_FAILED);
-            throw new Exception("Failed: " + ex.getMessage());
+            ex.printStackTrace();
+            //throw new Exception("Failed: " + ex.getMessage());
         }
     }
 
@@ -160,12 +162,13 @@ public class Android_Sprint_01 extends BaseTest {
             TestLink.updateResult(Testlink_ProjectName, Testlink_TestPlanName, "AND_SN_TC-3", Testlink_BuildName, null, TestLinkAPIResults.TEST_PASSED);
         } catch (TestLinkAPIException ex) {
             System.out.print("Can't update result to Testlink ");
-        } catch (Exception ex) {
+        } catch (AssertionError ex) {
             //Test failed
             getHelper().takeScreenshot("SN", className, "Failed_", sMethodName);
             System.out.println("Current working dir: " + new File(Android_Sprint_01.class.getProtectionDomain().getCodeSource().getLocation().getPath()));
             TestLink.updateResult(Testlink_ProjectName, Testlink_TestPlanName, "AND_SN_TC-3", Testlink_BuildName, null, TestLinkAPIResults.TEST_FAILED);
-            throw new Exception("Failed: " + ex.getMessage());
+            ex.printStackTrace();
+            // throw new Exception("Failed: " + ex.getMessage());
         }
     }
 
@@ -189,12 +192,13 @@ public class Android_Sprint_01 extends BaseTest {
             TestLink.updateResult(Testlink_ProjectName, Testlink_TestPlanName, "AND_SN_TC-4", Testlink_BuildName, null, TestLinkAPIResults.TEST_PASSED);
         } catch (TestLinkAPIException ex) {
             System.out.print("Can't update result to Testlink ");
-        } catch (Exception ex) {
+        } catch (AssertionError ex) {
             //Test failed
             getHelper().takeScreenshot("SN", className, "Failed_", sMethodName);
             System.out.println("Current working dir: " + new File(Android_Sprint_01.class.getProtectionDomain().getCodeSource().getLocation().getPath()));
             TestLink.updateResult(Testlink_ProjectName, Testlink_TestPlanName, "AND_SN_TC-4", Testlink_BuildName, null, TestLinkAPIResults.TEST_FAILED);
-            throw new Exception("Failed: " + ex.getMessage());
+            ex.printStackTrace();
+            //throw new Exception("Failed: " + ex.getMessage());
         }
     }
 
@@ -217,12 +221,13 @@ public class Android_Sprint_01 extends BaseTest {
             TestLink.updateResult(Testlink_ProjectName, Testlink_TestPlanName, "AND_SN_TC-5", Testlink_BuildName, null, TestLinkAPIResults.TEST_PASSED);
         } catch (TestLinkAPIException ex) {
             System.out.print("Can't update result to Testlink ");
-        } catch (Exception ex) {
+        } catch (AssertionError ex) {
             //Test failed
             getHelper().takeScreenshot("SN", className, "Failed_", sMethodName);
             System.out.println("Current working dir: " + new File(Android_Sprint_01.class.getProtectionDomain().getCodeSource().getLocation().getPath()));
             TestLink.updateResult(Testlink_ProjectName, Testlink_TestPlanName, "AND_SN_TC-5", Testlink_BuildName, null, TestLinkAPIResults.TEST_FAILED);
-            throw new Exception("Failed: " + ex.getMessage());
+            //throw new Exception("Failed: " + ex.getMessage());
+            ex.printStackTrace();
         }
     }
 
@@ -249,12 +254,13 @@ public class Android_Sprint_01 extends BaseTest {
             TestLink.updateResult(Testlink_ProjectName, Testlink_TestPlanName, "AND_SN_TC-6", Testlink_BuildName, null, TestLinkAPIResults.TEST_PASSED);
         } catch (TestLinkAPIException ex) {
             System.out.print("Can't update result to Testlink ");
-        } catch (Exception ex) {
+        } catch (AssertionError ex) {
             //Test failed
             getHelper().takeScreenshot("SN", className, "Failed_", sMethodName);
             System.out.println("Current working dir: " + new File(Android_Sprint_01.class.getProtectionDomain().getCodeSource().getLocation().getPath()));
             TestLink.updateResult(Testlink_ProjectName, Testlink_TestPlanName, "AND_SN_TC-6", Testlink_BuildName, null, TestLinkAPIResults.TEST_FAILED);
-            throw new Exception("Failed: " + ex.getMessage());
+            //throw new Exception("Failed: " + ex.getMessage());
+            ex.printStackTrace();
         }
     }
 
@@ -298,12 +304,13 @@ public class Android_Sprint_01 extends BaseTest {
             TestLink.updateResult(Testlink_ProjectName, Testlink_TestPlanName, "AND_SN_TC-7", Testlink_BuildName, null, TestLinkAPIResults.TEST_PASSED);
         } catch (TestLinkAPIException ex) {
             System.out.print("Can't update result to Testlink ");
-        } catch (Exception ex) {
+        } catch (AssertionError ex) {
             //Test failed
             getHelper().takeScreenshot("SN", className, "Failed_", sMethodName);
             System.out.println("Current working dir: " + new File(Android_Sprint_01.class.getProtectionDomain().getCodeSource().getLocation().getPath()));
             TestLink.updateResult(Testlink_ProjectName, Testlink_TestPlanName, "AND_SN_TC-7", Testlink_BuildName, null, TestLinkAPIResults.TEST_FAILED);
-            throw new Exception("Failed: " + ex.getMessage());
+            //throw new Exception("Failed: " + ex.getMessage());
+            ex.printStackTrace();
         }
     }
 
@@ -334,12 +341,13 @@ public class Android_Sprint_01 extends BaseTest {
             TestLink.updateResult(Testlink_ProjectName, Testlink_TestPlanName, "AND_SN_TC-8", Testlink_BuildName, null, TestLinkAPIResults.TEST_PASSED);
         } catch (TestLinkAPIException ex) {
             System.out.print("Can't update result to Testlink ");
-        } catch (Exception ex) {
+        } catch (AssertionError ex) {
             //Test failed
             getHelper().takeScreenshot("SN", className, "Failed_", sMethodName);
             System.out.println("Current working dir: " + new File(Android_Sprint_01.class.getProtectionDomain().getCodeSource().getLocation().getPath()));
             TestLink.updateResult(Testlink_ProjectName, Testlink_TestPlanName, "AND_SN_TC-8", Testlink_BuildName, null, TestLinkAPIResults.TEST_FAILED);
-            throw new Exception("Failed: " + ex.getMessage());
+            //throw new Exception("Failed: " + ex.getMessage());
+            ex.printStackTrace();
         }
     }
 
@@ -369,12 +377,13 @@ public class Android_Sprint_01 extends BaseTest {
             TestLink.updateResult(Testlink_ProjectName, Testlink_TestPlanName, "AND_SN_TC-9", Testlink_BuildName, null, TestLinkAPIResults.TEST_PASSED);
         } catch (TestLinkAPIException ex) {
             System.out.print("Can't update result to Testlink ");
-        } catch (Exception ex) {
+        } catch (AssertionError ex) {
             //Test failed
             getHelper().takeScreenshot("SN", className, "Failed_", sMethodName);
             System.out.println("Current working dir: " + new File(Android_Sprint_01.class.getProtectionDomain().getCodeSource().getLocation().getPath()));
             TestLink.updateResult(Testlink_ProjectName, Testlink_TestPlanName, "AND_SN_TC-9", Testlink_BuildName, null, TestLinkAPIResults.TEST_FAILED);
-            throw new Exception("Failed: " + ex.getMessage());
+            //throw new Exception("Failed: " + ex.getMessage());
+            ex.printStackTrace();
         }
     }
 
@@ -423,12 +432,13 @@ public class Android_Sprint_01 extends BaseTest {
             TestLink.updateResult(Testlink_ProjectName, Testlink_TestPlanName, "AND_SN_TC-10", Testlink_BuildName, null, TestLinkAPIResults.TEST_PASSED);
         } catch (TestLinkAPIException ex) {
             System.out.print("Can't update result to Testlink ");
-        } catch (Exception ex) {
+        } catch (AssertionError ex) {
             //Test failed
             getHelper().takeScreenshot("SN", className, "Failed_", sMethodName);
             System.out.println("Current working dir: " + new File(Android_Sprint_01.class.getProtectionDomain().getCodeSource().getLocation().getPath()));
             TestLink.updateResult(Testlink_ProjectName, Testlink_TestPlanName, "AND_SN_TC-10", Testlink_BuildName, null, TestLinkAPIResults.TEST_FAILED);
-            throw new Exception("Failed: " + ex.getMessage());
+            //throw new Exception("Failed: " + ex.getMessage());
+            ex.printStackTrace();
         }
     }
 
@@ -455,12 +465,13 @@ public class Android_Sprint_01 extends BaseTest {
             TestLink.updateResult(Testlink_ProjectName, Testlink_TestPlanName, "AND_SN_TC-11", Testlink_BuildName, null, TestLinkAPIResults.TEST_PASSED);
         } catch (TestLinkAPIException ex) {
             System.out.print("Can't update result to Testlink ");
-        } catch (Exception ex) {
+        } catch (AssertionError ex) {
             //Test failed
             getHelper().takeScreenshot("SN", className, "Failed_", sMethodName);
             System.out.println("Current working dir: " + new File(Android_Sprint_01.class.getProtectionDomain().getCodeSource().getLocation().getPath()));
             TestLink.updateResult(Testlink_ProjectName, Testlink_TestPlanName, "AND_SN_TC-11", Testlink_BuildName, null, TestLinkAPIResults.TEST_FAILED);
-            throw new Exception("Failed: " + ex.getMessage());
+            //throw new Exception("Failed: " + ex.getMessage());
+            ex.printStackTrace();
         }
     }
 
@@ -481,6 +492,11 @@ public class Android_Sprint_01 extends BaseTest {
         if (driver != null) {
             driver.resetApp();
         }
+    }
+
+    @Override
+    protected void initData() {
+
     }
 }
 //    public void AddingandRemove_SingleCategory() {

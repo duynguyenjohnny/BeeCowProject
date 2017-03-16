@@ -1,7 +1,7 @@
 package com.beecow.utils;
 
 
-import org.json.JSONObject;
+import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
@@ -14,7 +14,7 @@ import static com.beecow.utils.Helper.addLog;
 
 public class APIUtil {
 
-    public static JSONObject sendPost(String url, String csrfToken, String cookie, Object requestBody) {
+    public static JSONObject sendPost(String url,  Object requestBody ) {
         try {
             // Create request connection
             URL obj = null;
@@ -31,16 +31,17 @@ public class APIUtil {
             }
             // add reuqest header
             con.setRequestMethod("POST");
-            con.setRequestProperty("User-Agent", "Mozilla/5.0 (Windows NT 6.3; WOW64; rv:28.0) Gecko/20100101 Firefox/28.0");
-            con.setRequestProperty("Accept-Language", "en-US,en;q=0.5");
-            if (requestBody instanceof String) {
-                con.setRequestProperty("Content-Type", "application/x-www-form-urlencoded; charset=UTF-8");
-            } else {
-                con.setRequestProperty("Content-Type", "application/json; charset=UTF-8");
-            }
-            con.setRequestProperty("X-CSRF-Token", csrfToken);
-            con.setRequestProperty("X-Requested-With", "XMLHttpRequest");
-            con.setRequestProperty("Cookie", cookie);
+            //con.setRequestProperty("User-Agent", "Mozilla/5.0 (Windows NT 6.3; WOW64; rv:28.0) Gecko/20100101 Firefox/28.0");
+            //con.setRequestProperty("Accept-Language", "en-US,en;q=0.5");
+           // if (requestBody instanceof String) {
+           //     con.setRequestProperty("Content-Type", "application/x-www-form-urlencoded; charset=UTF-8");
+           // } else {
+                con.setRequestProperty("Content-Type", "application/json");
+            //}
+            //con.setRequestProperty("X-CSRF-Token", csrfToken);
+            //con.setRequestProperty("X-Requested-With", "XMLHttpRequest");
+            con.setRequestProperty("Authorization","Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1dGgiOiJST0xFX0FETUlOLFJPTEVfVVNFUiIsImV4cCI6MTQ4OTgwNjE4Nn0.QlVYiwCyAAzjZhAjxYUhEDRNLR3L8YaCneyeAl64IPD7_-GxksT3g2tovvU6YTbWS9EbiXjRRXtHZN7GU5c4wg");
+            //con.setRequestProperty("Cookie", cookie);
             // Send post request
             con.setDoOutput(true);
             DataOutputStream wr = new DataOutputStream(con.getOutputStream());
@@ -54,7 +55,7 @@ public class APIUtil {
             addLog("Response Code : " + responseCode);
             // Get response body
             BufferedReader in;
-            if (responseCode != 200) {
+            if (responseCode != 200 && responseCode != 201) {
                 in = new BufferedReader(new InputStreamReader(con.getErrorStream()));
             } else {
                 in = new BufferedReader(new InputStreamReader(con.getInputStream()));
@@ -91,19 +92,20 @@ public class APIUtil {
         }
     }
 
-    public static JSONObject sendGet(String url, String csrfToken, String cookie) {
+    public static JSONObject sendGet(String url) {
         try {
             // Create request connection
             URL obj = new URL(url);
             HttpURLConnection con = (HttpURLConnection) obj.openConnection();
             // Add request header
             con.setRequestMethod("GET");
-            con.setRequestProperty("User-Agent", "Mozilla/5.0 (Windows NT 6.3; WOW64; rv:28.0) Gecko/20100101 Firefox/28.0");
-            con.setRequestProperty("Accept-Language", "en-US,en;q=0.5");
-            con.setRequestProperty("Content-Type", "application/x-www-form-urlencoded; charset=UTF-8");
-            con.setRequestProperty("X-CSRF-Token", csrfToken);
-            con.setRequestProperty("X-Requested-With", "XMLHttpRequest");
-            con.setRequestProperty("Cookie", cookie);
+            //con.setRequestProperty("User-Agent", "Mozilla/5.0 (Windows NT 6.3; WOW64; rv:28.0) Gecko/20100101 Firefox/28.0");
+            //con.setRequestProperty("Accept-Language", "en-US,en;q=0.5");
+            con.setRequestProperty("Content-Type", "application/json");
+            //con.setRequestProperty("X-CSRF-Token", csrfToken);
+            //con.setRequestProperty("X-Requested-With", "XMLHttpRequest");
+            con.setRequestProperty("Authorization","Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1dGgiOiJST0xFX0FETUlOLFJPTEVfVVNFUiIsImV4cCI6MTQ4OTgwNjE4Nn0.QlVYiwCyAAzjZhAjxYUhEDRNLR3L8YaCneyeAl64IPD7_-GxksT3g2tovvU6YTbWS9EbiXjRRXtHZN7GU5c4wg");
+            //con.setRequestProperty("Cookie", cookie);
             // Send get request
             addLog("\nSending 'GET' request to URL : " + url);
             // Get response code
@@ -111,7 +113,7 @@ public class APIUtil {
             addLog("Response Code : " + responseCode);
             // Get response body
             BufferedReader in;
-            if (responseCode != 200) {
+            if (responseCode != 200 && responseCode != 201) {
                 in = new BufferedReader(new InputStreamReader(
                         con.getErrorStream()));
             } else {
@@ -179,19 +181,21 @@ public class APIUtil {
 
     }
 
-    public static JSONObject sendHTTPRequest(String method, String url, String csrfToken, String cookie, String requestBody) {
+    public static JSONObject sendHTTPRequest(String method, String url, String requestBody) {
         try {
             // Create request connection
             URL obj = new URL(url);
             HttpURLConnection con = (HttpURLConnection) obj.openConnection();
             // add reuqest header
             con.setRequestMethod(method);
-            con.setRequestProperty("User-Agent", "Mozilla/5.0 (Windows NT 6.3; WOW64; rv:28.0) Gecko/20100101 Firefox/28.0");
-            con.setRequestProperty("Accept-Language", "en-US,en;q=0.5");
-            con.setRequestProperty("Content-Type", "application/x-www-form-urlencoded; charset=UTF-8");
-            con.setRequestProperty("X-CSRF-Token", csrfToken);
-            con.setRequestProperty("X-Requested-With", "XMLHttpRequest");
-            con.setRequestProperty("Cookie", cookie);
+            //con.setRequestProperty("User-Agent", "Mozilla/5.0 (Windows NT 6.3; WOW64; rv:28.0) Gecko/20100101 Firefox/28.0");
+            //con.setRequestProperty("Accept-Language", "en-US,en;q=0.5");
+            //con.setRequestProperty("Content-Type", "application/x-www-form-urlencoded; charset=UTF-8");
+            //con.setRequestProperty("X-CSRF-Token", csrfToken);
+           // con.setRequestProperty("X-Requested-With", "XMLHttpRequest");
+            con.setRequestProperty("Content-Type", "application/json");
+            con.setRequestProperty("Authorization","Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1dGgiOiJST0xFX0FETUlOLFJPTEVfVVNFUiIsImV4cCI6MTQ4OTgwNjE4Nn0.QlVYiwCyAAzjZhAjxYUhEDRNLR3L8YaCneyeAl64IPD7_-GxksT3g2tovvU6YTbWS9EbiXjRRXtHZN7GU5c4wg");
+            //con.setRequestProperty("Cookie", cookie);
             // Send HTTP request
             addLog("\nSending '" + method + "' request to URL : " + url);
             if (!method.equals("GET") && !method.equals("DELETE")) {
@@ -208,7 +212,7 @@ public class APIUtil {
             addLog("Response Code : " + responseCode);
             // Get response body
             BufferedReader in;
-            if (responseCode != 200) {
+            if (responseCode != 200 && responseCode != 201) {
                 in = new BufferedReader(new InputStreamReader(con.getErrorStream()));
             } else {
                 in = new BufferedReader(new InputStreamReader(con.getInputStream()));
