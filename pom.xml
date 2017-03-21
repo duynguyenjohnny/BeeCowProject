@@ -23,6 +23,7 @@
                         <configuration>
                             <suiteXmlFiles>
                                 <suiteXmlFile>${basedir}/src/test/java/com/beecow/mobile/SN/SN_TestNG.xml</suiteXmlFile>
+                                <suiteXmlFile>${basedir}/src/test/java/com/beecow/mobile/SN/SN2_TestNG.xml</suiteXmlFile>
                             </suiteXmlFiles>
                         </configuration>
                     </plugin>
@@ -197,6 +198,7 @@
                     <forkCount>0</forkCount>
                     <suiteXmlFiles>
                         <file>${basedir}/src/test/java/com/beecow/mobile/SN/SN_TestNG.xml</file>
+                        <file>${basedir}/src/test/java/com/beecow/mobile/SN/SN2_TestNG.xml</file>
                     </suiteXmlFiles>
                     <properties>
                         <property>

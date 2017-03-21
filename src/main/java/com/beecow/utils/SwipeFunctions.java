@@ -143,10 +143,11 @@ public class SwipeFunctions {
             try {
                 //driver.findElement(By.xpath(xPath)).click();
                By something =getHelper().byLocator(UISelectorType.TEXT_CONTAINS.toString(),textcontain);
+               //assert (something != null);
                driver.findElement(something).click();
                 break;
             //} catch (Exception NoSuchElementException) {
-            } catch (Exception NullPointerException) {
+            } catch (NoSuchElementException ex) {
                 size = driver.manage().window().getSize();
                 Double screenHeightStart = size.getHeight() * 0.5;
                 int scrollStart = screenHeightStart.intValue();

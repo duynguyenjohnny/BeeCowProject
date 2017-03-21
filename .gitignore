@@ -2,5 +2,6 @@
 /target/
 BeeCowProjectMobile.iml
 BeeCowProject.iml
-*.apk
+/src/report/
 /log/
+BeeCow_1.0_CA_RELEASE_15Mar2017_Build_413768.apk

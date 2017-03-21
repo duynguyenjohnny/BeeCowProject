@@ -36,10 +36,13 @@ public class APIData {
 
     // Json data key
     public static final String ADD_NEW_STATUS = "add new status";
-    public static final String PUBLISHED_PRODUCT_DATA = "published product data";
-    public static final String GLOBAL_PROMOTION_DATA = "global promotion data";
-    public static final String ADD_GLOBAL_PROMOTION_DATA = "add promotion";
-    public static final String EDIT_GLOBAL_PROMOTION_DATA = "edit promotion";
+    public static final String ADD_ONE_PHOTO_LANDSCAPE_STATUS = "add one photo landscape status";
+    public static final String ADD_FOUR_PHOTO_LANDSCAPE_STATUS = "add four photo portrait status";
+    public static final String ADD_MORE_FOUR_PHOTO_LANDSCAPE_STATUS = "add more four photo portrait status";
+    public static final String ADD_ONE_PHOTO_PORTRAIT_STATUS = "add one photo portrait status";
+    public static final String ADD_FOUR_PHOTO_PORTRAIT_STATUS = "add four photo portrait status";
+    public static final String ADD_MORE_FOUR_PHOTO_PORTRAIT_STATUS = "add more four photo portrait status";
+
     public static final String LOG_IN = "login";
 
 //    public enum TuningAction {
