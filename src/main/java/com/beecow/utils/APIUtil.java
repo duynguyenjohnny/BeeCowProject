@@ -1,6 +1,9 @@
 package com.beecow.utils;
 
 
+import org.json.JSONException;
+import org.json.JSONTokener;
+import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
@@ -33,14 +36,14 @@ public class APIUtil {
             con.setRequestMethod("POST");
             //con.setRequestProperty("User-Agent", "Mozilla/5.0 (Windows NT 6.3; WOW64; rv:28.0) Gecko/20100101 Firefox/28.0");
             //con.setRequestProperty("Accept-Language", "en-US,en;q=0.5");
-           // if (requestBody instanceof String) {
-           //     con.setRequestProperty("Content-Type", "application/x-www-form-urlencoded; charset=UTF-8");
-           // } else {
-                con.setRequestProperty("Content-Type", "application/json");
+            // if (requestBody instanceof String) {
+            //     con.setRequestProperty("Content-Type", "application/x-www-form-urlencoded; charset=UTF-8");
+            // } else {
+            con.setRequestProperty("Content-Type", "application/json");
             //}
             //con.setRequestProperty("X-CSRF-Token", csrfToken);
             //con.setRequestProperty("X-Requested-With", "XMLHttpRequest");
-            con.setRequestProperty("Authorization","Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1dGgiOiJST0xFX0FETUlOLFJPTEVfVVNFUiIsImV4cCI6MTQ4OTgwNjE4Nn0.QlVYiwCyAAzjZhAjxYUhEDRNLR3L8YaCneyeAl64IPD7_-GxksT3g2tovvU6YTbWS9EbiXjRRXtHZN7GU5c4wg");
+            con.setRequestProperty("Authorization","Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1dGgiOiJST0xFX1VTRVIsIFJPTEVfQURNSU4iLCJleHAiOjE1MjA5MTc3MDF9.FTXcQTaDSOAIxKcYrCCAnGIuPMT3torAIoCmxAl8ELsPso1vyT_tz1xPsYW5OJlSoXP1cT4RZ5BsN-kNC4zT6w");
             //con.setRequestProperty("Cookie", cookie);
             // Send post request
             con.setDoOutput(true);
@@ -104,7 +107,7 @@ public class APIUtil {
             con.setRequestProperty("Content-Type", "application/json");
             //con.setRequestProperty("X-CSRF-Token", csrfToken);
             //con.setRequestProperty("X-Requested-With", "XMLHttpRequest");
-            con.setRequestProperty("Authorization","Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1dGgiOiJST0xFX0FETUlOLFJPTEVfVVNFUiIsImV4cCI6MTQ4OTgwNjE4Nn0.QlVYiwCyAAzjZhAjxYUhEDRNLR3L8YaCneyeAl64IPD7_-GxksT3g2tovvU6YTbWS9EbiXjRRXtHZN7GU5c4wg");
+            con.setRequestProperty("Authorization","Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1dGgiOiJST0xFX1VTRVIsIFJPTEVfQURNSU4iLCJleHAiOjE1MjA5MTc3MDF9.FTXcQTaDSOAIxKcYrCCAnGIuPMT3torAIoCmxAl8ELsPso1vyT_tz1xPsYW5OJlSoXP1cT4RZ5BsN-kNC4zT6w");
             //con.setRequestProperty("Cookie", cookie);
             // Send get request
             addLog("\nSending 'GET' request to URL : " + url);
@@ -145,6 +148,109 @@ public class APIUtil {
             e.printStackTrace();
             return null;
         }
+    }
+
+    public static String sendGetString(String url) throws IOException, ParseException {
+            // Create request connection
+            URL obj = new URL(url);
+            HttpURLConnection con = (HttpURLConnection) obj.openConnection();
+            // Add request header
+            con.setRequestMethod("GET");
+            //con.setRequestProperty("User-Agent", "Mozilla/5.0 (Windows NT 6.3; WOW64; rv:28.0) Gecko/20100101 Firefox/28.0");
+            //con.setRequestProperty("Accept-Language", "en-US,en;q=0.5");
+            con.setRequestProperty("Content-Type", "application/json");
+            //con.setRequestProperty("X-CSRF-Token", csrfToken);
+            //con.setRequestProperty("X-Requested-With", "XMLHttpRequest");
+            con.setRequestProperty("Authorization", "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1dGgiOiJST0xFX1VTRVIsIFJPTEVfQURNSU4iLCJleHAiOjE1MjA5MTc3MDF9.FTXcQTaDSOAIxKcYrCCAnGIuPMT3torAIoCmxAl8ELsPso1vyT_tz1xPsYW5OJlSoXP1cT4RZ5BsN-kNC4zT6w");
+            //con.setRequestProperty("Cookie", cookie);
+            // Send get request
+            addLog("\nSending 'GET' request to URL : " + url);
+            // Get response code
+            int responseCode = con.getResponseCode();
+            addLog("Response Code : " + responseCode);
+            // Get response body
+            BufferedReader in;
+            if (responseCode != 200 && responseCode != 201) {
+                in = new BufferedReader(new InputStreamReader(
+                        con.getErrorStream()));
+            } else {
+                in = new BufferedReader(new InputStreamReader(
+                        con.getInputStream()));
+            }
+            String inputLine;
+            StringBuffer response = new StringBuffer();
+            while ((inputLine = in.readLine()) != null) {
+                response.append(inputLine);
+            }
+            in.close();
+            // print result
+            addLog(response.toString());
+            System.out.print("response " + response.toString());
+
+            // Return Json object
+            JSONParser parser = new JSONParser();
+            Object jsonObject = parser.parse(response.toString());
+            JSONObject jsonObj = null;
+            JSONArray jsonArr = null;
+            jsonObj = objectToJSONObject(jsonObject);
+            jsonArr = objectToJSONArray(jsonObject);
+
+            if (jsonObj != null) {
+                //process JSONObject
+                return response.toString();
+            } else if (jsonArr != null) {
+                //process JSONArray
+                jsonObject = parser.parse("{\"id\": " + jsonObject.toString() + "}");
+                System.out.print("JSONOBJECT " + jsonObject);
+                return response.toString();
+            }
+//            Object jsonObject = parser.parse(response.toString());
+//            System.out.print("jsonObject " + jsonObject);
+//            if(jsonObject instanceof Long){
+//                jsonObject = parser.parse("{\"id\": " + jsonObject.toString() + "}");
+//            }
+//            if(jsonObject instanceof Boolean){
+//                return ;
+//            }
+//            return (JSONObject) jsonObject;
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//            return null;
+//        } catch (ParseException e) {
+//            e.printStackTrace();
+//            return null;
+//        }
+        return response.toString();
+    }
+
+
+
+    public static JSONObject objectToJSONObject(Object object){
+        Object json = null;
+        JSONObject jsonObject = null;
+        try {
+            json = new JSONTokener(object.toString()).nextValue();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        if (json instanceof JSONObject) {
+            jsonObject = (JSONObject) json;
+        }
+        return jsonObject;
+    }
+
+    public static JSONArray objectToJSONArray(Object object){
+        Object json = null;
+        JSONArray jsonArray = null;
+        try {
+            json = new JSONTokener(object.toString()).nextValue();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        if (json instanceof JSONArray) {
+            jsonArray = (JSONArray) json;
+        }
+        return jsonArray;
     }
 
     public static JSONObject parseDataToJsonObject(String data){
@@ -194,7 +300,7 @@ public class APIUtil {
             //con.setRequestProperty("X-CSRF-Token", csrfToken);
            // con.setRequestProperty("X-Requested-With", "XMLHttpRequest");
             con.setRequestProperty("Content-Type", "application/json");
-            con.setRequestProperty("Authorization","Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1dGgiOiJST0xFX0FETUlOLFJPTEVfVVNFUiIsImV4cCI6MTQ4OTgwNjE4Nn0.QlVYiwCyAAzjZhAjxYUhEDRNLR3L8YaCneyeAl64IPD7_-GxksT3g2tovvU6YTbWS9EbiXjRRXtHZN7GU5c4wg");
+            con.setRequestProperty("Authorization","Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1dGgiOiJST0xFX1VTRVIsIFJPTEVfQURNSU4iLCJleHAiOjE1MjA5MTc3MDF9.FTXcQTaDSOAIxKcYrCCAnGIuPMT3torAIoCmxAl8ELsPso1vyT_tz1xPsYW5OJlSoXP1cT4RZ5BsN-kNC4zT6w");
             //con.setRequestProperty("Cookie", cookie);
             // Send HTTP request
             addLog("\nSending '" + method + "' request to URL : " + url);

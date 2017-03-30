@@ -1,338 +1,437 @@
-2017-03-16 06:53:45:982 - info: Welcome to Appium v1.3.4 (REV c8c79a85fbd6870cd6fc3d66d038a115ebe22efe)
-2017-03-16 06:53:45:986 - info: Appium REST http interface listener started on 127.0.0.1:4723
-2017-03-16 06:53:45:990 - info: [debug] Non-default server args: {"address":"127.0.0.1","sessionOverride":true,"log":"D:\\Projects\\beecow-QAAutomation\\log\\androidLog.txt"}
-2017-03-16 06:53:45:990 - info: Console LogLevel: debug
-2017-03-16 06:53:45:990 - info: File LogLevel: debug
-2017-03-16 06:53:46:266 - info: --> GET /wd/hub/status {}
-2017-03-16 06:53:46:268 - info: [debug] Responding to client with success: {"status":0,"value":{"build":{"version":"1.3.4","revision":"c8c79a85fbd6870cd6fc3d66d038a115ebe22efe"}}}
-2017-03-16 06:53:46:275 - info: <-- GET /wd/hub/status 200 9.161 ms - 104 {"status":0,"value":{"build":{"version":"1.3.4","revision":"c8c79a85fbd6870cd6fc3d66d038a115ebe22efe"}}}
-2017-03-16 06:53:46:931 - info: --> POST /wd/hub/session {"capabilities":{"desiredCapabilities":{"app":"D:\\Projects\\beecow-QAAutomation\\Beecow.apk","appPackage":"com.mediastep.beecow","noReset":true,"version":"6.0","deviceName":"K153XB1X6B251487","fullReset":true,"platform":"ANDROID","appActivity":"com.mediastep.beecow.general.activity.SplashScreenActivity","newCommandTimeout":"100","platformVersion":"6.0","browserName":"appWaitActivity","platformName":"Android"},"requiredCapabilities":{}},"desiredCapabilities":{"app":"D:\\Projects\\beecow-QAAutomation\\Beecow.apk","appPackage":"com.mediastep.beecow","noReset":true,"version":"6.0","deviceName":"K153XB1X6B251487","fullReset":true,"platform":"ANDROID","appActivity":"com.mediastep.beecow.general.activity.SplashScreenActivity","newCommandTimeout":"100","platformVersion":"6.0","browserName":"appWaitActivity","platformName":"Android"},"requiredCapabilities":{}}
-2017-03-16 06:53:46:932 - info: Client User-Agent string: Apache-HttpClient/4.5.2 (Java/1.8.0_112)
-2017-03-16 06:53:46:935 - info: [debug] The following desired capabilities were provided, but not recognized by appium. They will be passed on to any other services running on this server. : version, platform
-2017-03-16 06:53:46:937 - info: [debug] Using local app from desired caps: D:\Projects\beecow-QAAutomation\Beecow.apk
-2017-03-16 06:53:46:939 - info: [debug] Creating new appium session 68170685-4305-42cd-9d30-bc78f6bfc072
-2017-03-16 06:53:46:939 - info: Starting android appium
-2017-03-16 06:53:46:941 - info: [debug] Getting Java version
-2017-03-16 06:53:47:049 - info: Java version is: 1.8.0_112
-2017-03-16 06:53:47:050 - info: [debug] Using fast reset? true
-2017-03-16 06:53:47:050 - info: [debug] Preparing device for session
-2017-03-16 06:53:47:051 - info: [debug] Checking whether app is actually present
-2017-03-16 06:53:47:052 - info: [debug] Checking whether adb is present
-2017-03-16 06:53:47:054 - info: [debug] Using adb from E:\Mediastep Automation\SDK\platform-tools\adb.exe
-2017-03-16 06:53:47:055 - info: Retrieving device
-2017-03-16 06:53:47:056 - info: [debug] Trying to find a connected android device
-2017-03-16 06:53:47:057 - info: [debug] Getting connected devices...
-2017-03-16 06:53:47:059 - info: [debug] executing cmd: "E:\Mediastep Automation\SDK\platform-tools\adb.exe" devices
-2017-03-16 06:53:47:087 - info: [debug] 1 device(s) connected
-2017-03-16 06:53:47:087 - info: Found device K153XB1X6B251487
-2017-03-16 06:53:47:087 - info: [debug] Setting device id to K153XB1X6B251487
-2017-03-16 06:53:47:088 - info: [debug] Waiting for device to be ready and to respond to shell commands (timeout = 5)
-2017-03-16 06:53:47:088 - info: [debug] executing cmd: "E:\Mediastep Automation\SDK\platform-tools\adb.exe" -s K153XB1X6B251487 wait-for-device
-2017-03-16 06:53:47:118 - info: [debug] executing cmd: "E:\Mediastep Automation\SDK\platform-tools\adb.exe" -s K153XB1X6B251487 shell "echo 'ready'"
-2017-03-16 06:53:47:188 - info: [debug] Starting logcat capture
-2017-03-16 06:53:47:235 - info: [debug] Getting device API level
-2017-03-16 06:53:47:236 - info: [debug] executing cmd: "E:\Mediastep Automation\SDK\platform-tools\adb.exe" -s K153XB1X6B251487 shell "getprop ro.build.version.sdk"
-2017-03-16 06:53:47:463 - info: [debug] Device is at API Level 23
-2017-03-16 06:53:47:463 - info: Device API level is: 23
-2017-03-16 06:53:47:465 - info: [debug] executing cmd: "E:\Mediastep Automation\SDK\platform-tools\adb.exe" -s K153XB1X6B251487 shell "getprop persist.sys.language"
-2017-03-16 06:53:47:671 - info: [debug] Current device persist.sys.language: 
-2017-03-16 06:53:47:672 - info: [debug] java -jar "C:\Program Files (x86)\Appium\node_modules\appium\node_modules\appium-adb\jars\appium_apk_tools.jar" "stringsFromApk" "D:\Projects\beecow-QAAutomation\Beecow.apk" "C:\Users\DUYNGU~1\AppData\Local\Temp\com.mediastep.beecow" 
-2017-03-16 06:53:49:052 - info: [debug] executing cmd: "E:\Mediastep Automation\SDK\platform-tools\adb.exe" -s K153XB1X6B251487 push "C:\\Users\\DUYNGU~1\\AppData\\Local\\Temp\\com.mediastep.beecow\\strings.json" /data/local/tmp
-2017-03-16 06:53:49:093 - info: [debug] Checking whether aapt is present
-2017-03-16 06:53:49:094 - info: [debug] Using aapt from E:\Mediastep Automation\SDK\build-tools\25.0.1\aapt.exe
-2017-03-16 06:53:49:094 - info: [debug] Retrieving process from manifest.
-2017-03-16 06:53:49:095 - info: [debug] executing cmd: "E:\Mediastep Automation\SDK\build-tools\25.0.1\aapt.exe" dump xmltree D:\Projects\beecow-QAAutomation\Beecow.apk AndroidManifest.xml
-2017-03-16 06:53:49:117 - info: [debug] Set app process to: com.mediastep.beecow
-2017-03-16 06:53:49:117 - info: [debug] Not uninstalling app since server not started with --full-reset
-2017-03-16 06:53:49:118 - info: [debug] Checking app cert for D:\Projects\beecow-QAAutomation\Beecow.apk.
-2017-03-16 06:53:49:118 - info: [debug] executing cmd: java -jar "C:\Program Files (x86)\Appium\node_modules\appium\node_modules\appium-adb\jars\verify.jar" D:\Projects\beecow-QAAutomation\Beecow.apk
-2017-03-16 06:53:49:843 - info: [debug] App already signed.
-2017-03-16 06:53:49:843 - info: [debug] Zip-aligning D:\Projects\beecow-QAAutomation\Beecow.apk
-2017-03-16 06:53:49:844 - info: [debug] Checking whether zipalign is present
-2017-03-16 06:53:49:847 - info: [debug] Using zipalign from E:\Mediastep Automation\SDK\build-tools\25.0.1\zipalign.exe
-2017-03-16 06:53:49:849 - info: [debug] Zip-aligning apk.
-2017-03-16 06:53:49:850 - info: [debug] executing cmd: "E:\Mediastep Automation\SDK\build-tools\25.0.1\zipalign.exe" -f 4 D:\Projects\beecow-QAAutomation\Beecow.apk C:\Users\DUYNGU~1\AppData\Local\Temp\appium117216-8244-1uig1jt.ervwo8ncdi.tmp
-2017-03-16 06:53:50:065 - info: [debug] MD5 for app is 73b747fcbeb5dc0045b92a05e0800034
-2017-03-16 06:53:50:065 - info: [debug] executing cmd: "E:\Mediastep Automation\SDK\platform-tools\adb.exe" -s K153XB1X6B251487 shell "ls /data/local/tmp/73b747fcbeb5dc0045b92a05e0800034.apk"
-2017-03-16 06:53:50:165 - info: [debug] Getting install status for com.mediastep.beecow
-2017-03-16 06:53:50:166 - info: [debug] Getting device API level
-2017-03-16 06:53:50:167 - info: [debug] executing cmd: "E:\Mediastep Automation\SDK\platform-tools\adb.exe" -s K153XB1X6B251487 shell "getprop ro.build.version.sdk"
-2017-03-16 06:53:50:240 - info: [debug] Device is at API Level 23
-2017-03-16 06:53:50:242 - info: [debug] executing cmd: "E:\Mediastep Automation\SDK\platform-tools\adb.exe" -s K153XB1X6B251487 shell "pm list packages -3 com.mediastep.beecow"
-2017-03-16 06:53:51:628 - info: [debug] App is installed
-2017-03-16 06:53:51:628 - info: App is already installed, resetting app
-2017-03-16 06:53:51:629 - info: [debug] Running fast reset (stop and clear)
-2017-03-16 06:53:51:629 - info: [debug] executing cmd: "E:\Mediastep Automation\SDK\platform-tools\adb.exe" -s K153XB1X6B251487 shell "am force-stop com.mediastep.beecow"
-2017-03-16 06:53:53:180 - info: [debug] executing cmd: "E:\Mediastep Automation\SDK\platform-tools\adb.exe" -s K153XB1X6B251487 shell "pm clear com.mediastep.beecow"
-2017-03-16 06:53:54:740 - info: [debug] Forwarding system:4724 to device:4724
-2017-03-16 06:53:54:740 - info: [debug] executing cmd: "E:\Mediastep Automation\SDK\platform-tools\adb.exe" -s K153XB1X6B251487 forward tcp:4724 tcp:4724
-2017-03-16 06:53:54:766 - info: [debug] Pushing appium bootstrap to device...
-2017-03-16 06:53:54:768 - info: [debug] executing cmd: "E:\Mediastep Automation\SDK\platform-tools\adb.exe" -s K153XB1X6B251487 push "C:\\Program Files (x86)\\Appium\\node_modules\\appium\\build\\android_bootstrap\\AppiumBootstrap.jar" /data/local/tmp/
-2017-03-16 06:53:54:812 - info: [debug] Pushing settings apk to device...
-2017-03-16 06:53:54:813 - info: [debug] executing cmd: "E:\Mediastep Automation\SDK\platform-tools\adb.exe" -s K153XB1X6B251487 install "C:\Program Files (x86)\Appium\node_modules\appium\build\settings_apk\settings_apk-debug.apk"
-2017-03-16 06:53:57:180 - info: [debug] Pushing unlock helper app to device...
-2017-03-16 06:53:57:184 - info: [debug] executing cmd: "E:\Mediastep Automation\SDK\platform-tools\adb.exe" -s K153XB1X6B251487 install "C:\Program Files (x86)\Appium\node_modules\appium\build\unlock_apk\unlock_apk-debug.apk"
-2017-03-16 06:53:59:022 - info: Starting App
-2017-03-16 06:53:59:023 - info: [debug] Attempting to kill all 'uiautomator' processes
-2017-03-16 06:53:59:023 - info: [debug] Getting all processes with 'uiautomator'
-2017-03-16 06:53:59:024 - info: [debug] executing cmd: "E:\Mediastep Automation\SDK\platform-tools\adb.exe" -s K153XB1X6B251487 shell "ps 'uiautomator'"
-2017-03-16 06:53:59:113 - info: [debug] No matching processes found
-2017-03-16 06:53:59:114 - info: [debug] Running bootstrap
-2017-03-16 06:53:59:114 - info: [debug] spawning: E:\Mediastep Automation\SDK\platform-tools\adb.exe -s K153XB1X6B251487 shell uiautomator runtest AppiumBootstrap.jar -c io.appium.android.bootstrap.Bootstrap
-2017-03-16 06:54:00:473 - info: [debug] [UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: numtests=1
-2017-03-16 06:54:00:473 - info: [debug] [UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: stream=
-2017-03-16 06:54:00:473 - info: [debug] [UIAUTOMATOR STDOUT] io.appium.android.bootstrap.Bootstrap:
-2017-03-16 06:54:00:474 - info: [debug] [UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: id=UiAutomatorTestRunner
-2017-03-16 06:54:00:474 - info: [debug] [UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: test=testRunServer
-2017-03-16 06:54:00:474 - info: [debug] [UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: class=io.appium.android.bootstrap.Bootstrap
-2017-03-16 06:54:00:474 - info: [debug] [UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: current=1
-2017-03-16 06:54:00:474 - info: [debug] [UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS_CODE: 1
-2017-03-16 06:54:00:501 - info: [debug] [BOOTSTRAP] [debug] Socket opened on port 4724
-2017-03-16 06:54:00:502 - info: [debug] [BOOTSTRAP] [debug] Appium Socket Server Ready
-2017-03-16 06:54:00:503 - info: [debug] [BOOTSTRAP] [debug] Loading json...
-2017-03-16 06:54:00:506 - info: [debug] [BOOTSTRAP] [debug] json loading complete.
-2017-03-16 06:54:00:506 - info: [debug] Waking up device if it's not alive
-2017-03-16 06:54:00:507 - info: [debug] Pushing command to appium work queue: ["wake",{}]
-2017-03-16 06:54:00:513 - info: [debug] [BOOTSTRAP] [debug] Registered crash watchers.
-2017-03-16 06:54:00:515 - info: [debug] [BOOTSTRAP] [debug] Client connected
-2017-03-16 06:54:00:515 - info: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"wake","params":{}}
-2017-03-16 06:54:00:516 - info: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
-2017-03-16 06:54:00:517 - info: [debug] [BOOTSTRAP] [debug] Got command action: wake
-2017-03-16 06:54:00:518 - info: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":true}
-2017-03-16 06:54:00:520 - info: [debug] executing cmd: "E:\Mediastep Automation\SDK\platform-tools\adb.exe" -s K153XB1X6B251487 shell "dumpsys window"
-2017-03-16 06:54:00:608 - info: [debug] Screen already unlocked, continuing.
-2017-03-16 06:54:00:608 - info: [debug] Pushing command to appium work queue: ["getDataDir",{}]
-2017-03-16 06:54:00:612 - info: [debug] dataDir set to: /data/local/tmp
-2017-03-16 06:54:00:612 - info: [debug] Pushing command to appium work queue: ["compressedLayoutHierarchy",{"compressLayout":false}]
-2017-03-16 06:54:00:613 - info: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"getDataDir","params":{}}
-2017-03-16 06:54:00:613 - info: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
-2017-03-16 06:54:00:613 - info: [debug] [BOOTSTRAP] [debug] Got command action: getDataDir
-2017-03-16 06:54:00:614 - info: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":"\/data\/local\/tmp"}
-2017-03-16 06:54:00:615 - info: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"compressedLayoutHierarchy","params":{"compressLayout":false}}
-2017-03-16 06:54:00:615 - info: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
-2017-03-16 06:54:00:616 - info: [debug] [BOOTSTRAP] [debug] Got command action: compressedLayoutHierarchy
-2017-03-16 06:54:00:618 - info: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":false}
-2017-03-16 06:54:00:620 - info: [debug] Getting device API level
-2017-03-16 06:54:00:621 - info: [debug] executing cmd: "E:\Mediastep Automation\SDK\platform-tools\adb.exe" -s K153XB1X6B251487 shell "getprop ro.build.version.sdk"
-2017-03-16 06:54:00:695 - info: [debug] Device is at API Level 23
-2017-03-16 06:54:00:696 - info: [debug] executing cmd: "E:\Mediastep Automation\SDK\platform-tools\adb.exe" -s K153XB1X6B251487 shell "am start -S -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -f 0x10200000 -n com.mediastep.beecow/com.mediastep.beecow.general.activity.SplashScreenActivity"
-2017-03-16 06:54:02:607 - info: [debug] Waiting for pkg "com.mediastep.beecow" and activity "com.mediastep.beecow.general.activity.SplashScreenActivity" to be focused
-2017-03-16 06:54:02:607 - info: [debug] Getting focused package and activity
-2017-03-16 06:54:02:608 - info: [debug] executing cmd: "E:\Mediastep Automation\SDK\platform-tools\adb.exe" -s K153XB1X6B251487 shell "dumpsys window windows"
-2017-03-16 06:54:02:718 - info: [debug] Device launched! Ready for commands
-2017-03-16 06:54:02:718 - info: [debug] Setting command timeout to 100 secs
-2017-03-16 06:54:02:719 - info: [debug] Appium session started with sessionId 68170685-4305-42cd-9d30-bc78f6bfc072
-2017-03-16 06:54:02:721 - info: <-- POST /wd/hub/session 303 15790.706 ms - 9 
-2017-03-16 06:54:02:746 - info: --> GET /wd/hub/session/68170685-4305-42cd-9d30-bc78f6bfc072 {}
-2017-03-16 06:54:02:748 - info: [debug] Responding to client with success: {"status":0,"value":{"platform":"ANDROID","browserName":"appWaitActivity","platformVersion":"6.0","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"app":"D:\\Projects\\beecow-QAAutomation\\Beecow.apk","appPackage":"com.mediastep.beecow","noReset":true,"version":"6.0","deviceName":"K153XB1X6B251487","fullReset":true,"platform":"ANDROID","appActivity":"com.mediastep.beecow.general.activity.SplashScreenActivity","newCommandTimeout":"100","platformVersion":"6.0","browserName":"appWaitActivity","platformName":"Android"},"app":"D:\\Projects\\beecow-QAAutomation\\Beecow.apk","appPackage":"com.mediastep.beecow","noReset":true,"version":"6.0","deviceName":"K153XB1X6B251487","fullReset":true,"appActivity":"com.mediastep.beecow.general.activity.SplashScreenActivity","newCommandTimeout":"100","platformName":"Android"},"sessionId":"68170685-4305-42cd-9d30-bc78f6bfc072"}
-2017-03-16 06:54:02:749 - info: <-- GET /wd/hub/session/68170685-4305-42cd-9d30-bc78f6bfc072 200 3.074 ms - 1006 {"status":0,"value":{"platform":"ANDROID","browserName":"appWaitActivity","platformVersion":"6.0","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"app":"D:\\Projects\\beecow-QAAutomation\\Beecow.apk","appPackage":"com.mediastep.beecow","noReset":true,"version":"6.0","deviceName":"K153XB1X6B251487","fullReset":true,"platform":"ANDROID","appActivity":"com.mediastep.beecow.general.activity.SplashScreenActivity","newCommandTimeout":"100","platformVersion":"6.0","browserName":"appWaitActivity","platformName":"Android"},"app":"D:\\Projects\\beecow-QAAutomation\\Beecow.apk","appPackage":"com.mediastep.beecow","noReset":true,"version":"6.0","deviceName":"K153XB1X6B251487","fullReset":true,"appActivity":"com.mediastep.beecow.general.activity.SplashScreenActivity","newCommandTimeout":"100","platformName":"Android"},"sessionId":"68170685-4305-42cd-9d30-bc78f6bfc072"}
-2017-03-16 06:54:02:775 - info: --> GET /wd/hub/session/68170685-4305-42cd-9d30-bc78f6bfc072 {}
-2017-03-16 06:54:02:776 - info: [debug] Responding to client with success: {"status":0,"value":{"platform":"ANDROID","browserName":"appWaitActivity","platformVersion":"6.0","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"app":"D:\\Projects\\beecow-QAAutomation\\Beecow.apk","appPackage":"com.mediastep.beecow","noReset":true,"version":"6.0","deviceName":"K153XB1X6B251487","fullReset":true,"platform":"ANDROID","appActivity":"com.mediastep.beecow.general.activity.SplashScreenActivity","newCommandTimeout":"100","platformVersion":"6.0","browserName":"appWaitActivity","platformName":"Android"},"app":"D:\\Projects\\beecow-QAAutomation\\Beecow.apk","appPackage":"com.mediastep.beecow","noReset":true,"version":"6.0","deviceName":"K153XB1X6B251487","fullReset":true,"appActivity":"com.mediastep.beecow.general.activity.SplashScreenActivity","newCommandTimeout":"100","platformName":"Android"},"sessionId":"68170685-4305-42cd-9d30-bc78f6bfc072"}
-2017-03-16 06:54:02:777 - info: <-- GET /wd/hub/session/68170685-4305-42cd-9d30-bc78f6bfc072 200 1.754 ms - 1006 {"status":0,"value":{"platform":"ANDROID","browserName":"appWaitActivity","platformVersion":"6.0","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"app":"D:\\Projects\\beecow-QAAutomation\\Beecow.apk","appPackage":"com.mediastep.beecow","noReset":true,"version":"6.0","deviceName":"K153XB1X6B251487","fullReset":true,"platform":"ANDROID","appActivity":"com.mediastep.beecow.general.activity.SplashScreenActivity","newCommandTimeout":"100","platformVersion":"6.0","browserName":"appWaitActivity","platformName":"Android"},"app":"D:\\Projects\\beecow-QAAutomation\\Beecow.apk","appPackage":"com.mediastep.beecow","noReset":true,"version":"6.0","deviceName":"K153XB1X6B251487","fullReset":true,"appActivity":"com.mediastep.beecow.general.activity.SplashScreenActivity","newCommandTimeout":"100","platformName":"Android"},"sessionId":"68170685-4305-42cd-9d30-bc78f6bfc072"}
-2017-03-16 06:54:02:787 - info: --> POST /wd/hub/session/68170685-4305-42cd-9d30-bc78f6bfc072/timeouts {"type":"implicit","ms":10000}
-2017-03-16 06:54:02:792 - info: [debug] Set Android implicit wait to 10000ms
-2017-03-16 06:54:02:792 - info: [debug] Responding to client with success: {"status":0,"value":null,"sessionId":"68170685-4305-42cd-9d30-bc78f6bfc072"}
-2017-03-16 06:54:02:793 - info: <-- POST /wd/hub/session/68170685-4305-42cd-9d30-bc78f6bfc072/timeouts 200 6.683 ms - 76 {"status":0,"value":null,"sessionId":"68170685-4305-42cd-9d30-bc78f6bfc072"}
-2017-03-16 06:54:04:818 - info: --> POST /wd/hub/session/68170685-4305-42cd-9d30-bc78f6bfc072/element {"using":"xpath","value":"//*[@text = 'Sport']"}
-2017-03-16 06:54:04:819 - info: [debug] Waiting up to 10000ms for condition
-2017-03-16 06:54:04:820 - info: [debug] Pushing command to appium work queue: ["find",{"strategy":"xpath","selector":"//*[@text = 'Sport']","context":"","multiple":false}]
-2017-03-16 06:54:04:824 - info: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"xpath","selector":"//*[@text = 'Sport']","context":"","multiple":false}}
-2017-03-16 06:54:04:825 - info: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
-2017-03-16 06:54:04:825 - info: [debug] [BOOTSTRAP] [debug] Got command action: find
-2017-03-16 06:54:04:825 - info: [debug] [BOOTSTRAP] [debug] Finding //*[@text = 'Sport'] using XPATH with the contextId:  multiple: false
-2017-03-16 06:54:04:990 - info: [debug] [BOOTSTRAP] [debug] Returning result: {"status":7,"value":"Could not find an element using supplied strategy. "}
-2017-03-16 06:54:04:991 - info: [debug] Waited for 171ms so far
-2017-03-16 06:54:05:491 - info: [debug] Pushing command to appium work queue: ["find",{"strategy":"xpath","selector":"//*[@text = 'Sport']","context":"","multiple":false}]
-2017-03-16 06:54:05:499 - info: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"xpath","selector":"//*[@text = 'Sport']","context":"","multiple":false}}
-2017-03-16 06:54:05:499 - info: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
-2017-03-16 06:54:05:499 - info: [debug] [BOOTSTRAP] [debug] Got command action: find
-2017-03-16 06:54:05:499 - info: [debug] [BOOTSTRAP] [debug] Finding //*[@text = 'Sport'] using XPATH with the contextId:  multiple: false
-2017-03-16 06:54:05:878 - info: [debug] Waited for 1057ms so far
-2017-03-16 06:54:05:883 - info: [debug] [BOOTSTRAP] [debug] Returning result: {"status":7,"value":"Could not find an element using supplied strategy. "}
-2017-03-16 06:54:06:379 - info: [debug] Pushing command to appium work queue: ["find",{"strategy":"xpath","selector":"//*[@text = 'Sport']","context":"","multiple":false}]
-2017-03-16 06:54:06:389 - info: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"xpath","selector":"//*[@text = 'Sport']","context":"","multiple":false}}
-2017-03-16 06:54:06:390 - info: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
-2017-03-16 06:54:06:390 - info: [debug] [BOOTSTRAP] [debug] Got command action: find
-2017-03-16 06:54:06:391 - info: [debug] [BOOTSTRAP] [debug] Finding //*[@text = 'Sport'] using XPATH with the contextId:  multiple: false
-2017-03-16 06:54:06:487 - info: [debug] [BOOTSTRAP] [debug] Using: UiSelector[CLASS=android.widget.TextView, INSTANCE=10]
-2017-03-16 06:54:06:791 - info: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":{"ELEMENT":"1"}}
-2017-03-16 06:54:06:791 - info: [debug] Responding to client with success: {"status":0,"value":{"ELEMENT":"1"},"sessionId":"68170685-4305-42cd-9d30-bc78f6bfc072"}
-2017-03-16 06:54:06:792 - info: <-- POST /wd/hub/session/68170685-4305-42cd-9d30-bc78f6bfc072/element 200 1974.020 ms - 87 {"status":0,"value":{"ELEMENT":"1"},"sessionId":"68170685-4305-42cd-9d30-bc78f6bfc072"}
-2017-03-16 06:54:06:804 - info: --> POST /wd/hub/session/68170685-4305-42cd-9d30-bc78f6bfc072/element/1/click {"id":"1"}
-2017-03-16 06:54:06:805 - info: [debug] Pushing command to appium work queue: ["element:click",{"elementId":"1"}]
-2017-03-16 06:54:06:808 - info: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"element:click","params":{"elementId":"1"}}
-2017-03-16 06:54:06:820 - info: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
-2017-03-16 06:54:06:821 - info: [debug] [BOOTSTRAP] [debug] Got command action: click
-2017-03-16 06:54:06:975 - info: [debug] Responding to client with success: {"status":0,"value":true,"sessionId":"68170685-4305-42cd-9d30-bc78f6bfc072"}
-2017-03-16 06:54:06:976 - info: <-- POST /wd/hub/session/68170685-4305-42cd-9d30-bc78f6bfc072/element/1/click 200 172.733 ms - 76 {"status":0,"value":true,"sessionId":"68170685-4305-42cd-9d30-bc78f6bfc072"}
-2017-03-16 06:54:06:976 - info: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":true}
-2017-03-16 06:54:06:981 - info: --> POST /wd/hub/session/68170685-4305-42cd-9d30-bc78f6bfc072/element {"using":"xpath","value":"//*[@text = 'Computer']"}
-2017-03-16 06:54:06:981 - info: [debug] Waiting up to 10000ms for condition
-2017-03-16 06:54:06:981 - info: [debug] Pushing command to appium work queue: ["find",{"strategy":"xpath","selector":"//*[@text = 'Computer']","context":"","multiple":false}]
-2017-03-16 06:54:06:986 - info: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"xpath","selector":"//*[@text = 'Computer']","context":"","multiple":false}}
-2017-03-16 06:54:06:986 - info: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
-2017-03-16 06:54:06:987 - info: [debug] [BOOTSTRAP] [debug] Got command action: find
-2017-03-16 06:54:06:987 - info: [debug] [BOOTSTRAP] [debug] Finding //*[@text = 'Computer'] using XPATH with the contextId:  multiple: false
-2017-03-16 06:54:07:075 - info: [debug] [BOOTSTRAP] [debug] Using: UiSelector[CLASS=android.widget.TextView, INSTANCE=13]
-2017-03-16 06:54:07:689 - info: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":{"ELEMENT":"2"}}
-2017-03-16 06:54:07:690 - info: [debug] Responding to client with success: {"status":0,"value":{"ELEMENT":"2"},"sessionId":"68170685-4305-42cd-9d30-bc78f6bfc072"}
-2017-03-16 06:54:07:691 - info: <-- POST /wd/hub/session/68170685-4305-42cd-9d30-bc78f6bfc072/element 200 710.014 ms - 87 {"status":0,"value":{"ELEMENT":"2"},"sessionId":"68170685-4305-42cd-9d30-bc78f6bfc072"}
-2017-03-16 06:54:07:695 - info: --> POST /wd/hub/session/68170685-4305-42cd-9d30-bc78f6bfc072/element/2/click {"id":"2"}
-2017-03-16 06:54:07:695 - info: [debug] Pushing command to appium work queue: ["element:click",{"elementId":"2"}]
-2017-03-16 06:54:07:701 - info: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"element:click","params":{"elementId":"2"}}
-2017-03-16 06:54:07:701 - info: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
-2017-03-16 06:54:07:702 - info: [debug] [BOOTSTRAP] [debug] Got command action: click
-2017-03-16 06:54:07:870 - info: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":true}
-2017-03-16 06:54:07:871 - info: [debug] Responding to client with success: {"status":0,"value":true,"sessionId":"68170685-4305-42cd-9d30-bc78f6bfc072"}
-2017-03-16 06:54:07:872 - info: <-- POST /wd/hub/session/68170685-4305-42cd-9d30-bc78f6bfc072/element/2/click 200 177.142 ms - 76 {"status":0,"value":true,"sessionId":"68170685-4305-42cd-9d30-bc78f6bfc072"}
-2017-03-16 06:54:07:875 - info: --> POST /wd/hub/session/68170685-4305-42cd-9d30-bc78f6bfc072/element {"using":"xpath","value":"//*[@text = 'Meal Deals']"}
-2017-03-16 06:54:07:876 - info: [debug] Waiting up to 10000ms for condition
-2017-03-16 06:54:07:876 - info: [debug] Pushing command to appium work queue: ["find",{"strategy":"xpath","selector":"//*[@text = 'Meal Deals']","context":"","multiple":false}]
-2017-03-16 06:54:07:885 - info: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"xpath","selector":"//*[@text = 'Meal Deals']","context":"","multiple":false}}
-2017-03-16 06:54:07:886 - info: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
-2017-03-16 06:54:07:886 - info: [debug] [BOOTSTRAP] [debug] Got command action: find
-2017-03-16 06:54:07:886 - info: [debug] [BOOTSTRAP] [debug] Finding //*[@text = 'Meal Deals'] using XPATH with the contextId:  multiple: false
-2017-03-16 06:54:07:973 - info: [debug] [BOOTSTRAP] [debug] Using: UiSelector[CLASS=android.widget.TextView, INSTANCE=8]
-2017-03-16 06:54:08:605 - info: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":{"ELEMENT":"3"}}
-2017-03-16 06:54:08:606 - info: [debug] Responding to client with success: {"status":0,"value":{"ELEMENT":"3"},"sessionId":"68170685-4305-42cd-9d30-bc78f6bfc072"}
-2017-03-16 06:54:08:608 - info: <-- POST /wd/hub/session/68170685-4305-42cd-9d30-bc78f6bfc072/element 200 732.198 ms - 87 {"status":0,"value":{"ELEMENT":"3"},"sessionId":"68170685-4305-42cd-9d30-bc78f6bfc072"}
-2017-03-16 06:54:08:612 - info: --> POST /wd/hub/session/68170685-4305-42cd-9d30-bc78f6bfc072/element/3/click {"id":"3"}
-2017-03-16 06:54:08:612 - info: [debug] Pushing command to appium work queue: ["element:click",{"elementId":"3"}]
-2017-03-16 06:54:08:617 - info: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"element:click","params":{"elementId":"3"}}
-2017-03-16 06:54:08:618 - info: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
-2017-03-16 06:54:08:618 - info: [debug] [BOOTSTRAP] [debug] Got command action: click
-2017-03-16 06:54:08:758 - info: [debug] Responding to client with success: {"status":0,"value":true,"sessionId":"68170685-4305-42cd-9d30-bc78f6bfc072"}
-2017-03-16 06:54:08:759 - info: <-- POST /wd/hub/session/68170685-4305-42cd-9d30-bc78f6bfc072/element/3/click 200 146.951 ms - 76 {"status":0,"value":true,"sessionId":"68170685-4305-42cd-9d30-bc78f6bfc072"}
-2017-03-16 06:54:08:760 - info: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":true}
-2017-03-16 06:54:08:763 - info: --> POST /wd/hub/session/68170685-4305-42cd-9d30-bc78f6bfc072/element {"using":"xpath","value":"//*[@text = 'Next']"}
-2017-03-16 06:54:08:763 - info: [debug] Waiting up to 10000ms for condition
-2017-03-16 06:54:08:763 - info: [debug] Pushing command to appium work queue: ["find",{"strategy":"xpath","selector":"//*[@text = 'Next']","context":"","multiple":false}]
-2017-03-16 06:54:08:771 - info: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"xpath","selector":"//*[@text = 'Next']","context":"","multiple":false}}
-2017-03-16 06:54:08:771 - info: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
-2017-03-16 06:54:08:772 - info: [debug] [BOOTSTRAP] [debug] Got command action: find
-2017-03-16 06:54:08:772 - info: [debug] [BOOTSTRAP] [debug] Finding //*[@text = 'Next'] using XPATH with the contextId:  multiple: false
-2017-03-16 06:54:08:846 - info: [debug] [BOOTSTRAP] [debug] Using: UiSelector[CLASS=android.widget.TextView, INSTANCE=15]
-2017-03-16 06:54:09:497 - info: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":{"ELEMENT":"4"}}
-2017-03-16 06:54:09:498 - info: [debug] Responding to client with success: {"status":0,"value":{"ELEMENT":"4"},"sessionId":"68170685-4305-42cd-9d30-bc78f6bfc072"}
-2017-03-16 06:54:09:499 - info: <-- POST /wd/hub/session/68170685-4305-42cd-9d30-bc78f6bfc072/element 200 736.103 ms - 87 {"status":0,"value":{"ELEMENT":"4"},"sessionId":"68170685-4305-42cd-9d30-bc78f6bfc072"}
-2017-03-16 06:54:09:503 - info: --> POST /wd/hub/session/68170685-4305-42cd-9d30-bc78f6bfc072/element/4/click {"id":"4"}
-2017-03-16 06:54:09:503 - info: [debug] Pushing command to appium work queue: ["element:click",{"elementId":"4"}]
-2017-03-16 06:54:09:505 - info: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"element:click","params":{"elementId":"4"}}
-2017-03-16 06:54:09:506 - info: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
-2017-03-16 06:54:09:506 - info: [debug] [BOOTSTRAP] [debug] Got command action: click
-2017-03-16 06:54:09:748 - info: [debug] Responding to client with success: {"status":0,"value":true,"sessionId":"68170685-4305-42cd-9d30-bc78f6bfc072"}
-2017-03-16 06:54:09:748 - info: <-- POST /wd/hub/session/68170685-4305-42cd-9d30-bc78f6bfc072/element/4/click 200 246.365 ms - 76 {"status":0,"value":true,"sessionId":"68170685-4305-42cd-9d30-bc78f6bfc072"}
-2017-03-16 06:54:09:749 - info: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":true}
-2017-03-16 06:54:11:755 - info: --> POST /wd/hub/session/68170685-4305-42cd-9d30-bc78f6bfc072/element {"using":"xpath","value":"//*[@text = 'Automotive']"}
-2017-03-16 06:54:11:755 - info: [debug] Waiting up to 10000ms for condition
-2017-03-16 06:54:11:755 - info: [debug] Pushing command to appium work queue: ["find",{"strategy":"xpath","selector":"//*[@text = 'Automotive']","context":"","multiple":false}]
-2017-03-16 06:54:11:766 - info: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"xpath","selector":"//*[@text = 'Automotive']","context":"","multiple":false}}
-2017-03-16 06:54:11:766 - info: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
-2017-03-16 06:54:11:767 - info: [debug] [BOOTSTRAP] [debug] Got command action: find
-2017-03-16 06:54:11:768 - info: [debug] [BOOTSTRAP] [debug] Finding //*[@text = 'Automotive'] using XPATH with the contextId:  multiple: false
-2017-03-16 06:54:11:886 - info: [debug] [BOOTSTRAP] [debug] Using: UiSelector[CLASS=android.widget.TextView, INSTANCE=11]
-2017-03-16 06:54:11:911 - info: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":{"ELEMENT":"5"}}
-2017-03-16 06:54:11:911 - info: [debug] Responding to client with success: {"status":0,"value":{"ELEMENT":"5"},"sessionId":"68170685-4305-42cd-9d30-bc78f6bfc072"}
-2017-03-16 06:54:11:912 - info: <-- POST /wd/hub/session/68170685-4305-42cd-9d30-bc78f6bfc072/element 200 156.721 ms - 87 {"status":0,"value":{"ELEMENT":"5"},"sessionId":"68170685-4305-42cd-9d30-bc78f6bfc072"}
-2017-03-16 06:54:11:916 - info: --> POST /wd/hub/session/68170685-4305-42cd-9d30-bc78f6bfc072/element/5/click {"id":"5"}
-2017-03-16 06:54:11:916 - info: [debug] Pushing command to appium work queue: ["element:click",{"elementId":"5"}]
-2017-03-16 06:54:11:919 - info: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"element:click","params":{"elementId":"5"}}
-2017-03-16 06:54:11:919 - info: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
-2017-03-16 06:54:11:919 - info: [debug] [BOOTSTRAP] [debug] Got command action: click
-2017-03-16 06:54:12:080 - info: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":true}
-2017-03-16 06:54:12:081 - info: [debug] Responding to client with success: {"status":0,"value":true,"sessionId":"68170685-4305-42cd-9d30-bc78f6bfc072"}
-2017-03-16 06:54:12:082 - info: <-- POST /wd/hub/session/68170685-4305-42cd-9d30-bc78f6bfc072/element/5/click 200 166.539 ms - 76 {"status":0,"value":true,"sessionId":"68170685-4305-42cd-9d30-bc78f6bfc072"}
-2017-03-16 06:54:12:085 - info: --> POST /wd/hub/session/68170685-4305-42cd-9d30-bc78f6bfc072/element {"using":"xpath","value":"//*[@text = 'Architecture']"}
-2017-03-16 06:54:12:085 - info: [debug] Waiting up to 10000ms for condition
-2017-03-16 06:54:12:086 - info: [debug] Pushing command to appium work queue: ["find",{"strategy":"xpath","selector":"//*[@text = 'Architecture']","context":"","multiple":false}]
-2017-03-16 06:54:12:088 - info: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"xpath","selector":"//*[@text = 'Architecture']","context":"","multiple":false}}
-2017-03-16 06:54:12:094 - info: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
-2017-03-16 06:54:12:094 - info: [debug] [BOOTSTRAP] [debug] Got command action: find
-2017-03-16 06:54:12:094 - info: [debug] [BOOTSTRAP] [debug] Finding //*[@text = 'Architecture'] using XPATH with the contextId:  multiple: false
-2017-03-16 06:54:12:184 - info: [debug] [BOOTSTRAP] [debug] Using: UiSelector[CLASS=android.widget.TextView, INSTANCE=9]
-2017-03-16 06:54:12:819 - info: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":{"ELEMENT":"6"}}
-2017-03-16 06:54:12:835 - info: [debug] Responding to client with success: {"status":0,"value":{"ELEMENT":"6"},"sessionId":"68170685-4305-42cd-9d30-bc78f6bfc072"}
-2017-03-16 06:54:12:837 - info: <-- POST /wd/hub/session/68170685-4305-42cd-9d30-bc78f6bfc072/element 200 751.959 ms - 87 {"status":0,"value":{"ELEMENT":"6"},"sessionId":"68170685-4305-42cd-9d30-bc78f6bfc072"}
-2017-03-16 06:54:12:841 - info: --> POST /wd/hub/session/68170685-4305-42cd-9d30-bc78f6bfc072/element/6/click {"id":"6"}
-2017-03-16 06:54:12:841 - info: [debug] Pushing command to appium work queue: ["element:click",{"elementId":"6"}]
-2017-03-16 06:54:12:850 - info: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"element:click","params":{"elementId":"6"}}
-2017-03-16 06:54:12:851 - info: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
-2017-03-16 06:54:12:851 - info: [debug] [BOOTSTRAP] [debug] Got command action: click
-2017-03-16 06:54:13:016 - info: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":true}
-2017-03-16 06:54:13:017 - info: [debug] Responding to client with success: {"status":0,"value":true,"sessionId":"68170685-4305-42cd-9d30-bc78f6bfc072"}
-2017-03-16 06:54:13:019 - info: <-- POST /wd/hub/session/68170685-4305-42cd-9d30-bc78f6bfc072/element/6/click 200 176.834 ms - 76 {"status":0,"value":true,"sessionId":"68170685-4305-42cd-9d30-bc78f6bfc072"}
-2017-03-16 06:54:13:021 - info: --> POST /wd/hub/session/68170685-4305-42cd-9d30-bc78f6bfc072/element {"using":"xpath","value":"//*[@text = 'Banking']"}
-2017-03-16 06:54:13:021 - info: [debug] Waiting up to 10000ms for condition
-2017-03-16 06:54:13:022 - info: [debug] Pushing command to appium work queue: ["find",{"strategy":"xpath","selector":"//*[@text = 'Banking']","context":"","multiple":false}]
-2017-03-16 06:54:13:028 - info: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"xpath","selector":"//*[@text = 'Banking']","context":"","multiple":false}}
-2017-03-16 06:54:13:028 - info: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
-2017-03-16 06:54:13:028 - info: [debug] [BOOTSTRAP] [debug] Got command action: find
-2017-03-16 06:54:13:029 - info: [debug] [BOOTSTRAP] [debug] Finding //*[@text = 'Banking'] using XPATH with the contextId:  multiple: false
-2017-03-16 06:54:13:119 - info: [debug] [BOOTSTRAP] [debug] Using: UiSelector[CLASS=android.widget.TextView, INSTANCE=2]
-2017-03-16 06:54:13:536 - info: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":{"ELEMENT":"7"}}
-2017-03-16 06:54:13:536 - info: [debug] Responding to client with success: {"status":0,"value":{"ELEMENT":"7"},"sessionId":"68170685-4305-42cd-9d30-bc78f6bfc072"}
-2017-03-16 06:54:13:537 - info: <-- POST /wd/hub/session/68170685-4305-42cd-9d30-bc78f6bfc072/element 200 515.471 ms - 87 {"status":0,"value":{"ELEMENT":"7"},"sessionId":"68170685-4305-42cd-9d30-bc78f6bfc072"}
-2017-03-16 06:54:13:541 - info: --> POST /wd/hub/session/68170685-4305-42cd-9d30-bc78f6bfc072/element/7/click {"id":"7"}
-2017-03-16 06:54:13:543 - info: [debug] Pushing command to appium work queue: ["element:click",{"elementId":"7"}]
-2017-03-16 06:54:13:546 - info: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"element:click","params":{"elementId":"7"}}
-2017-03-16 06:54:13:546 - info: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
-2017-03-16 06:54:13:548 - info: [debug] [BOOTSTRAP] [debug] Got command action: click
-2017-03-16 06:54:13:790 - info: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":true}
-2017-03-16 06:54:13:791 - info: [debug] Responding to client with success: {"status":0,"value":true,"sessionId":"68170685-4305-42cd-9d30-bc78f6bfc072"}
-2017-03-16 06:54:13:792 - info: <-- POST /wd/hub/session/68170685-4305-42cd-9d30-bc78f6bfc072/element/7/click 200 251.045 ms - 76 {"status":0,"value":true,"sessionId":"68170685-4305-42cd-9d30-bc78f6bfc072"}
-2017-03-16 06:54:13:797 - info: --> POST /wd/hub/session/68170685-4305-42cd-9d30-bc78f6bfc072/element {"using":"xpath","value":"//*[@text = 'Done']"}
-2017-03-16 06:54:13:798 - info: [debug] Waiting up to 10000ms for condition
-2017-03-16 06:54:13:798 - info: [debug] Pushing command to appium work queue: ["find",{"strategy":"xpath","selector":"//*[@text = 'Done']","context":"","multiple":false}]
-2017-03-16 06:54:13:803 - info: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"xpath","selector":"//*[@text = 'Done']","context":"","multiple":false}}
-2017-03-16 06:54:13:803 - info: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
-2017-03-16 06:54:13:803 - info: [debug] [BOOTSTRAP] [debug] Got command action: find
-2017-03-16 06:54:13:803 - info: [debug] [BOOTSTRAP] [debug] Finding //*[@text = 'Done'] using XPATH with the contextId:  multiple: false
-2017-03-16 06:54:13:902 - info: [debug] [BOOTSTRAP] [debug] Using: UiSelector[CLASS=android.widget.TextView, INSTANCE=14]
-2017-03-16 06:54:14:330 - info: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":{"ELEMENT":"8"}}
-2017-03-16 06:54:14:331 - info: [debug] Responding to client with success: {"status":0,"value":{"ELEMENT":"8"},"sessionId":"68170685-4305-42cd-9d30-bc78f6bfc072"}
-2017-03-16 06:54:14:332 - info: <-- POST /wd/hub/session/68170685-4305-42cd-9d30-bc78f6bfc072/element 200 534.418 ms - 87 {"status":0,"value":{"ELEMENT":"8"},"sessionId":"68170685-4305-42cd-9d30-bc78f6bfc072"}
-2017-03-16 06:54:14:334 - info: --> POST /wd/hub/session/68170685-4305-42cd-9d30-bc78f6bfc072/element/8/click {"id":"8"}
-2017-03-16 06:54:14:335 - info: [debug] Pushing command to appium work queue: ["element:click",{"elementId":"8"}]
-2017-03-16 06:54:14:337 - info: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"element:click","params":{"elementId":"8"}}
-2017-03-16 06:54:14:338 - info: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
-2017-03-16 06:54:14:339 - info: [debug] [BOOTSTRAP] [debug] Got command action: click
-2017-03-16 06:54:15:805 - info: [debug] Responding to client with success: {"status":0,"value":true,"sessionId":"68170685-4305-42cd-9d30-bc78f6bfc072"}
-2017-03-16 06:54:15:806 - info: <-- POST /wd/hub/session/68170685-4305-42cd-9d30-bc78f6bfc072/element/8/click 200 1472.177 ms - 76 {"status":0,"value":true,"sessionId":"68170685-4305-42cd-9d30-bc78f6bfc072"}
-2017-03-16 06:54:15:806 - info: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":true}
-2017-03-16 06:54:17:821 - info: --> POST /wd/hub/session/68170685-4305-42cd-9d30-bc78f6bfc072/appium/app/close {}
-2017-03-16 06:54:17:822 - info: [debug] Removing app from device
-2017-03-16 06:54:17:823 - info: [debug] Not uninstalling app since server not started with --full-reset
-2017-03-16 06:54:17:823 - info: [debug] Pressing the HOME button
-2017-03-16 06:54:17:824 - info: [debug] executing cmd: "E:\Mediastep Automation\SDK\platform-tools\adb.exe" -s K153XB1X6B251487 shell "input keyevent 3"
-2017-03-16 06:54:19:464 - info: [debug] Stopping logcat capture
-2017-03-16 06:54:19:467 - info: [debug] Logcat terminated with code null, signal SIGTERM
-2017-03-16 06:54:19:471 - info: [debug] Sent shutdown command, waiting for UiAutomator to stop...
-2017-03-16 06:54:19:474 - info: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"shutdown"}
-2017-03-16 06:54:19:474 - info: [debug] [BOOTSTRAP] [debug] Got command of type SHUTDOWN
-2017-03-16 06:54:19:474 - info: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":"OK, shutting down"}
-2017-03-16 06:54:19:474 - info: [debug] [UIAUTOMATOR STDOUT] close [socket][/127.0.0.1:4724]
-2017-03-16 06:54:19:474 - info: [debug] [BOOTSTRAP] [debug] Closed client connection
-2017-03-16 06:54:19:474 - info: [debug] [UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: numtests=1
-2017-03-16 06:54:19:474 - info: [debug] [UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: stream=.
-2017-03-16 06:54:19:475 - info: [debug] [UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: id=UiAutomatorTestRunner
-2017-03-16 06:54:19:475 - info: [debug] [UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: test=testRunServer
-2017-03-16 06:54:19:475 - info: [debug] [UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: class=io.appium.android.bootstrap.Bootstrap
-2017-03-16 06:54:19:475 - info: [debug] [UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: current=1
-2017-03-16 06:54:19:475 - info: [debug] [UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS_CODE: 0
-2017-03-16 06:54:19:475 - info: [debug] [UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: stream=
-2017-03-16 06:54:19:475 - info: [debug] [UIAUTOMATOR STDOUT] Test results for WatcherResultPrinter=.
-2017-03-16 06:54:19:475 - info: [debug] [UIAUTOMATOR STDOUT] Time: 19.041
-2017-03-16 06:54:19:475 - info: [debug] [UIAUTOMATOR STDOUT] OK (1 test)
-2017-03-16 06:54:19:475 - info: [debug] [UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS_CODE: -1
-2017-03-16 06:54:19:512 - info: [debug] UiAutomator shut down normally
-2017-03-16 06:54:19:512 - info: [debug] Cleaning up android objects
-2017-03-16 06:54:19:512 - info: [debug] Responding to client with success: {"status":0,"value":"Successfully closed the [D:\\Projects\\beecow-QAAutomation\\Beecow.apk] app.","sessionId":"68170685-4305-42cd-9d30-bc78f6bfc072"}
-2017-03-16 06:54:19:513 - info: <-- POST /wd/hub/session/68170685-4305-42cd-9d30-bc78f6bfc072/appium/app/close 200 1692.111 ms - 150 {"status":0,"value":"Successfully closed the [D:\\Projects\\beecow-QAAutomation\\Beecow.apk] app.","sessionId":"68170685-4305-42cd-9d30-bc78f6bfc072"}
-2017-03-16 06:54:19:517 - info: --> DELETE /wd/hub/session/68170685-4305-42cd-9d30-bc78f6bfc072 {}
-2017-03-16 06:54:19:517 - info: Shutting down appium session
-2017-03-16 06:54:19:517 - info: [debug] Removing app from device
-2017-03-16 06:54:19:518 - info: [debug] Not uninstalling app since server not started with --full-reset
-2017-03-16 06:54:19:518 - info: [debug] Cleaning up android objects
-2017-03-16 06:54:19:518 - info: [debug] Cleaning up appium session
-2017-03-16 06:54:19:518 - info: [debug] Responding to client with success: {"status":0,"value":null,"sessionId":"68170685-4305-42cd-9d30-bc78f6bfc072"}
-2017-03-16 06:54:19:519 - info: <-- DELETE /wd/hub/session/68170685-4305-42cd-9d30-bc78f6bfc072 200 2.532 ms - 76 {"status":0,"value":null,"sessionId":"68170685-4305-42cd-9d30-bc78f6bfc072"}
+2017-03-30 10:11:46:267 - info: Welcome to Appium v1.3.4 (REV c8c79a85fbd6870cd6fc3d66d038a115ebe22efe)
+2017-03-30 10:11:46:269 - info: Appium REST http interface listener started on 127.0.0.1:4723
+2017-03-30 10:11:46:273 - info: [debug] Non-default server args: {"address":"127.0.0.1","sessionOverride":true,"log":"D:\\Projects\\beecow-QAAutomation\\log\\androidLog.txt"}
+2017-03-30 10:11:46:274 - info: Console LogLevel: debug
+2017-03-30 10:11:46:274 - info: File LogLevel: debug
+2017-03-30 10:11:46:434 - info: --> GET /wd/hub/status {}
+2017-03-30 10:11:46:436 - info: [debug] Responding to client with success: {"status":0,"value":{"build":{"version":"1.3.4","revision":"c8c79a85fbd6870cd6fc3d66d038a115ebe22efe"}}}
+2017-03-30 10:11:46:444 - info: <-- GET /wd/hub/status 200 10.092 ms - 104 {"status":0,"value":{"build":{"version":"1.3.4","revision":"c8c79a85fbd6870cd6fc3d66d038a115ebe22efe"}}}
+2017-03-30 10:11:47:090 - info: --> POST /wd/hub/session {"capabilities":{"desiredCapabilities":{"app":"D:\\Projects\\beecow-QAAutomation\\Beecow.apk","appPackage":"com.mediastep.beecow","noReset":true,"version":"6.0","deviceName":"K153XB1X6B251487","fullReset":true,"platform":"ANDROID","appActivity":"com.mediastep.beecow.general.activity.SplashScreenActivity","newCommandTimeout":"100","platformVersion":"6.0","browserName":"appWaitActivity","platformName":"Android"},"requiredCapabilities":{}},"desiredCapabilities":{"app":"D:\\Projects\\beecow-QAAutomation\\Beecow.apk","appPackage":"com.mediastep.beecow","noReset":true,"version":"6.0","deviceName":"K153XB1X6B251487","fullReset":true,"platform":"ANDROID","appActivity":"com.mediastep.beecow.general.activity.SplashScreenActivity","newCommandTimeout":"100","platformVersion":"6.0","browserName":"appWaitActivity","platformName":"Android"},"requiredCapabilities":{}}
+2017-03-30 10:11:47:092 - info: Client User-Agent string: Apache-HttpClient/4.5.2 (Java/1.8.0_112)
+2017-03-30 10:11:47:093 - info: [debug] The following desired capabilities were provided, but not recognized by appium. They will be passed on to any other services running on this server. : version, platform
+2017-03-30 10:11:47:096 - info: [debug] Using local app from desired caps: D:\Projects\beecow-QAAutomation\Beecow.apk
+2017-03-30 10:11:47:097 - info: [debug] Creating new appium session 6ff8b094-4f67-4ecc-a391-01b436923300
+2017-03-30 10:11:47:098 - info: Starting android appium
+2017-03-30 10:11:47:100 - info: [debug] Getting Java version
+2017-03-30 10:11:47:200 - info: Java version is: 1.8.0_112
+2017-03-30 10:11:47:202 - info: [debug] Using fast reset? true
+2017-03-30 10:11:47:202 - info: [debug] Preparing device for session
+2017-03-30 10:11:47:202 - info: [debug] Checking whether app is actually present
+2017-03-30 10:11:47:203 - info: [debug] Checking whether adb is present
+2017-03-30 10:11:47:205 - info: [debug] Using adb from E:\Mediastep Automation\SDK\platform-tools\adb.exe
+2017-03-30 10:11:47:206 - info: Retrieving device
+2017-03-30 10:11:47:206 - info: [debug] Trying to find a connected android device
+2017-03-30 10:11:47:207 - info: [debug] Getting connected devices...
+2017-03-30 10:11:47:210 - info: [debug] executing cmd: "E:\Mediastep Automation\SDK\platform-tools\adb.exe" devices
+2017-03-30 10:11:47:237 - info: [debug] 1 device(s) connected
+2017-03-30 10:11:47:238 - info: Found device K153XB1X6B251487
+2017-03-30 10:11:47:238 - info: [debug] Setting device id to K153XB1X6B251487
+2017-03-30 10:11:47:239 - info: [debug] Waiting for device to be ready and to respond to shell commands (timeout = 5)
+2017-03-30 10:11:47:240 - info: [debug] executing cmd: "E:\Mediastep Automation\SDK\platform-tools\adb.exe" -s K153XB1X6B251487 wait-for-device
+2017-03-30 10:11:47:269 - info: [debug] executing cmd: "E:\Mediastep Automation\SDK\platform-tools\adb.exe" -s K153XB1X6B251487 shell "echo 'ready'"
+2017-03-30 10:11:47:332 - info: [debug] Starting logcat capture
+2017-03-30 10:11:47:381 - info: [debug] Getting device API level
+2017-03-30 10:11:47:381 - info: [debug] executing cmd: "E:\Mediastep Automation\SDK\platform-tools\adb.exe" -s K153XB1X6B251487 shell "getprop ro.build.version.sdk"
+2017-03-30 10:11:47:614 - info: [debug] Device is at API Level 23
+2017-03-30 10:11:47:614 - info: Device API level is: 23
+2017-03-30 10:11:47:615 - info: [debug] executing cmd: "E:\Mediastep Automation\SDK\platform-tools\adb.exe" -s K153XB1X6B251487 shell "getprop persist.sys.language"
+2017-03-30 10:11:47:842 - info: [debug] Current device persist.sys.language: 
+2017-03-30 10:11:47:843 - info: [debug] java -jar "C:\Program Files (x86)\Appium\node_modules\appium\node_modules\appium-adb\jars\appium_apk_tools.jar" "stringsFromApk" "D:\Projects\beecow-QAAutomation\Beecow.apk" "C:\Users\DUYNGU~1\AppData\Local\Temp\com.mediastep.beecow" 
+2017-03-30 10:11:49:094 - info: [debug] executing cmd: "E:\Mediastep Automation\SDK\platform-tools\adb.exe" -s K153XB1X6B251487 push "C:\\Users\\DUYNGU~1\\AppData\\Local\\Temp\\com.mediastep.beecow\\strings.json" /data/local/tmp
+2017-03-30 10:11:49:139 - info: [debug] Checking whether aapt is present
+2017-03-30 10:11:49:141 - info: [debug] Using aapt from E:\Mediastep Automation\SDK\build-tools\25.0.1\aapt.exe
+2017-03-30 10:11:49:141 - info: [debug] Retrieving process from manifest.
+2017-03-30 10:11:49:142 - info: [debug] executing cmd: "E:\Mediastep Automation\SDK\build-tools\25.0.1\aapt.exe" dump xmltree D:\Projects\beecow-QAAutomation\Beecow.apk AndroidManifest.xml
+2017-03-30 10:11:49:170 - info: [debug] Set app process to: com.mediastep.beecow
+2017-03-30 10:11:49:171 - info: [debug] Not uninstalling app since server not started with --full-reset
+2017-03-30 10:11:49:173 - info: [debug] Checking app cert for D:\Projects\beecow-QAAutomation\Beecow.apk.
+2017-03-30 10:11:49:173 - info: [debug] executing cmd: java -jar "C:\Program Files (x86)\Appium\node_modules\appium\node_modules\appium-adb\jars\verify.jar" D:\Projects\beecow-QAAutomation\Beecow.apk
+2017-03-30 10:11:49:848 - info: [debug] App already signed.
+2017-03-30 10:11:49:848 - info: [debug] Zip-aligning D:\Projects\beecow-QAAutomation\Beecow.apk
+2017-03-30 10:11:49:848 - info: [debug] Checking whether zipalign is present
+2017-03-30 10:11:49:850 - info: [debug] Using zipalign from E:\Mediastep Automation\SDK\build-tools\25.0.1\zipalign.exe
+2017-03-30 10:11:49:851 - info: [debug] Zip-aligning apk.
+2017-03-30 10:11:49:852 - info: [debug] executing cmd: "E:\Mediastep Automation\SDK\build-tools\25.0.1\zipalign.exe" -f 4 D:\Projects\beecow-QAAutomation\Beecow.apk C:\Users\DUYNGU~1\AppData\Local\Temp\appium117230-7336-axtou2.f33s9ssjor.tmp
+2017-03-30 10:11:50:063 - info: [debug] MD5 for app is 73b747fcbeb5dc0045b92a05e0800034
+2017-03-30 10:11:50:063 - info: [debug] executing cmd: "E:\Mediastep Automation\SDK\platform-tools\adb.exe" -s K153XB1X6B251487 shell "ls /data/local/tmp/73b747fcbeb5dc0045b92a05e0800034.apk"
+2017-03-30 10:11:50:174 - info: [debug] Getting install status for com.mediastep.beecow
+2017-03-30 10:11:50:176 - info: [debug] Getting device API level
+2017-03-30 10:11:50:177 - info: [debug] executing cmd: "E:\Mediastep Automation\SDK\platform-tools\adb.exe" -s K153XB1X6B251487 shell "getprop ro.build.version.sdk"
+2017-03-30 10:11:50:278 - info: [debug] Device is at API Level 23
+2017-03-30 10:11:50:279 - info: [debug] executing cmd: "E:\Mediastep Automation\SDK\platform-tools\adb.exe" -s K153XB1X6B251487 shell "pm list packages -3 com.mediastep.beecow"
+2017-03-30 10:11:51:633 - info: [debug] App is installed
+2017-03-30 10:11:51:634 - info: App is already installed, resetting app
+2017-03-30 10:11:51:635 - info: [debug] Running fast reset (stop and clear)
+2017-03-30 10:11:51:635 - info: [debug] executing cmd: "E:\Mediastep Automation\SDK\platform-tools\adb.exe" -s K153XB1X6B251487 shell "am force-stop com.mediastep.beecow"
+2017-03-30 10:11:53:211 - info: [debug] executing cmd: "E:\Mediastep Automation\SDK\platform-tools\adb.exe" -s K153XB1X6B251487 shell "pm clear com.mediastep.beecow"
+2017-03-30 10:11:54:540 - info: [debug] Forwarding system:4724 to device:4724
+2017-03-30 10:11:54:541 - info: [debug] executing cmd: "E:\Mediastep Automation\SDK\platform-tools\adb.exe" -s K153XB1X6B251487 forward tcp:4724 tcp:4724
+2017-03-30 10:11:54:571 - info: [debug] Pushing appium bootstrap to device...
+2017-03-30 10:11:54:572 - info: [debug] executing cmd: "E:\Mediastep Automation\SDK\platform-tools\adb.exe" -s K153XB1X6B251487 push "C:\\Program Files (x86)\\Appium\\node_modules\\appium\\build\\android_bootstrap\\AppiumBootstrap.jar" /data/local/tmp/
+2017-03-30 10:11:54:624 - info: [debug] Pushing settings apk to device...
+2017-03-30 10:11:54:625 - info: [debug] executing cmd: "E:\Mediastep Automation\SDK\platform-tools\adb.exe" -s K153XB1X6B251487 install "C:\Program Files (x86)\Appium\node_modules\appium\build\settings_apk\settings_apk-debug.apk"
+2017-03-30 10:11:59:448 - info: [debug] Pushing unlock helper app to device...
+2017-03-30 10:11:59:450 - info: [debug] executing cmd: "E:\Mediastep Automation\SDK\platform-tools\adb.exe" -s K153XB1X6B251487 install "C:\Program Files (x86)\Appium\node_modules\appium\build\unlock_apk\unlock_apk-debug.apk"
+2017-03-30 10:12:01:485 - info: Starting App
+2017-03-30 10:12:01:486 - info: [debug] Attempting to kill all 'uiautomator' processes
+2017-03-30 10:12:01:487 - info: [debug] Getting all processes with 'uiautomator'
+2017-03-30 10:12:01:487 - info: [debug] executing cmd: "E:\Mediastep Automation\SDK\platform-tools\adb.exe" -s K153XB1X6B251487 shell "ps 'uiautomator'"
+2017-03-30 10:12:01:590 - info: [debug] No matching processes found
+2017-03-30 10:12:01:591 - info: [debug] Running bootstrap
+2017-03-30 10:12:01:591 - info: [debug] spawning: E:\Mediastep Automation\SDK\platform-tools\adb.exe -s K153XB1X6B251487 shell uiautomator runtest AppiumBootstrap.jar -c io.appium.android.bootstrap.Bootstrap
+2017-03-30 10:12:02:929 - info: [debug] [UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: numtests=1
+2017-03-30 10:12:02:931 - info: [debug] [UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: stream=
+2017-03-30 10:12:02:932 - info: [debug] [UIAUTOMATOR STDOUT] io.appium.android.bootstrap.Bootstrap:
+2017-03-30 10:12:02:932 - info: [debug] [UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: id=UiAutomatorTestRunner
+2017-03-30 10:12:02:933 - info: [debug] [UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: test=testRunServer
+2017-03-30 10:12:02:934 - info: [debug] [UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: class=io.appium.android.bootstrap.Bootstrap
+2017-03-30 10:12:02:934 - info: [debug] [UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: current=1
+2017-03-30 10:12:02:936 - info: [debug] [UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS_CODE: 1
+2017-03-30 10:12:02:957 - info: [debug] [BOOTSTRAP] [debug] Socket opened on port 4724
+2017-03-30 10:12:02:963 - info: [debug] [BOOTSTRAP] [debug] Appium Socket Server Ready
+2017-03-30 10:12:02:963 - info: [debug] [BOOTSTRAP] [debug] Loading json...
+2017-03-30 10:12:02:967 - info: [debug] [BOOTSTRAP] [debug] json loading complete.
+2017-03-30 10:12:02:968 - info: [debug] [BOOTSTRAP] [debug] Registered crash watchers.
+2017-03-30 10:12:02:973 - info: [debug] Waking up device if it's not alive
+2017-03-30 10:12:02:973 - info: [debug] Pushing command to appium work queue: ["wake",{}]
+2017-03-30 10:12:02:978 - info: [debug] [BOOTSTRAP] [debug] Client connected
+2017-03-30 10:12:02:979 - info: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"wake","params":{}}
+2017-03-30 10:12:02:980 - info: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+2017-03-30 10:12:02:980 - info: [debug] [BOOTSTRAP] [debug] Got command action: wake
+2017-03-30 10:12:02:984 - info: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":true}
+2017-03-30 10:12:02:985 - info: [debug] executing cmd: "E:\Mediastep Automation\SDK\platform-tools\adb.exe" -s K153XB1X6B251487 shell "dumpsys window"
+2017-03-30 10:12:03:064 - info: [debug] Screen already unlocked, continuing.
+2017-03-30 10:12:03:064 - info: [debug] Pushing command to appium work queue: ["getDataDir",{}]
+2017-03-30 10:12:03:067 - info: [debug] dataDir set to: /data/local/tmp
+2017-03-30 10:12:03:068 - info: [debug] Pushing command to appium work queue: ["compressedLayoutHierarchy",{"compressLayout":false}]
+2017-03-30 10:12:03:068 - info: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"getDataDir","params":{}}
+2017-03-30 10:12:03:068 - info: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+2017-03-30 10:12:03:068 - info: [debug] [BOOTSTRAP] [debug] Got command action: getDataDir
+2017-03-30 10:12:03:068 - info: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":"\/data\/local\/tmp"}
+2017-03-30 10:12:03:071 - info: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"compressedLayoutHierarchy","params":{"compressLayout":false}}
+2017-03-30 10:12:03:071 - info: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+2017-03-30 10:12:03:072 - info: [debug] [BOOTSTRAP] [debug] Got command action: compressedLayoutHierarchy
+2017-03-30 10:12:03:074 - info: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":false}
+2017-03-30 10:12:03:075 - info: [debug] Getting device API level
+2017-03-30 10:12:03:076 - info: [debug] executing cmd: "E:\Mediastep Automation\SDK\platform-tools\adb.exe" -s K153XB1X6B251487 shell "getprop ro.build.version.sdk"
+2017-03-30 10:12:03:144 - info: [debug] Device is at API Level 23
+2017-03-30 10:12:03:145 - info: [debug] executing cmd: "E:\Mediastep Automation\SDK\platform-tools\adb.exe" -s K153XB1X6B251487 shell "am start -S -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -f 0x10200000 -n com.mediastep.beecow/com.mediastep.beecow.general.activity.SplashScreenActivity"
+2017-03-30 10:12:05:049 - info: [debug] Waiting for pkg "com.mediastep.beecow" and activity "com.mediastep.beecow.general.activity.SplashScreenActivity" to be focused
+2017-03-30 10:12:05:050 - info: [debug] Getting focused package and activity
+2017-03-30 10:12:05:052 - info: [debug] executing cmd: "E:\Mediastep Automation\SDK\platform-tools\adb.exe" -s K153XB1X6B251487 shell "dumpsys window windows"
+2017-03-30 10:12:05:166 - info: [debug] Device launched! Ready for commands
+2017-03-30 10:12:05:167 - info: [debug] Setting command timeout to 100 secs
+2017-03-30 10:12:05:169 - info: [debug] Appium session started with sessionId 6ff8b094-4f67-4ecc-a391-01b436923300
+2017-03-30 10:12:05:176 - info: <-- POST /wd/hub/session 303 18085.465 ms - 9 
+2017-03-30 10:12:05:207 - info: --> GET /wd/hub/session/6ff8b094-4f67-4ecc-a391-01b436923300 {}
+2017-03-30 10:12:05:209 - info: [debug] Responding to client with success: {"status":0,"value":{"platform":"ANDROID","browserName":"appWaitActivity","platformVersion":"6.0","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"app":"D:\\Projects\\beecow-QAAutomation\\Beecow.apk","appPackage":"com.mediastep.beecow","noReset":true,"version":"6.0","deviceName":"K153XB1X6B251487","fullReset":true,"platform":"ANDROID","appActivity":"com.mediastep.beecow.general.activity.SplashScreenActivity","newCommandTimeout":"100","platformVersion":"6.0","browserName":"appWaitActivity","platformName":"Android"},"app":"D:\\Projects\\beecow-QAAutomation\\Beecow.apk","appPackage":"com.mediastep.beecow","noReset":true,"version":"6.0","deviceName":"K153XB1X6B251487","fullReset":true,"appActivity":"com.mediastep.beecow.general.activity.SplashScreenActivity","newCommandTimeout":"100","platformName":"Android"},"sessionId":"6ff8b094-4f67-4ecc-a391-01b436923300"}
+2017-03-30 10:12:05:210 - info: <-- GET /wd/hub/session/6ff8b094-4f67-4ecc-a391-01b436923300 200 3.299 ms - 1006 {"status":0,"value":{"platform":"ANDROID","browserName":"appWaitActivity","platformVersion":"6.0","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"app":"D:\\Projects\\beecow-QAAutomation\\Beecow.apk","appPackage":"com.mediastep.beecow","noReset":true,"version":"6.0","deviceName":"K153XB1X6B251487","fullReset":true,"platform":"ANDROID","appActivity":"com.mediastep.beecow.general.activity.SplashScreenActivity","newCommandTimeout":"100","platformVersion":"6.0","browserName":"appWaitActivity","platformName":"Android"},"app":"D:\\Projects\\beecow-QAAutomation\\Beecow.apk","appPackage":"com.mediastep.beecow","noReset":true,"version":"6.0","deviceName":"K153XB1X6B251487","fullReset":true,"appActivity":"com.mediastep.beecow.general.activity.SplashScreenActivity","newCommandTimeout":"100","platformName":"Android"},"sessionId":"6ff8b094-4f67-4ecc-a391-01b436923300"}
+2017-03-30 10:12:05:235 - info: --> GET /wd/hub/session/6ff8b094-4f67-4ecc-a391-01b436923300 {}
+2017-03-30 10:12:05:236 - info: [debug] Responding to client with success: {"status":0,"value":{"platform":"ANDROID","browserName":"appWaitActivity","platformVersion":"6.0","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"app":"D:\\Projects\\beecow-QAAutomation\\Beecow.apk","appPackage":"com.mediastep.beecow","noReset":true,"version":"6.0","deviceName":"K153XB1X6B251487","fullReset":true,"platform":"ANDROID","appActivity":"com.mediastep.beecow.general.activity.SplashScreenActivity","newCommandTimeout":"100","platformVersion":"6.0","browserName":"appWaitActivity","platformName":"Android"},"app":"D:\\Projects\\beecow-QAAutomation\\Beecow.apk","appPackage":"com.mediastep.beecow","noReset":true,"version":"6.0","deviceName":"K153XB1X6B251487","fullReset":true,"appActivity":"com.mediastep.beecow.general.activity.SplashScreenActivity","newCommandTimeout":"100","platformName":"Android"},"sessionId":"6ff8b094-4f67-4ecc-a391-01b436923300"}
+2017-03-30 10:12:05:236 - info: <-- GET /wd/hub/session/6ff8b094-4f67-4ecc-a391-01b436923300 200 1.158 ms - 1006 {"status":0,"value":{"platform":"ANDROID","browserName":"appWaitActivity","platformVersion":"6.0","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"app":"D:\\Projects\\beecow-QAAutomation\\Beecow.apk","appPackage":"com.mediastep.beecow","noReset":true,"version":"6.0","deviceName":"K153XB1X6B251487","fullReset":true,"platform":"ANDROID","appActivity":"com.mediastep.beecow.general.activity.SplashScreenActivity","newCommandTimeout":"100","platformVersion":"6.0","browserName":"appWaitActivity","platformName":"Android"},"app":"D:\\Projects\\beecow-QAAutomation\\Beecow.apk","appPackage":"com.mediastep.beecow","noReset":true,"version":"6.0","deviceName":"K153XB1X6B251487","fullReset":true,"appActivity":"com.mediastep.beecow.general.activity.SplashScreenActivity","newCommandTimeout":"100","platformName":"Android"},"sessionId":"6ff8b094-4f67-4ecc-a391-01b436923300"}
+2017-03-30 10:12:05:246 - info: --> POST /wd/hub/session/6ff8b094-4f67-4ecc-a391-01b436923300/timeouts {"type":"implicit","ms":10000}
+2017-03-30 10:12:05:251 - info: [debug] Set Android implicit wait to 10000ms
+2017-03-30 10:12:05:251 - info: [debug] Responding to client with success: {"status":0,"value":null,"sessionId":"6ff8b094-4f67-4ecc-a391-01b436923300"}
+2017-03-30 10:12:05:252 - info: <-- POST /wd/hub/session/6ff8b094-4f67-4ecc-a391-01b436923300/timeouts 200 6.597 ms - 76 {"status":0,"value":null,"sessionId":"6ff8b094-4f67-4ecc-a391-01b436923300"}
+2017-03-30 10:12:08:279 - info: --> POST /wd/hub/session/6ff8b094-4f67-4ecc-a391-01b436923300/element {"using":"xpath","value":"//*[@text = 'Sport']"}
+2017-03-30 10:12:08:280 - info: [debug] Waiting up to 10000ms for condition
+2017-03-30 10:12:08:281 - info: [debug] Pushing command to appium work queue: ["find",{"strategy":"xpath","selector":"//*[@text = 'Sport']","context":"","multiple":false}]
+2017-03-30 10:12:08:290 - info: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"xpath","selector":"//*[@text = 'Sport']","context":"","multiple":false}}
+2017-03-30 10:12:08:290 - info: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+2017-03-30 10:12:08:290 - info: [debug] [BOOTSTRAP] [debug] Got command action: find
+2017-03-30 10:12:08:291 - info: [debug] [BOOTSTRAP] [debug] Finding //*[@text = 'Sport'] using XPATH with the contextId:  multiple: false
+2017-03-30 10:12:08:311 - info: [debug] [UIAUTOMATOR STDOUT] java.io.FileNotFoundException: /data/local/tmp/local/tmp/dump.xml: open failed: ENOENT (No such file or directory)
+2017-03-30 10:12:08:311 - info: [debug] [UIAUTOMATOR STDOUT] at libcore.io.IoBridge.open(IoBridge.java:487)
+2017-03-30 10:12:08:311 - info: [debug] [UIAUTOMATOR STDOUT] at java.io.FileInputStream.<init>(FileInputStream.java:76)
+2017-03-30 10:12:08:311 - info: [debug] [UIAUTOMATOR STDOUT] at java.io.FileReader.<init>(FileReader.java:42)
+2017-03-30 10:12:08:312 - info: [debug] [UIAUTOMATOR STDOUT] at io.appium.android.bootstrap.utils.XMLHierarchy.getRawXMLHierarchy(XMLHierarchy.java:88)
+2017-03-30 10:12:08:312 - info: [debug] [UIAUTOMATOR STDOUT] at io.appium.android.bootstrap.utils.XMLHierarchy.getFormattedXMLDoc(XMLHierarchy.java:96)
+2017-03-30 10:12:08:312 - info: [debug] [UIAUTOMATOR STDOUT] at io.appium.android.bootstrap.utils.XMLHierarchy.getClassInstancePairs(XMLHierarchy.java:39)
+2017-03-30 10:12:08:312 - info: [debug] [UIAUTOMATOR STDOUT] at io.appium.android.bootstrap.handler.Find.getXPathSelectors(Find.java:316)
+2017-03-30 10:12:08:312 - info: [debug] [UIAUTOMATOR STDOUT] at io.appium.android.bootstrap.handler.Find.getSelectors(Find.java:207)
+2017-03-30 10:12:08:313 - info: [debug] [UIAUTOMATOR STDOUT] at io.appium.android.bootstrap.handler.Find.execute(Find.java:84)
+2017-03-30 10:12:08:313 - info: [debug] [UIAUTOMATOR STDOUT] at io.appium.android.bootstrap.AndroidCommandExecutor.execute(AndroidCommandExecutor.java:64)
+2017-03-30 10:12:08:313 - info: [debug] [UIAUTOMATOR STDOUT] at io.appium.android.bootstrap.SocketServer.runCommand(SocketServer.java:168)
+2017-03-30 10:12:08:313 - info: [debug] [UIAUTOMATOR STDOUT] at io.appium.android.bootstrap.SocketServer.handleClientData(SocketServer.java:89)
+2017-03-30 10:12:08:314 - info: [debug] [UIAUTOMATOR STDOUT] at io.appium.android.bootstrap.SocketServer.listenForever(SocketServer.java:133)
+2017-03-30 10:12:08:314 - info: [debug] [UIAUTOMATOR STDOUT] at io.appium.android.bootstrap.Bootstrap.testRunServer(Bootstrap.java:16)
+2017-03-30 10:12:08:314 - info: [debug] [UIAUTOMATOR STDOUT] at java.lang.reflect.Method.invoke(Native Method)
+2017-03-30 10:12:08:314 - info: [debug] [UIAUTOMATOR STDOUT] at junit.framework.TestCase.runTest(TestCase.java:168)
+2017-03-30 10:12:08:314 - info: [debug] [UIAUTOMATOR STDOUT] at junit.framework.TestCase.runBare(TestCase.java:134)
+2017-03-30 10:12:08:314 - info: [debug] [UIAUTOMATOR STDOUT] at junit.framework.TestResult$1.protect(TestResult.java:115)
+2017-03-30 10:12:08:314 - info: [debug] [UIAUTOMATOR STDOUT] at junit.framework.TestResult.runProtected(TestResult.java:133)
+2017-03-30 10:12:08:314 - info: [debug] [UIAUTOMATOR STDOUT] at junit.framework.TestResult.run(TestResult.java:118)
+2017-03-30 10:12:08:314 - info: [debug] [UIAUTOMATOR STDOUT] at junit.framework.TestCase.run(TestCase.java:124)
+2017-03-30 10:12:08:314 - info: [debug] [UIAUTOMATOR STDOUT] at com.android.uiautomator.testrunner.UiAutomatorTestRunner.start(UiAutomatorTestRunner.java:161)
+2017-03-30 10:12:08:315 - info: [debug] [UIAUTOMATOR STDOUT] at com.android.uiautomator.testrunner.UiAutomatorTestRunner.run(UiAutomatorTestRunner.java:96)
+2017-03-30 10:12:08:315 - info: [debug] [UIAUTOMATOR STDOUT] at com.android.commands.uiautomator.RunTestCommand.run(RunTestCommand.java:91)
+2017-03-30 10:12:08:315 - info: [debug] [UIAUTOMATOR STDOUT] at com.android.commands.uiautomator.Launcher.main(Launcher.java:83)
+2017-03-30 10:12:08:315 - info: [debug] [UIAUTOMATOR STDOUT] at com.android.internal.os.RuntimeInit.nativeFinishInit(Native Method)
+2017-03-30 10:12:08:315 - info: [debug] [UIAUTOMATOR STDOUT] at com.android.internal.os.RuntimeInit.main(RuntimeInit.java:276)
+2017-03-30 10:12:08:315 - info: [debug] [UIAUTOMATOR STDOUT] Caused by:
+2017-03-30 10:12:08:316 - info: [debug] Waited for 36ms so far
+2017-03-30 10:12:08:316 - info: [debug] [UIAUTOMATOR STDOUT] android.system.ErrnoException: open failed: ENOENT (No such file or directory)
+2017-03-30 10:12:08:316 - info: [debug] [UIAUTOMATOR STDOUT] at libcore.io.Posix.open(Native Method)
+2017-03-30 10:12:08:317 - info: [debug] [UIAUTOMATOR STDOUT] at libcore.io.BlockGuardOs.open(BlockGuardOs.java:186)
+2017-03-30 10:12:08:317 - info: [debug] [UIAUTOMATOR STDOUT] at libcore.io.IoBridge.open(IoBridge.java:473)
+2017-03-30 10:12:08:317 - info: [debug] [UIAUTOMATOR STDOUT] ... 26 more
+2017-03-30 10:12:08:317 - info: [debug] [BOOTSTRAP] [debug] Command returned error:java.lang.RuntimeException: Failed to Dump Window Hierarchy
+2017-03-30 10:12:08:317 - info: [debug] [BOOTSTRAP] [debug] Returning result: {"status":13,"value":"Failed to Dump Window Hierarchy"}
+2017-03-30 10:12:08:816 - info: [debug] Pushing command to appium work queue: ["find",{"strategy":"xpath","selector":"//*[@text = 'Sport']","context":"","multiple":false}]
+2017-03-30 10:12:08:826 - info: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"xpath","selector":"//*[@text = 'Sport']","context":"","multiple":false}}
+2017-03-30 10:12:08:826 - info: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+2017-03-30 10:12:08:828 - info: [debug] [BOOTSTRAP] [debug] Got command action: find
+2017-03-30 10:12:08:829 - info: [debug] [BOOTSTRAP] [debug] Finding //*[@text = 'Sport'] using XPATH with the contextId:  multiple: false
+2017-03-30 10:12:08:830 - info: [debug] [UIAUTOMATOR STDOUT] java.io.FileNotFoundException: /data/local/tmp/local/tmp/dump.xml: open failed: ENOENT (No such file or directory)
+2017-03-30 10:12:08:835 - info: [debug] [UIAUTOMATOR STDOUT] at libcore.io.IoBridge.open(IoBridge.java:487)
+2017-03-30 10:12:08:835 - info: [debug] [UIAUTOMATOR STDOUT] at java.io.FileInputStream.<init>(FileInputStream.java:76)
+2017-03-30 10:12:08:836 - info: [debug] [UIAUTOMATOR STDOUT] at java.io.FileReader.<init>(FileReader.java:42)
+2017-03-30 10:12:08:837 - info: [debug] [UIAUTOMATOR STDOUT] at io.appium.android.bootstrap.utils.XMLHierarchy.getRawXMLHierarchy(XMLHierarchy.java:88)
+2017-03-30 10:12:08:837 - info: [debug] [UIAUTOMATOR STDOUT] at io.appium.android.bootstrap.utils.XMLHierarchy.getFormattedXMLDoc(XMLHierarchy.java:96)
+2017-03-30 10:12:08:838 - info: [debug] [UIAUTOMATOR STDOUT] at io.appium.android.bootstrap.utils.XMLHierarchy.getClassInstancePairs(XMLHierarchy.java:39)
+2017-03-30 10:12:08:839 - info: [debug] [UIAUTOMATOR STDOUT] at io.appium.android.bootstrap.handler.Find.getXPathSelectors(Find.java:316)
+2017-03-30 10:12:08:839 - info: [debug] [UIAUTOMATOR STDOUT] at io.appium.android.bootstrap.handler.Find.getSelectors(Find.java:207)
+2017-03-30 10:12:08:840 - info: [debug] [UIAUTOMATOR STDOUT] at io.appium.android.bootstrap.handler.Find.execute(Find.java:84)
+2017-03-30 10:12:08:840 - info: [debug] [UIAUTOMATOR STDOUT] at io.appium.android.bootstrap.AndroidCommandExecutor.execute(AndroidCommandExecutor.java:64)
+2017-03-30 10:12:08:840 - info: [debug] [UIAUTOMATOR STDOUT] at
+2017-03-30 10:12:08:842 - info: [debug] [UIAUTOMATOR STDOUT] io.appium.android.bootstrap.SocketServer.runCommand(SocketServer.java:168)
+2017-03-30 10:12:08:844 - info: [debug] [UIAUTOMATOR STDOUT] at io.appium.android.bootstrap.SocketServer.handleClientData(SocketServer.java:89)
+2017-03-30 10:12:08:844 - info: [debug] [UIAUTOMATOR STDOUT] at io.appium.android.bootstrap.SocketServer.listenForever(SocketServer.java:133)
+2017-03-30 10:12:08:844 - info: [debug] [UIAUTOMATOR STDOUT] at io.appium.android.bootstrap.Bootstrap.testRunServer(Bootstrap.java:16)
+2017-03-30 10:12:08:844 - info: [debug] [UIAUTOMATOR STDOUT] at java.lang.reflect.Method.invoke(Native Method)
+2017-03-30 10:12:08:844 - info: [debug] [UIAUTOMATOR STDOUT] at junit.framework.TestCase.runTest(TestCase.java:168)
+2017-03-30 10:12:08:845 - info: [debug] [UIAUTOMATOR STDOUT] at junit.framework.TestCase.runBare(TestCase.java:134)
+2017-03-30 10:12:08:845 - info: [debug] [UIAUTOMATOR STDOUT] at junit.framework.TestResult$1.protect(TestResult.java:115)
+2017-03-30 10:12:08:845 - info: [debug] [UIAUTOMATOR STDOUT] at junit.framework.TestResult.runProtected(TestResult.java:133)
+2017-03-30 10:12:08:846 - info: [debug] [UIAUTOMATOR STDOUT] at junit.framework.TestResult.run(TestResult.java:118)
+2017-03-30 10:12:08:846 - info: [debug] [UIAUTOMATOR STDOUT] at junit.framework.TestCase.run(TestCase.java:124)
+2017-03-30 10:12:08:847 - info: [debug] [UIAUTOMATOR STDOUT] at com.android.uiautomator.testrunner.UiAutomatorTestRunner.start(UiAutomatorTestRunner.java:161)
+2017-03-30 10:12:08:847 - info: [debug] [UIAUTOMATOR STDOUT] at com.android.uiautomator.testrunner.UiAutomatorTestRunner.run(UiAutomatorTestRunner.java:96)
+2017-03-30 10:12:08:847 - info: [debug] [UIAUTOMATOR STDOUT] at com.android.commands.uiautomator.RunTestCommand.run(RunTestCommand.java:91)
+2017-03-30 10:12:08:847 - info: [debug] [UIAUTOMATOR STDOUT] at com.android.commands.uiautomator.Launcher.main(Launcher.java:83)
+2017-03-30 10:12:08:847 - info: [debug] [UIAUTOMATOR STDOUT] at com.android.internal.os
+2017-03-30 10:12:08:847 - info: [debug] Waited for 567ms so far
+2017-03-30 10:12:08:848 - info: [debug] [UIAUTOMATOR STDOUT] .RuntimeInit.nativeFinishInit(Native Method)
+2017-03-30 10:12:08:848 - info: [debug] [UIAUTOMATOR STDOUT] at com.android.internal.os.RuntimeInit.main(RuntimeInit.java:276)
+2017-03-30 10:12:08:848 - info: [debug] [UIAUTOMATOR STDOUT] Caused by: android.system.ErrnoException: open failed: ENOENT (No such file or directory)
+2017-03-30 10:12:08:848 - info: [debug] [UIAUTOMATOR STDOUT] at libcore.io.Posix.open(Native Method)
+2017-03-30 10:12:08:848 - info: [debug] [UIAUTOMATOR STDOUT] at libcore.io.BlockGuardOs.open(BlockGuardOs.java:186)
+2017-03-30 10:12:08:848 - info: [debug] [UIAUTOMATOR STDOUT] at libcore.io.IoBridge.open(IoBridge.java:473)
+2017-03-30 10:12:08:848 - info: [debug] [UIAUTOMATOR STDOUT] ... 26 more
+2017-03-30 10:12:08:848 - info: [debug] [BOOTSTRAP] [debug] Command returned error:java.lang.RuntimeException: Failed to Dump Window Hierarchy
+2017-03-30 10:12:08:848 - info: [debug] [BOOTSTRAP] [debug] Returning result: {"status":13,"value":"Failed to Dump Window Hierarchy"}
+2017-03-30 10:12:09:348 - info: [debug] Pushing command to appium work queue: ["find",{"strategy":"xpath","selector":"//*[@text = 'Sport']","context":"","multiple":false}]
+2017-03-30 10:12:09:351 - info: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"xpath","selector":"//*[@text = 'Sport']","context":"","multiple":false}}
+2017-03-30 10:12:09:352 - info: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+2017-03-30 10:12:09:352 - info: [debug] [BOOTSTRAP] [debug] Got command action: find
+2017-03-30 10:12:09:352 - info: [debug] [BOOTSTRAP] [debug] Finding //*[@text = 'Sport'] using XPATH with the contextId:  multiple: false
+2017-03-30 10:12:09:411 - info: [debug] [BOOTSTRAP] [debug] Returning result: {"status":7,"value":"Could not find an element using supplied strategy. "}
+2017-03-30 10:12:09:411 - info: [debug] Waited for 1131ms so far
+2017-03-30 10:12:09:912 - info: [debug] Pushing command to appium work queue: ["find",{"strategy":"xpath","selector":"//*[@text = 'Sport']","context":"","multiple":false}]
+2017-03-30 10:12:09:920 - info: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"xpath","selector":"//*[@text = 'Sport']","context":"","multiple":false}}
+2017-03-30 10:12:09:922 - info: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+2017-03-30 10:12:09:922 - info: [debug] [BOOTSTRAP] [debug] Got command action: find
+2017-03-30 10:12:09:922 - info: [debug] [BOOTSTRAP] [debug] Finding //*[@text = 'Sport'] using XPATH with the contextId:  multiple: false
+2017-03-30 10:12:09:972 - info: [debug] [BOOTSTRAP] [debug] Returning result: {"status":7,"value":"Could not find an element using supplied strategy. "}
+2017-03-30 10:12:09:973 - info: [debug] Waited for 1693ms so far
+2017-03-30 10:12:10:482 - info: [debug] Pushing command to appium work queue: ["find",{"strategy":"xpath","selector":"//*[@text = 'Sport']","context":"","multiple":false}]
+2017-03-30 10:12:10:492 - info: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"xpath","selector":"//*[@text = 'Sport']","context":"","multiple":false}}
+2017-03-30 10:12:10:493 - info: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+2017-03-30 10:12:10:494 - info: [debug] [BOOTSTRAP] [debug] Got command action: find
+2017-03-30 10:12:10:495 - info: [debug] [BOOTSTRAP] [debug] Finding //*[@text = 'Sport'] using XPATH with the contextId:  multiple: false
+2017-03-30 10:12:10:525 - info: [debug] [BOOTSTRAP] [debug] Returning result: {"status":7,"value":"Could not find an element using supplied strategy. "}
+2017-03-30 10:12:10:525 - info: [debug] Waited for 2245ms so far
+2017-03-30 10:12:11:026 - info: [debug] Pushing command to appium work queue: ["find",{"strategy":"xpath","selector":"//*[@text = 'Sport']","context":"","multiple":false}]
+2017-03-30 10:12:11:033 - info: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"xpath","selector":"//*[@text = 'Sport']","context":"","multiple":false}}
+2017-03-30 10:12:11:034 - info: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+2017-03-30 10:12:11:034 - info: [debug] [BOOTSTRAP] [debug] Got command action: find
+2017-03-30 10:12:11:034 - info: [debug] [BOOTSTRAP] [debug] Finding //*[@text = 'Sport'] using XPATH with the contextId:  multiple: false
+2017-03-30 10:12:11:789 - info: [debug] [BOOTSTRAP] [debug] Returning result: {"status":7,"value":"Could not find an element using supplied strategy. "}
+2017-03-30 10:12:11:790 - info: [debug] Waited for 3510ms so far
+2017-03-30 10:12:12:292 - info: [debug] Pushing command to appium work queue: ["find",{"strategy":"xpath","selector":"//*[@text = 'Sport']","context":"","multiple":false}]
+2017-03-30 10:12:12:300 - info: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"xpath","selector":"//*[@text = 'Sport']","context":"","multiple":false}}
+2017-03-30 10:12:12:301 - info: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+2017-03-30 10:12:12:301 - info: [debug] [BOOTSTRAP] [debug] Got command action: find
+2017-03-30 10:12:12:302 - info: [debug] [BOOTSTRAP] [debug] Finding //*[@text = 'Sport'] using XPATH with the contextId:  multiple: false
+2017-03-30 10:12:12:711 - info: [debug] [BOOTSTRAP] [debug] Using: UiSelector[CLASS=android.widget.TextView, INSTANCE=11]
+2017-03-30 10:12:13:205 - info: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":{"ELEMENT":"1"}}
+2017-03-30 10:12:13:206 - info: [debug] Responding to client with success: {"status":0,"value":{"ELEMENT":"1"},"sessionId":"6ff8b094-4f67-4ecc-a391-01b436923300"}
+2017-03-30 10:12:13:208 - info: <-- POST /wd/hub/session/6ff8b094-4f67-4ecc-a391-01b436923300/element 200 4928.035 ms - 87 {"status":0,"value":{"ELEMENT":"1"},"sessionId":"6ff8b094-4f67-4ecc-a391-01b436923300"}
+2017-03-30 10:12:13:231 - info: --> POST /wd/hub/session/6ff8b094-4f67-4ecc-a391-01b436923300/element/1/click {"id":"1"}
+2017-03-30 10:12:13:232 - info: [debug] Pushing command to appium work queue: ["element:click",{"elementId":"1"}]
+2017-03-30 10:12:13:235 - info: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"element:click","params":{"elementId":"1"}}
+2017-03-30 10:12:13:237 - info: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+2017-03-30 10:12:13:237 - info: [debug] [BOOTSTRAP] [debug] Got command action: click
+2017-03-30 10:12:13:420 - info: [debug] Responding to client with success: {"status":0,"value":true,"sessionId":"6ff8b094-4f67-4ecc-a391-01b436923300"}
+2017-03-30 10:12:13:421 - info: <-- POST /wd/hub/session/6ff8b094-4f67-4ecc-a391-01b436923300/element/1/click 200 189.442 ms - 76 {"status":0,"value":true,"sessionId":"6ff8b094-4f67-4ecc-a391-01b436923300"}
+2017-03-30 10:12:13:426 - info: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":true}
+2017-03-30 10:12:13:431 - info: --> POST /wd/hub/session/6ff8b094-4f67-4ecc-a391-01b436923300/element {"using":"xpath","value":"//*[@text = 'Computer']"}
+2017-03-30 10:12:13:432 - info: [debug] Waiting up to 10000ms for condition
+2017-03-30 10:12:13:432 - info: [debug] Pushing command to appium work queue: ["find",{"strategy":"xpath","selector":"//*[@text = 'Computer']","context":"","multiple":false}]
+2017-03-30 10:12:13:439 - info: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"xpath","selector":"//*[@text = 'Computer']","context":"","multiple":false}}
+2017-03-30 10:12:13:439 - info: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+2017-03-30 10:12:13:439 - info: [debug] [BOOTSTRAP] [debug] Got command action: find
+2017-03-30 10:12:13:440 - info: [debug] [BOOTSTRAP] [debug] Finding //*[@text = 'Computer'] using XPATH with the contextId:  multiple: false
+2017-03-30 10:12:13:510 - info: [debug] [BOOTSTRAP] [debug] Using: UiSelector[CLASS=android.widget.TextView, INSTANCE=13]
+2017-03-30 10:12:14:114 - info: [debug] Responding to client with success: {"status":0,"value":{"ELEMENT":"2"},"sessionId":"6ff8b094-4f67-4ecc-a391-01b436923300"}
+2017-03-30 10:12:14:115 - info: <-- POST /wd/hub/session/6ff8b094-4f67-4ecc-a391-01b436923300/element 200 684.003 ms - 87 {"status":0,"value":{"ELEMENT":"2"},"sessionId":"6ff8b094-4f67-4ecc-a391-01b436923300"}
+2017-03-30 10:12:14:116 - info: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":{"ELEMENT":"2"}}
+2017-03-30 10:12:14:120 - info: --> POST /wd/hub/session/6ff8b094-4f67-4ecc-a391-01b436923300/element/2/click {"id":"2"}
+2017-03-30 10:12:14:121 - info: [debug] Pushing command to appium work queue: ["element:click",{"elementId":"2"}]
+2017-03-30 10:12:14:124 - info: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"element:click","params":{"elementId":"2"}}
+2017-03-30 10:12:14:124 - info: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+2017-03-30 10:12:14:126 - info: [debug] [BOOTSTRAP] [debug] Got command action: click
+2017-03-30 10:12:14:292 - info: [debug] Responding to client with success: {"status":0,"value":true,"sessionId":"6ff8b094-4f67-4ecc-a391-01b436923300"}
+2017-03-30 10:12:14:293 - info: <-- POST /wd/hub/session/6ff8b094-4f67-4ecc-a391-01b436923300/element/2/click 200 173.449 ms - 76 {"status":0,"value":true,"sessionId":"6ff8b094-4f67-4ecc-a391-01b436923300"}
+2017-03-30 10:12:14:294 - info: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":true}
+2017-03-30 10:12:14:299 - info: --> POST /wd/hub/session/6ff8b094-4f67-4ecc-a391-01b436923300/element {"using":"xpath","value":"//*[@text = 'Meal Deals']"}
+2017-03-30 10:12:14:300 - info: [debug] Waiting up to 10000ms for condition
+2017-03-30 10:12:14:300 - info: [debug] Pushing command to appium work queue: ["find",{"strategy":"xpath","selector":"//*[@text = 'Meal Deals']","context":"","multiple":false}]
+2017-03-30 10:12:14:306 - info: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"xpath","selector":"//*[@text = 'Meal Deals']","context":"","multiple":false}}
+2017-03-30 10:12:14:307 - info: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+2017-03-30 10:12:14:307 - info: [debug] [BOOTSTRAP] [debug] Got command action: find
+2017-03-30 10:12:14:307 - info: [debug] [BOOTSTRAP] [debug] Finding //*[@text = 'Meal Deals'] using XPATH with the contextId:  multiple: false
+2017-03-30 10:12:14:381 - info: [debug] [BOOTSTRAP] [debug] Using: UiSelector[CLASS=android.widget.TextView, INSTANCE=8]
+2017-03-30 10:12:14:993 - info: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":{"ELEMENT":"3"}}
+2017-03-30 10:12:14:994 - info: [debug] Responding to client with success: {"status":0,"value":{"ELEMENT":"3"},"sessionId":"6ff8b094-4f67-4ecc-a391-01b436923300"}
+2017-03-30 10:12:14:996 - info: <-- POST /wd/hub/session/6ff8b094-4f67-4ecc-a391-01b436923300/element 200 696.547 ms - 87 {"status":0,"value":{"ELEMENT":"3"},"sessionId":"6ff8b094-4f67-4ecc-a391-01b436923300"}
+2017-03-30 10:12:15:004 - info: --> POST /wd/hub/session/6ff8b094-4f67-4ecc-a391-01b436923300/element/3/click {"id":"3"}
+2017-03-30 10:12:15:005 - info: [debug] Pushing command to appium work queue: ["element:click",{"elementId":"3"}]
+2017-03-30 10:12:15:009 - info: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"element:click","params":{"elementId":"3"}}
+2017-03-30 10:12:15:009 - info: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+2017-03-30 10:12:15:009 - info: [debug] [BOOTSTRAP] [debug] Got command action: click
+2017-03-30 10:12:15:185 - info: [debug] Responding to client with success: {"status":0,"value":true,"sessionId":"6ff8b094-4f67-4ecc-a391-01b436923300"}
+2017-03-30 10:12:15:188 - info: <-- POST /wd/hub/session/6ff8b094-4f67-4ecc-a391-01b436923300/element/3/click 200 183.447 ms - 76 {"status":0,"value":true,"sessionId":"6ff8b094-4f67-4ecc-a391-01b436923300"}
+2017-03-30 10:12:15:189 - info: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":true}
+2017-03-30 10:12:15:198 - info: --> POST /wd/hub/session/6ff8b094-4f67-4ecc-a391-01b436923300/element {"using":"xpath","value":"//*[@text = 'Next']"}
+2017-03-30 10:12:15:199 - info: [debug] Waiting up to 10000ms for condition
+2017-03-30 10:12:15:199 - info: [debug] Pushing command to appium work queue: ["find",{"strategy":"xpath","selector":"//*[@text = 'Next']","context":"","multiple":false}]
+2017-03-30 10:12:15:206 - info: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"xpath","selector":"//*[@text = 'Next']","context":"","multiple":false}}
+2017-03-30 10:12:15:206 - info: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+2017-03-30 10:12:15:206 - info: [debug] [BOOTSTRAP] [debug] Got command action: find
+2017-03-30 10:12:15:207 - info: [debug] [BOOTSTRAP] [debug] Finding //*[@text = 'Next'] using XPATH with the contextId:  multiple: false
+2017-03-30 10:12:15:279 - info: [debug] [BOOTSTRAP] [debug] Using: UiSelector[CLASS=android.widget.TextView, INSTANCE=15]
+2017-03-30 10:12:15:922 - info: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":{"ELEMENT":"4"}}
+2017-03-30 10:12:15:923 - info: [debug] Responding to client with success: {"status":0,"value":{"ELEMENT":"4"},"sessionId":"6ff8b094-4f67-4ecc-a391-01b436923300"}
+2017-03-30 10:12:15:923 - info: <-- POST /wd/hub/session/6ff8b094-4f67-4ecc-a391-01b436923300/element 200 726.053 ms - 87 {"status":0,"value":{"ELEMENT":"4"},"sessionId":"6ff8b094-4f67-4ecc-a391-01b436923300"}
+2017-03-30 10:12:15:927 - info: --> POST /wd/hub/session/6ff8b094-4f67-4ecc-a391-01b436923300/element/4/click {"id":"4"}
+2017-03-30 10:12:15:927 - info: [debug] Pushing command to appium work queue: ["element:click",{"elementId":"4"}]
+2017-03-30 10:12:15:930 - info: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"element:click","params":{"elementId":"4"}}
+2017-03-30 10:12:15:931 - info: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+2017-03-30 10:12:15:931 - info: [debug] [BOOTSTRAP] [debug] Got command action: click
+2017-03-30 10:12:16:206 - info: [debug] Responding to client with success: {"status":0,"value":true,"sessionId":"6ff8b094-4f67-4ecc-a391-01b436923300"}
+2017-03-30 10:12:16:207 - info: <-- POST /wd/hub/session/6ff8b094-4f67-4ecc-a391-01b436923300/element/4/click 200 279.542 ms - 76 {"status":0,"value":true,"sessionId":"6ff8b094-4f67-4ecc-a391-01b436923300"}
+2017-03-30 10:12:16:208 - info: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":true}
+2017-03-30 10:12:18:218 - info: --> POST /wd/hub/session/6ff8b094-4f67-4ecc-a391-01b436923300/element {"using":"xpath","value":"//*[@text = 'Automotive']"}
+2017-03-30 10:12:18:219 - info: [debug] Waiting up to 10000ms for condition
+2017-03-30 10:12:18:220 - info: [debug] Pushing command to appium work queue: ["find",{"strategy":"xpath","selector":"//*[@text = 'Automotive']","context":"","multiple":false}]
+2017-03-30 10:12:18:228 - info: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"xpath","selector":"//*[@text = 'Automotive']","context":"","multiple":false}}
+2017-03-30 10:12:18:229 - info: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+2017-03-30 10:12:18:229 - info: [debug] [BOOTSTRAP] [debug] Got command action: find
+2017-03-30 10:12:18:230 - info: [debug] [BOOTSTRAP] [debug] Finding //*[@text = 'Automotive'] using XPATH with the contextId:  multiple: false
+2017-03-30 10:12:18:336 - info: [debug] [BOOTSTRAP] [debug] Using: UiSelector[CLASS=android.widget.TextView, INSTANCE=11]
+2017-03-30 10:12:18:357 - info: [debug] Responding to client with success: {"status":0,"value":{"ELEMENT":"5"},"sessionId":"6ff8b094-4f67-4ecc-a391-01b436923300"}
+2017-03-30 10:12:18:358 - info: <-- POST /wd/hub/session/6ff8b094-4f67-4ecc-a391-01b436923300/element 200 140.814 ms - 87 {"status":0,"value":{"ELEMENT":"5"},"sessionId":"6ff8b094-4f67-4ecc-a391-01b436923300"}
+2017-03-30 10:12:18:359 - info: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":{"ELEMENT":"5"}}
+2017-03-30 10:12:18:364 - info: --> POST /wd/hub/session/6ff8b094-4f67-4ecc-a391-01b436923300/element/5/click {"id":"5"}
+2017-03-30 10:12:18:365 - info: [debug] Pushing command to appium work queue: ["element:click",{"elementId":"5"}]
+2017-03-30 10:12:18:368 - info: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"element:click","params":{"elementId":"5"}}
+2017-03-30 10:12:18:369 - info: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+2017-03-30 10:12:18:369 - info: [debug] [BOOTSTRAP] [debug] Got command action: click
+2017-03-30 10:12:18:522 - info: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":true}
+2017-03-30 10:12:18:522 - info: [debug] Responding to client with success: {"status":0,"value":true,"sessionId":"6ff8b094-4f67-4ecc-a391-01b436923300"}
+2017-03-30 10:12:18:524 - info: <-- POST /wd/hub/session/6ff8b094-4f67-4ecc-a391-01b436923300/element/5/click 200 159.243 ms - 76 {"status":0,"value":true,"sessionId":"6ff8b094-4f67-4ecc-a391-01b436923300"}
+2017-03-30 10:12:18:528 - info: --> POST /wd/hub/session/6ff8b094-4f67-4ecc-a391-01b436923300/element {"using":"xpath","value":"//*[@text = 'Architecture']"}
+2017-03-30 10:12:18:529 - info: [debug] Waiting up to 10000ms for condition
+2017-03-30 10:12:18:530 - info: [debug] Pushing command to appium work queue: ["find",{"strategy":"xpath","selector":"//*[@text = 'Architecture']","context":"","multiple":false}]
+2017-03-30 10:12:18:539 - info: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"xpath","selector":"//*[@text = 'Architecture']","context":"","multiple":false}}
+2017-03-30 10:12:18:540 - info: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+2017-03-30 10:12:18:540 - info: [debug] [BOOTSTRAP] [debug] Got command action: find
+2017-03-30 10:12:18:540 - info: [debug] [BOOTSTRAP] [debug] Finding //*[@text = 'Architecture'] using XPATH with the contextId:  multiple: false
+2017-03-30 10:12:18:654 - info: [debug] [BOOTSTRAP] [debug] Using: UiSelector[CLASS=android.widget.TextView, INSTANCE=9]
+2017-03-30 10:12:19:246 - info: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":{"ELEMENT":"6"}}
+2017-03-30 10:12:19:246 - info: [debug] Responding to client with success: {"status":0,"value":{"ELEMENT":"6"},"sessionId":"6ff8b094-4f67-4ecc-a391-01b436923300"}
+2017-03-30 10:12:19:247 - info: <-- POST /wd/hub/session/6ff8b094-4f67-4ecc-a391-01b436923300/element 200 718.991 ms - 87 {"status":0,"value":{"ELEMENT":"6"},"sessionId":"6ff8b094-4f67-4ecc-a391-01b436923300"}
+2017-03-30 10:12:19:252 - info: --> POST /wd/hub/session/6ff8b094-4f67-4ecc-a391-01b436923300/element/6/click {"id":"6"}
+2017-03-30 10:12:19:253 - info: [debug] Pushing command to appium work queue: ["element:click",{"elementId":"6"}]
+2017-03-30 10:12:19:256 - info: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"element:click","params":{"elementId":"6"}}
+2017-03-30 10:12:19:256 - info: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+2017-03-30 10:12:19:257 - info: [debug] [BOOTSTRAP] [debug] Got command action: click
+2017-03-30 10:12:19:446 - info: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":true}
+2017-03-30 10:12:19:447 - info: [debug] Responding to client with success: {"status":0,"value":true,"sessionId":"6ff8b094-4f67-4ecc-a391-01b436923300"}
+2017-03-30 10:12:19:448 - info: <-- POST /wd/hub/session/6ff8b094-4f67-4ecc-a391-01b436923300/element/6/click 200 196.754 ms - 76 {"status":0,"value":true,"sessionId":"6ff8b094-4f67-4ecc-a391-01b436923300"}
+2017-03-30 10:12:19:460 - info: --> POST /wd/hub/session/6ff8b094-4f67-4ecc-a391-01b436923300/element {"using":"xpath","value":"//*[@text = 'Banking']"}
+2017-03-30 10:12:19:461 - info: [debug] Waiting up to 10000ms for condition
+2017-03-30 10:12:19:462 - info: [debug] Pushing command to appium work queue: ["find",{"strategy":"xpath","selector":"//*[@text = 'Banking']","context":"","multiple":false}]
+2017-03-30 10:12:19:469 - info: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"xpath","selector":"//*[@text = 'Banking']","context":"","multiple":false}}
+2017-03-30 10:12:19:470 - info: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+2017-03-30 10:12:19:470 - info: [debug] [BOOTSTRAP] [debug] Got command action: find
+2017-03-30 10:12:19:470 - info: [debug] [BOOTSTRAP] [debug] Finding //*[@text = 'Banking'] using XPATH with the contextId:  multiple: false
+2017-03-30 10:12:19:575 - info: [debug] [BOOTSTRAP] [debug] Using: UiSelector[CLASS=android.widget.TextView, INSTANCE=2]
+2017-03-30 10:12:19:954 - info: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":{"ELEMENT":"7"}}
+2017-03-30 10:12:19:956 - info: [debug] Responding to client with success: {"status":0,"value":{"ELEMENT":"7"},"sessionId":"6ff8b094-4f67-4ecc-a391-01b436923300"}
+2017-03-30 10:12:19:961 - info: <-- POST /wd/hub/session/6ff8b094-4f67-4ecc-a391-01b436923300/element 200 497.556 ms - 87 {"status":0,"value":{"ELEMENT":"7"},"sessionId":"6ff8b094-4f67-4ecc-a391-01b436923300"}
+2017-03-30 10:12:19:970 - info: --> POST /wd/hub/session/6ff8b094-4f67-4ecc-a391-01b436923300/element/7/click {"id":"7"}
+2017-03-30 10:12:19:971 - info: [debug] Pushing command to appium work queue: ["element:click",{"elementId":"7"}]
+2017-03-30 10:12:19:975 - info: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"element:click","params":{"elementId":"7"}}
+2017-03-30 10:12:19:976 - info: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+2017-03-30 10:12:19:976 - info: [debug] [BOOTSTRAP] [debug] Got command action: click
+2017-03-30 10:12:20:169 - info: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":true}
+2017-03-30 10:12:20:170 - info: [debug] Responding to client with success: {"status":0,"value":true,"sessionId":"6ff8b094-4f67-4ecc-a391-01b436923300"}
+2017-03-30 10:12:20:171 - info: <-- POST /wd/hub/session/6ff8b094-4f67-4ecc-a391-01b436923300/element/7/click 200 201.698 ms - 76 {"status":0,"value":true,"sessionId":"6ff8b094-4f67-4ecc-a391-01b436923300"}
+2017-03-30 10:12:20:176 - info: --> POST /wd/hub/session/6ff8b094-4f67-4ecc-a391-01b436923300/element {"using":"xpath","value":"//*[@text = 'Done']"}
+2017-03-30 10:12:20:177 - info: [debug] Waiting up to 10000ms for condition
+2017-03-30 10:12:20:177 - info: [debug] Pushing command to appium work queue: ["find",{"strategy":"xpath","selector":"//*[@text = 'Done']","context":"","multiple":false}]
+2017-03-30 10:12:20:185 - info: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"xpath","selector":"//*[@text = 'Done']","context":"","multiple":false}}
+2017-03-30 10:12:20:186 - info: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+2017-03-30 10:12:20:186 - info: [debug] [BOOTSTRAP] [debug] Got command action: find
+2017-03-30 10:12:20:186 - info: [debug] [BOOTSTRAP] [debug] Finding //*[@text = 'Done'] using XPATH with the contextId:  multiple: false
+2017-03-30 10:12:20:279 - info: [debug] [BOOTSTRAP] [debug] Using: UiSelector[CLASS=android.widget.TextView, INSTANCE=14]
+2017-03-30 10:12:20:707 - info: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":{"ELEMENT":"8"}}
+2017-03-30 10:12:20:710 - info: [debug] Responding to client with success: {"status":0,"value":{"ELEMENT":"8"},"sessionId":"6ff8b094-4f67-4ecc-a391-01b436923300"}
+2017-03-30 10:12:20:711 - info: <-- POST /wd/hub/session/6ff8b094-4f67-4ecc-a391-01b436923300/element 200 535.129 ms - 87 {"status":0,"value":{"ELEMENT":"8"},"sessionId":"6ff8b094-4f67-4ecc-a391-01b436923300"}
+2017-03-30 10:12:20:720 - info: --> POST /wd/hub/session/6ff8b094-4f67-4ecc-a391-01b436923300/element/8/click {"id":"8"}
+2017-03-30 10:12:20:723 - info: [debug] Pushing command to appium work queue: ["element:click",{"elementId":"8"}]
+2017-03-30 10:12:20:728 - info: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"element:click","params":{"elementId":"8"}}
+2017-03-30 10:12:20:729 - info: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+2017-03-30 10:12:20:729 - info: [debug] [BOOTSTRAP] [debug] Got command action: click
+2017-03-30 10:12:23:263 - info: [debug] Responding to client with success: {"status":0,"value":true,"sessionId":"6ff8b094-4f67-4ecc-a391-01b436923300"}
+2017-03-30 10:12:23:264 - info: <-- POST /wd/hub/session/6ff8b094-4f67-4ecc-a391-01b436923300/element/8/click 200 2544.516 ms - 76 {"status":0,"value":true,"sessionId":"6ff8b094-4f67-4ecc-a391-01b436923300"}
+2017-03-30 10:12:23:265 - info: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":true}
+2017-03-30 10:12:49:773 - info: --> POST /wd/hub/session/6ff8b094-4f67-4ecc-a391-01b436923300/appium/app/close {}
+2017-03-30 10:12:49:777 - info: [debug] Removing app from device
+2017-03-30 10:12:49:777 - info: [debug] Not uninstalling app since server not started with --full-reset
+2017-03-30 10:12:49:777 - info: [debug] Pressing the HOME button
+2017-03-30 10:12:49:778 - info: [debug] executing cmd: "E:\Mediastep Automation\SDK\platform-tools\adb.exe" -s K153XB1X6B251487 shell "input keyevent 3"
+2017-03-30 10:12:51:356 - info: [debug] Stopping logcat capture
+2017-03-30 10:12:51:361 - info: [debug] Logcat terminated with code null, signal SIGTERM
+2017-03-30 10:12:51:367 - info: [debug] Sent shutdown command, waiting for UiAutomator to stop...
+2017-03-30 10:12:51:369 - info: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"shutdown"}
+2017-03-30 10:12:51:369 - info: [debug] [BOOTSTRAP] [debug] Got command of type SHUTDOWN
+2017-03-30 10:12:51:369 - info: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":"OK, shutting down"}
+2017-03-30 10:12:51:369 - info: [debug] [UIAUTOMATOR STDOUT] close [socket][/127.0.0.1:4724]
+2017-03-30 10:12:51:369 - info: [debug] [BOOTSTRAP] [debug] Closed client connection
+2017-03-30 10:12:51:369 - info: [debug] [UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: numtests=1
+2017-03-30 10:12:51:370 - info: [debug] [UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: stream=.
+2017-03-30 10:12:51:370 - info: [debug] [UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: id=UiAutomatorTestRunner
+2017-03-30 10:12:51:370 - info: [debug] [UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: test=testRunServer
+2017-03-30 10:12:51:370 - info: [debug] [UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: class=io.appium.android.bootstrap.Bootstrap
+2017-03-30 10:12:51:370 - info: [debug] [UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: current=1
+2017-03-30 10:12:51:371 - info: [debug] [UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS_CODE: 0
+2017-03-30 10:12:51:371 - info: [debug] [UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: stream=
+2017-03-30 10:12:51:371 - info: [debug] [UIAUTOMATOR STDOUT] Test results for WatcherResultPrinter=.
+2017-03-30 10:12:51:372 - info: [debug] [UIAUTOMATOR STDOUT] Time: 48.479
+2017-03-30 10:12:51:372 - info: [debug] [UIAUTOMATOR STDOUT] OK (1 test)
+2017-03-30 10:12:51:372 - info: [debug] [UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS_CODE: -1
+2017-03-30 10:12:51:406 - info: [debug] UiAutomator shut down normally
+2017-03-30 10:12:51:406 - info: [debug] Cleaning up android objects
+2017-03-30 10:12:51:406 - info: [debug] Responding to client with success: {"status":0,"value":"Successfully closed the [D:\\Projects\\beecow-QAAutomation\\Beecow.apk] app.","sessionId":"6ff8b094-4f67-4ecc-a391-01b436923300"}
+2017-03-30 10:12:51:408 - info: <-- POST /wd/hub/session/6ff8b094-4f67-4ecc-a391-01b436923300/appium/app/close 200 1635.281 ms - 150 {"status":0,"value":"Successfully closed the [D:\\Projects\\beecow-QAAutomation\\Beecow.apk] app.","sessionId":"6ff8b094-4f67-4ecc-a391-01b436923300"}
+2017-03-30 10:12:51:412 - info: --> DELETE /wd/hub/session/6ff8b094-4f67-4ecc-a391-01b436923300 {}
+2017-03-30 10:12:51:412 - info: Shutting down appium session
+2017-03-30 10:12:51:412 - info: [debug] Removing app from device
+2017-03-30 10:12:51:412 - info: [debug] Not uninstalling app since server not started with --full-reset
+2017-03-30 10:12:51:412 - info: [debug] Cleaning up android objects
+2017-03-30 10:12:51:413 - info: [debug] Cleaning up appium session
+2017-03-30 10:12:51:413 - info: [debug] Responding to client with success: {"status":0,"value":null,"sessionId":"6ff8b094-4f67-4ecc-a391-01b436923300"}
+2017-03-30 10:12:51:414 - info: <-- DELETE /wd/hub/session/6ff8b094-4f67-4ecc-a391-01b436923300 200 2.150 ms - 76 {"status":0,"value":null,"sessionId":"6ff8b094-4f67-4ecc-a391-01b436923300"}
