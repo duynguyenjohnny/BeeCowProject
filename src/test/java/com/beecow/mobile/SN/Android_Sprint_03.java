@@ -1,20 +1,15 @@
 package com.beecow.mobile.SN;
 
 import com.beecow.component.BaseTest;
-import com.beecow.utils.APIData;
-import com.beecow.utils.APIUtil;
 import com.beecow.screen.ActivityFirstScreen;
 import com.beecow.screen.ActivitySecondScreen;
 import com.beecow.screen.HomeScreen;
 import com.beecow.screen.MarketScreen;
-import com.beecow.utils.*;
-
-import io.appium.java_client.MobileElement;
-import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.ios.IOSElement;
+import com.beecow.utils.APIData;
+import com.beecow.utils.APIUtil;
+import com.beecow.utils.SwipeFunctions;
+import com.beecow.utils.TestLink;
 import org.json.simple.JSONObject;
-
-import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -22,13 +17,11 @@ import testlink.api.java.client.TestLinkAPIException;
 import testlink.api.java.client.TestLinkAPIResults;
 
 import java.io.File;
-import java.math.BigInteger;
-
 
 import static com.beecow.utils.Helper.addLog;
 
 
-public class Android_Sprint_02 extends BaseTest {
+public class Android_Sprint_03 extends BaseTest {
 
     String className = this.getClass().getSimpleName();
     private ActivityFirstScreen firstScreen;
@@ -57,36 +50,32 @@ public class Android_Sprint_02 extends BaseTest {
 
     /*
 
-     Home - Status: pure text
-     AND_SN_TC_12 Verify color dot appears and displays orange color
-     AND_SN_TC_13 Verify upload time notification should appear and display "Just now"
-     AND_SN_TC_14 Verify upload time notification should appear and display "1 min" to "59 mins"
-     AND_SN_TC_15 Verify upload time notification should appear and display "1 hr" to "24 hrs"
-     AND_SN_TC_16 Verify upload time notification should appear and display "Yesterday at hh:mm"
-     AND_SN_TC_17 Verify upload time notification should appear and display"x d"
-     AND_SN_TC_18 Verify upload time notification should appear and display "Mmm dd"
-     AND_SN_TC_19 Verify upload time notification should appear and display as "Mmm dd, yyyy" for last year backwards
-     AND_SN_TC_20 Verify input texts below 5 rows
-     AND_SN_TC_21 Verify input texts within 5 to 15 rows
-     AND_SN_TC_22 Verify input texts more than 15 rows
-     AND_SN_TC_23 Verify mention friend feature on posting status
-     AND_SN_TC_24 Verify mention shop feature on posting status
-     AND_SN_TC_25 Verify mention company feature on posting status
-     AND_SN_TC_26 Verify Uploader should be shown
-     AND_SN_TC_27 Verify length name of Uploader
+     Home - Photo's gestures
+     AND_SN_TC_34:Verify touch a photo to enter full screen mode - single photo posting
+     AND_SN_TC_35:Verify actions in full screen mode - single photo posting
+     AND_SN_TC_36:Verify touch a photo to enter full screen mode - multiple photos posting
+     AND_SN_TC_37:Verify actions in full screen mode - multiple photos posting
 
-     Home-Status: Photo + Text
-     AND_SN_TC_28:Verify posting 1 photo and texts
-     AND_SN_TC_29:Verify posting 2 photo and texts
-     AND_SN_TC_30:Verify posting 3 photo and texts
-     AND_SN_TC_31:Verify posting 4 photo and texts
-     AND_SN_TC_32:Verify posting more than 4 photos and texts
-     AND_SN_TC_33:Verify posting cannot over 30 photos
+     Home - Status: link and text
+     AND_SN_TC_38:Verify displaying of link and test - Link has thumbnail photo
+     AND_SN_TC_39:Verify displaying of link and test - Link has no thumbnail photo
+     AND_SN_TC_40:Verify displaying of link and test - more than 1 Link
+
+     Home - Status: Photos and link and text
+     AND_SN_TC_41:Verify posting single photo and link and texts
+     AND_SN_TC_42:Verify posting multi photos and link and texts
+
+     Home - Selling: Selling product by shop
+     AND_SN_TC_43:Verify selling product by shop on posting - Product with discount
+     AND_SN_TC_44:Verify selling product by shop on posting - Product without discount
+
+     Home - Selling: Selling product by user
+     AND_SN_TC_45:Verify selling product by user on posting
 
      */
     @Test
-    public void AND_SN_TC_12() throws Exception, TestLinkAPIException {
-        addLog("AND_SN_TC_12 Verify color dot appears and displays orange color");
+    public void AND_SN_TC_34() throws Exception, TestLinkAPIException {
+        addLog("AND_SN_TC_34:Verify touch a photo to enter full screen mode - single photo posting");
         String sMethodName = new Object() {
         }.getClass().getEnclosingMethod().getName();
         try {
@@ -118,14 +107,14 @@ public class Android_Sprint_02 extends BaseTest {
         } catch (AssertionError ex) {
             //Test failed
             getHelper().takeScreenshot("SN", className, "Failed_", sMethodName);
-            System.out.println("Current working dir: " + new File(Android_Sprint_02.class.getProtectionDomain().getCodeSource().getLocation().getPath()));
+            System.out.println("Current working dir: " + new File(Android_Sprint_03.class.getProtectionDomain().getCodeSource().getLocation().getPath()));
             TestLink.updateResult(Testlink_ProjectName, Testlink_TestPlanName, "AND_SN_TC-12", Testlink_BuildName, null, TestLinkAPIResults.TEST_FAILED);
             ex.printStackTrace();
             throw new AssertionError("Failed: " + ex.getMessage());
         } catch (Exception ex){
             //Test failed
             getHelper().takeScreenshot("SN", className, "Failed_", sMethodName);
-            System.out.println("Current working dir: " + new File(Android_Sprint_02.class.getProtectionDomain().getCodeSource().getLocation().getPath()));
+            System.out.println("Current working dir: " + new File(Android_Sprint_03.class.getProtectionDomain().getCodeSource().getLocation().getPath()));
             TestLink.updateResult(Testlink_ProjectName, Testlink_TestPlanName, "AND_SN_TC-12", Testlink_BuildName, null, TestLinkAPIResults.TEST_FAILED);
             ex.printStackTrace();
             throw new Exception("Failed: " + ex.getMessage());
@@ -149,14 +138,14 @@ public class Android_Sprint_02 extends BaseTest {
         } catch (AssertionError ex) {
             //Test failed
             getHelper().takeScreenshot("SN", className, "Failed_", sMethodName);
-            System.out.println("Current working dir: " + new File(Android_Sprint_02.class.getProtectionDomain().getCodeSource().getLocation().getPath()));
+            System.out.println("Current working dir: " + new File(Android_Sprint_03.class.getProtectionDomain().getCodeSource().getLocation().getPath()));
             TestLink.updateResult(Testlink_ProjectName, Testlink_TestPlanName, "AND_SN_TC-13", Testlink_BuildName, null, TestLinkAPIResults.TEST_FAILED);
             ex.printStackTrace();
             throw new AssertionError("Failed: " + ex.getMessage());
         } catch (Exception ex){
             //Test failed
             getHelper().takeScreenshot("SN", className, "Failed_", sMethodName);
-            System.out.println("Current working dir: " + new File(Android_Sprint_02.class.getProtectionDomain().getCodeSource().getLocation().getPath()));
+            System.out.println("Current working dir: " + new File(Android_Sprint_03.class.getProtectionDomain().getCodeSource().getLocation().getPath()));
             TestLink.updateResult(Testlink_ProjectName, Testlink_TestPlanName, "AND_SN_TC-13", Testlink_BuildName, null, TestLinkAPIResults.TEST_FAILED);
             ex.printStackTrace();
             throw new Exception("Failed: " + ex.getMessage());
@@ -210,14 +199,14 @@ public class Android_Sprint_02 extends BaseTest {
         } catch (AssertionError ex) {
             //Test failed
             getHelper().takeScreenshot("SN", className, "Failed_", sMethodName);
-            System.out.println("Current working dir: " + new File(Android_Sprint_02.class.getProtectionDomain().getCodeSource().getLocation().getPath()));
+            System.out.println("Current working dir: " + new File(Android_Sprint_03.class.getProtectionDomain().getCodeSource().getLocation().getPath()));
             TestLink.updateResult(Testlink_ProjectName, Testlink_TestPlanName, "AND_SN_TC-14", Testlink_BuildName, null, TestLinkAPIResults.TEST_FAILED);
             ex.printStackTrace();
             throw new AssertionError("Failed: " + ex.getMessage());
         } catch (Exception ex){
             //Test failed
             getHelper().takeScreenshot("SN", className, "Failed_", sMethodName);
-            System.out.println("Current working dir: " + new File(Android_Sprint_02.class.getProtectionDomain().getCodeSource().getLocation().getPath()));
+            System.out.println("Current working dir: " + new File(Android_Sprint_03.class.getProtectionDomain().getCodeSource().getLocation().getPath()));
             TestLink.updateResult(Testlink_ProjectName, Testlink_TestPlanName, "AND_SN_TC-14", Testlink_BuildName, null, TestLinkAPIResults.TEST_FAILED);
             ex.printStackTrace();
             throw new Exception("Failed: " + ex.getMessage());
@@ -296,14 +285,14 @@ public class Android_Sprint_02 extends BaseTest {
         } catch (AssertionError ex) {
             //Test failed
             getHelper().takeScreenshot("SN", className, "Failed_", sMethodName);
-            System.out.println("Current working dir: " + new File(Android_Sprint_02.class.getProtectionDomain().getCodeSource().getLocation().getPath()));
+            System.out.println("Current working dir: " + new File(Android_Sprint_03.class.getProtectionDomain().getCodeSource().getLocation().getPath()));
             TestLink.updateResult(Testlink_ProjectName, Testlink_TestPlanName, "AND_SN_TC-15", Testlink_BuildName, null, TestLinkAPIResults.TEST_FAILED);
             ex.printStackTrace();
             throw new AssertionError("Failed: " + ex.getMessage());
         } catch (Exception ex){
             //Test failed
             getHelper().takeScreenshot("SN", className, "Failed_", sMethodName);
-            System.out.println("Current working dir: " + new File(Android_Sprint_02.class.getProtectionDomain().getCodeSource().getLocation().getPath()));
+            System.out.println("Current working dir: " + new File(Android_Sprint_03.class.getProtectionDomain().getCodeSource().getLocation().getPath()));
             TestLink.updateResult(Testlink_ProjectName, Testlink_TestPlanName, "AND_SN_TC-15", Testlink_BuildName, null, TestLinkAPIResults.TEST_FAILED);
             ex.printStackTrace();
             throw new Exception("Failed: " + ex.getMessage());
@@ -327,14 +316,14 @@ public class Android_Sprint_02 extends BaseTest {
         } catch (AssertionError ex) {
             //Test failed
             getHelper().takeScreenshot("SN", className, "Failed_", sMethodName);
-            System.out.println("Current working dir: " + new File(Android_Sprint_02.class.getProtectionDomain().getCodeSource().getLocation().getPath()));
+            System.out.println("Current working dir: " + new File(Android_Sprint_03.class.getProtectionDomain().getCodeSource().getLocation().getPath()));
             TestLink.updateResult(Testlink_ProjectName, Testlink_TestPlanName, "AND_SN_TC-16", Testlink_BuildName, null, TestLinkAPIResults.TEST_FAILED);
             ex.printStackTrace();
             throw new AssertionError("Failed: " + ex.getMessage());
         } catch (Exception ex){
             //Test failed
             getHelper().takeScreenshot("SN", className, "Failed_", sMethodName);
-            System.out.println("Current working dir: " + new File(Android_Sprint_02.class.getProtectionDomain().getCodeSource().getLocation().getPath()));
+            System.out.println("Current working dir: " + new File(Android_Sprint_03.class.getProtectionDomain().getCodeSource().getLocation().getPath()));
             TestLink.updateResult(Testlink_ProjectName, Testlink_TestPlanName, "AND_SN_TC-16", Testlink_BuildName, null, TestLinkAPIResults.TEST_FAILED);
             ex.printStackTrace();
             throw new Exception("Failed: " + ex.getMessage());
@@ -380,14 +369,14 @@ public class Android_Sprint_02 extends BaseTest {
         } catch (AssertionError ex) {
             //Test failed
             getHelper().takeScreenshot("SN", className, "Failed_", sMethodName);
-            System.out.println("Current working dir: " + new File(Android_Sprint_02.class.getProtectionDomain().getCodeSource().getLocation().getPath()));
+            System.out.println("Current working dir: " + new File(Android_Sprint_03.class.getProtectionDomain().getCodeSource().getLocation().getPath()));
             TestLink.updateResult(Testlink_ProjectName, Testlink_TestPlanName, "AND_SN_TC-17", Testlink_BuildName, null, TestLinkAPIResults.TEST_FAILED);
             ex.printStackTrace();
             throw new AssertionError("Failed: " + ex.getMessage());
         } catch (Exception ex){
             //Test failed
             getHelper().takeScreenshot("SN", className, "Failed_", sMethodName);
-            System.out.println("Current working dir: " + new File(Android_Sprint_02.class.getProtectionDomain().getCodeSource().getLocation().getPath()));
+            System.out.println("Current working dir: " + new File(Android_Sprint_03.class.getProtectionDomain().getCodeSource().getLocation().getPath()));
             TestLink.updateResult(Testlink_ProjectName, Testlink_TestPlanName, "AND_SN_TC-17", Testlink_BuildName, null, TestLinkAPIResults.TEST_FAILED);
             ex.printStackTrace();
             throw new Exception("Failed: " + ex.getMessage());
@@ -434,14 +423,14 @@ public class Android_Sprint_02 extends BaseTest {
         } catch (AssertionError ex) {
             //Test failed
             getHelper().takeScreenshot("SN", className, "Failed_", sMethodName);
-            System.out.println("Current working dir: " + new File(Android_Sprint_02.class.getProtectionDomain().getCodeSource().getLocation().getPath()));
+            System.out.println("Current working dir: " + new File(Android_Sprint_03.class.getProtectionDomain().getCodeSource().getLocation().getPath()));
             TestLink.updateResult(Testlink_ProjectName, Testlink_TestPlanName, "AND_SN_TC-18", Testlink_BuildName, null, TestLinkAPIResults.TEST_FAILED);
             ex.printStackTrace();
             throw new AssertionError("Failed: " + ex.getMessage());
         } catch (Exception ex){
             //Test failed
             getHelper().takeScreenshot("SN", className, "Failed_", sMethodName);
-            System.out.println("Current working dir: " + new File(Android_Sprint_02.class.getProtectionDomain().getCodeSource().getLocation().getPath()));
+            System.out.println("Current working dir: " + new File(Android_Sprint_03.class.getProtectionDomain().getCodeSource().getLocation().getPath()));
             TestLink.updateResult(Testlink_ProjectName, Testlink_TestPlanName, "AND_SN_TC-18", Testlink_BuildName, null, TestLinkAPIResults.TEST_FAILED);
             ex.printStackTrace();
             throw new Exception("Failed: " + ex.getMessage());
@@ -491,14 +480,14 @@ public class Android_Sprint_02 extends BaseTest {
         } catch (AssertionError ex) {
             //Test failed
             getHelper().takeScreenshot("SN", className, "Failed_", sMethodName);
-            System.out.println("Current working dir: " + new File(Android_Sprint_02.class.getProtectionDomain().getCodeSource().getLocation().getPath()));
+            System.out.println("Current working dir: " + new File(Android_Sprint_03.class.getProtectionDomain().getCodeSource().getLocation().getPath()));
             TestLink.updateResult(Testlink_ProjectName, Testlink_TestPlanName, "AND_SN_TC-19", Testlink_BuildName, null, TestLinkAPIResults.TEST_FAILED);
             ex.printStackTrace();
             throw new AssertionError("Failed: " + ex.getMessage());
         } catch (Exception ex){
             //Test failed
             getHelper().takeScreenshot("SN", className, "Failed_", sMethodName);
-            System.out.println("Current working dir: " + new File(Android_Sprint_02.class.getProtectionDomain().getCodeSource().getLocation().getPath()));
+            System.out.println("Current working dir: " + new File(Android_Sprint_03.class.getProtectionDomain().getCodeSource().getLocation().getPath()));
             TestLink.updateResult(Testlink_ProjectName, Testlink_TestPlanName, "AND_SN_TC-19", Testlink_BuildName, null, TestLinkAPIResults.TEST_FAILED);
             ex.printStackTrace();
             throw new Exception("Failed: " + ex.getMessage());
@@ -535,14 +524,14 @@ public class Android_Sprint_02 extends BaseTest {
         } catch (AssertionError ex) {
             //Test failed
             getHelper().takeScreenshot("SN", className, "Failed_", sMethodName);
-            System.out.println("Current working dir: " + new File(Android_Sprint_02.class.getProtectionDomain().getCodeSource().getLocation().getPath()));
+            System.out.println("Current working dir: " + new File(Android_Sprint_03.class.getProtectionDomain().getCodeSource().getLocation().getPath()));
             TestLink.updateResult(Testlink_ProjectName, Testlink_TestPlanName, "AND_SN_TC-20", Testlink_BuildName, null, TestLinkAPIResults.TEST_FAILED);
             ex.printStackTrace();
             throw new AssertionError("Failed: " + ex.getMessage());
         } catch (Exception ex){
             //Test failed
             getHelper().takeScreenshot("SN", className, "Failed_", sMethodName);
-            System.out.println("Current working dir: " + new File(Android_Sprint_02.class.getProtectionDomain().getCodeSource().getLocation().getPath()));
+            System.out.println("Current working dir: " + new File(Android_Sprint_03.class.getProtectionDomain().getCodeSource().getLocation().getPath()));
             TestLink.updateResult(Testlink_ProjectName, Testlink_TestPlanName, "AND_SN_TC-20", Testlink_BuildName, null, TestLinkAPIResults.TEST_FAILED);
             ex.printStackTrace();
             throw new Exception("Failed: " + ex.getMessage());
@@ -580,14 +569,14 @@ public class Android_Sprint_02 extends BaseTest {
         } catch (AssertionError ex) {
             //Test failed
             getHelper().takeScreenshot("SN", className, "Failed_", sMethodName);
-            System.out.println("Current working dir: " + new File(Android_Sprint_02.class.getProtectionDomain().getCodeSource().getLocation().getPath()));
+            System.out.println("Current working dir: " + new File(Android_Sprint_03.class.getProtectionDomain().getCodeSource().getLocation().getPath()));
             TestLink.updateResult(Testlink_ProjectName, Testlink_TestPlanName, "AND_SN_TC-21", Testlink_BuildName, null, TestLinkAPIResults.TEST_FAILED);
             ex.printStackTrace();
             throw new AssertionError("Failed: " + ex.getMessage());
         } catch (Exception ex){
             //Test failed
             getHelper().takeScreenshot("SN", className, "Failed_", sMethodName);
-            System.out.println("Current working dir: " + new File(Android_Sprint_02.class.getProtectionDomain().getCodeSource().getLocation().getPath()));
+            System.out.println("Current working dir: " + new File(Android_Sprint_03.class.getProtectionDomain().getCodeSource().getLocation().getPath()));
             TestLink.updateResult(Testlink_ProjectName, Testlink_TestPlanName, "AND_SN_TC-21", Testlink_BuildName, null, TestLinkAPIResults.TEST_FAILED);
             ex.printStackTrace();
             throw new Exception("Failed: " + ex.getMessage());
@@ -623,14 +612,14 @@ public class Android_Sprint_02 extends BaseTest {
         } catch (AssertionError ex) {
             //Test failed
             getHelper().takeScreenshot("SN", className, "Failed_", sMethodName);
-            System.out.println("Current working dir: " + new File(Android_Sprint_02.class.getProtectionDomain().getCodeSource().getLocation().getPath()));
+            System.out.println("Current working dir: " + new File(Android_Sprint_03.class.getProtectionDomain().getCodeSource().getLocation().getPath()));
             TestLink.updateResult(Testlink_ProjectName, Testlink_TestPlanName, "AND_SN_TC-22", Testlink_BuildName, null, TestLinkAPIResults.TEST_FAILED);
             ex.printStackTrace();
             throw new AssertionError("Failed: " + ex.getMessage());
         } catch (Exception ex){
             //Test failed
             getHelper().takeScreenshot("SN", className, "Failed_", sMethodName);
-            System.out.println("Current working dir: " + new File(Android_Sprint_02.class.getProtectionDomain().getCodeSource().getLocation().getPath()));
+            System.out.println("Current working dir: " + new File(Android_Sprint_03.class.getProtectionDomain().getCodeSource().getLocation().getPath()));
             TestLink.updateResult(Testlink_ProjectName, Testlink_TestPlanName, "AND_SN_TC-22", Testlink_BuildName, null, TestLinkAPIResults.TEST_FAILED);
             ex.printStackTrace();
             throw new Exception("Failed: " + ex.getMessage());
@@ -666,502 +655,19 @@ public class Android_Sprint_02 extends BaseTest {
         } catch (AssertionError ex) {
             //Test failed
             getHelper().takeScreenshot("SN", className, "Failed_", sMethodName);
-            System.out.println("Current working dir: " + new File(Android_Sprint_02.class.getProtectionDomain().getCodeSource().getLocation().getPath()));
+            System.out.println("Current working dir: " + new File(Android_Sprint_03.class.getProtectionDomain().getCodeSource().getLocation().getPath()));
             TestLink.updateResult(Testlink_ProjectName, Testlink_TestPlanName, "AND_SN_TC-23", Testlink_BuildName, null, TestLinkAPIResults.TEST_FAILED);
             ex.printStackTrace();
             throw new AssertionError("Failed: " + ex.getMessage());
         } catch (Exception ex){
             //Test failed
             getHelper().takeScreenshot("SN", className, "Failed_", sMethodName);
-            System.out.println("Current working dir: " + new File(Android_Sprint_02.class.getProtectionDomain().getCodeSource().getLocation().getPath()));
+            System.out.println("Current working dir: " + new File(Android_Sprint_03.class.getProtectionDomain().getCodeSource().getLocation().getPath()));
             TestLink.updateResult(Testlink_ProjectName, Testlink_TestPlanName, "AND_SN_TC-23", Testlink_BuildName, null, TestLinkAPIResults.TEST_FAILED);
             ex.printStackTrace();
             throw new Exception("Failed: " + ex.getMessage());
         }
     }
-
-    @Test
-    public void AND_SN_TC_24() throws Exception, TestLinkAPIException {
-        addLog("AND_SN_TC_24:Verify mention shop feature on posting status");
-        String sMethodName = new Object() {
-        }.getClass().getEnclosingMethod().getName();
-        try {
-            Thread.sleep(2000);
-            Assert.assertEquals(true,true);
-
-            //update if pass to testlink
-            TestLink.updateResult(Testlink_ProjectName, Testlink_TestPlanName, "AND_SN_TC-24", Testlink_BuildName, null, TestLinkAPIResults.TEST_PASSED);
-        } catch (TestLinkAPIException ex) {
-            System.out.print("Can't update result to Testlink ");
-        } catch (AssertionError ex) {
-            //Test failed
-            getHelper().takeScreenshot("SN", className, "Failed_", sMethodName);
-            System.out.println("Current working dir: " + new File(Android_Sprint_02.class.getProtectionDomain().getCodeSource().getLocation().getPath()));
-            TestLink.updateResult(Testlink_ProjectName, Testlink_TestPlanName, "AND_SN_TC-24", Testlink_BuildName, null, TestLinkAPIResults.TEST_FAILED);
-            ex.printStackTrace();
-            throw new AssertionError("Failed: " + ex.getMessage());
-        } catch (Exception ex){
-            //Test failed
-            getHelper().takeScreenshot("SN", className, "Failed_", sMethodName);
-            System.out.println("Current working dir: " + new File(Android_Sprint_02.class.getProtectionDomain().getCodeSource().getLocation().getPath()));
-            TestLink.updateResult(Testlink_ProjectName, Testlink_TestPlanName, "AND_SN_TC-24", Testlink_BuildName, null, TestLinkAPIResults.TEST_FAILED);
-            ex.printStackTrace();
-            throw new Exception("Failed: " + ex.getMessage());
-        }
-    }
-
-    @Test
-    public void AND_SN_TC_25() throws Exception, TestLinkAPIException {
-        addLog("AND_SN_TC_25:Verify mention company feature on posting status");
-        String sMethodName = new Object() {
-        }.getClass().getEnclosingMethod().getName();
-        try {
-            Thread.sleep(2000);
-            Assert.assertEquals(true,true);
-
-            //update if pass to testlink
-            TestLink.updateResult(Testlink_ProjectName, Testlink_TestPlanName, "AND_SN_TC-25", Testlink_BuildName, null, TestLinkAPIResults.TEST_PASSED);
-        } catch (TestLinkAPIException ex) {
-            System.out.print("Can't update result to Testlink ");
-        } catch (AssertionError ex) {
-            //Test failed
-            getHelper().takeScreenshot("SN", className, "Failed_", sMethodName);
-            System.out.println("Current working dir: " + new File(Android_Sprint_02.class.getProtectionDomain().getCodeSource().getLocation().getPath()));
-            TestLink.updateResult(Testlink_ProjectName, Testlink_TestPlanName, "AND_SN_TC-25", Testlink_BuildName, null, TestLinkAPIResults.TEST_FAILED);
-            ex.printStackTrace();
-            throw new AssertionError("Failed: " + ex.getMessage());
-        } catch (Exception ex){
-            //Test failed
-            getHelper().takeScreenshot("SN", className, "Failed_", sMethodName);
-            System.out.println("Current working dir: " + new File(Android_Sprint_02.class.getProtectionDomain().getCodeSource().getLocation().getPath()));
-            TestLink.updateResult(Testlink_ProjectName, Testlink_TestPlanName, "AND_SN_TC-25", Testlink_BuildName, null, TestLinkAPIResults.TEST_FAILED);
-            ex.printStackTrace();
-            throw new Exception("Failed: " + ex.getMessage());
-        }
-    }
-
-    @Test
-    public void AND_SN_TC_26() throws Exception, TestLinkAPIException {
-        addLog("AND_SN_TC_26:Verify Uploader should be shown");
-        String sMethodName = new Object() {
-        }.getClass().getEnclosingMethod().getName();
-        try {
-            Thread.sleep(3000);
-            firstScreen.selectFirstAndSecondLaunching();
-            Thread.sleep(2000);
-
-            String request = "{\"title\": \"Automation Verify Uploader should be shown\",\"content\": \"@1111 Automation Verify Uploader should be shown\",\"author\": {\"userId\": 2,\"displayName\": \"Long Long\",\"avatarUrl\": \"feed/images/feed3048\"},\"statusType\": \"TEXT\",\"mentionedUsers\": [{\"userId\": 1111,\"displayName\": \"Long Nguyen\",\"avatarUrl\": \"feed/images/feed3048\",\"mentioned\": true}]}";
-            JSONObject poststatus = APIUtil.sendPost(APIData.POST_STATUS_CA, request);
-            Thread.sleep(2000);
-            String id = poststatus.get("id").toString();
-
-            Thread.sleep(2000);
-            JSONObject collectpost = APIUtil.sendPost(APIData.POST_FEEDS_CA, "");
-            Thread.sleep(2000);
-            String getfeeds = APIUtil.sendGetString(APIData.GET_FEEDS_CA);
-            System.out.println("Getfeeds "+ getfeeds);
-            Assert.assertTrue(getfeeds.contains("\"feedId\":" +id));
-
-            //update if pass to testlink
-            TestLink.updateResult(Testlink_ProjectName, Testlink_TestPlanName, "AND_SN_TC-26", Testlink_BuildName, null, TestLinkAPIResults.TEST_PASSED);
-        } catch (TestLinkAPIException ex) {
-            System.out.print("Can't update result to Testlink ");
-        } catch (AssertionError ex) {
-            //Test failed
-            getHelper().takeScreenshot("SN", className, "Failed_", sMethodName);
-            System.out.println("Current working dir: " + new File(Android_Sprint_02.class.getProtectionDomain().getCodeSource().getLocation().getPath()));
-            TestLink.updateResult(Testlink_ProjectName, Testlink_TestPlanName, "AND_SN_TC-26", Testlink_BuildName, null, TestLinkAPIResults.TEST_FAILED);
-            ex.printStackTrace();
-            throw new AssertionError("Failed: " + ex.getMessage());
-        } catch (Exception ex){
-            //Test failed
-            getHelper().takeScreenshot("SN", className, "Failed_", sMethodName);
-            System.out.println("Current working dir: " + new File(Android_Sprint_02.class.getProtectionDomain().getCodeSource().getLocation().getPath()));
-            TestLink.updateResult(Testlink_ProjectName, Testlink_TestPlanName, "AND_SN_TC-26", Testlink_BuildName, null, TestLinkAPIResults.TEST_FAILED);
-            ex.printStackTrace();
-            throw new Exception("Failed: " + ex.getMessage());
-        }
-    }
-
-    @Test
-    public void AND_SN_TC_27() throws Exception, TestLinkAPIException {
-        addLog("AND_SN_TC_27:Verify length name of Uploader");
-        String sMethodName = new Object() {
-        }.getClass().getEnclosingMethod().getName();
-        try {
-            Thread.sleep(2000);
-            Assert.assertEquals(true,true);
-
-            //update if pass to testlink
-            TestLink.updateResult(Testlink_ProjectName, Testlink_TestPlanName, "AND_SN_TC-27", Testlink_BuildName, null, TestLinkAPIResults.TEST_PASSED);
-        } catch (TestLinkAPIException ex) {
-            System.out.print("Can't update result to Testlink ");
-        } catch (AssertionError ex) {
-            //Test failed
-            getHelper().takeScreenshot("SN", className, "Failed_", sMethodName);
-            System.out.println("Current working dir: " + new File(Android_Sprint_02.class.getProtectionDomain().getCodeSource().getLocation().getPath()));
-            TestLink.updateResult(Testlink_ProjectName, Testlink_TestPlanName, "AND_SN_TC-27", Testlink_BuildName, null, TestLinkAPIResults.TEST_FAILED);
-            ex.printStackTrace();
-            throw new AssertionError("Failed: " + ex.getMessage());
-        } catch (Exception ex){
-            //Test failed
-            getHelper().takeScreenshot("SN", className, "Failed_", sMethodName);
-            System.out.println("Current working dir: " + new File(Android_Sprint_02.class.getProtectionDomain().getCodeSource().getLocation().getPath()));
-            TestLink.updateResult(Testlink_ProjectName, Testlink_TestPlanName, "AND_SN_TC-27", Testlink_BuildName, null, TestLinkAPIResults.TEST_FAILED);
-            ex.printStackTrace();
-            throw new Exception("Failed: " + ex.getMessage());
-        }
-    }
-
-   /*
-
-     AND_SN_TC_28:Verify posting 1 photo and texts
-     AND_SN_TC_29:Verify posting 2 photo and texts
-     AND_SN_TC_30:Verify posting 3 photo and texts
-     AND_SN_TC_31:Verify posting 4 photo and texts
-     AND_SN_TC_32:Verify posting more than 4 photos and texts
-     AND_SN_TC_33:Verify posting cannot over 30 photos
-
-     */
-
-    @Test
-    public void AND_SN_TC_28() throws Exception, TestLinkAPIException {
-        addLog("AND_SN_TC_28:Verify posting 1 photo and texts");
-        String sMethodName = new Object() {
-        }.getClass().getEnclosingMethod().getName();
-        try {
-            Thread.sleep(1000);
-            firstScreen.selectFirstAndSecondLaunching();
-            Thread.sleep(1000);
-            System.out.println("Create a post as status type");
-            // Post one landscape photo
-            String requestBodyStatus1 = jsonData.get(APIData.ADD_ONE_PHOTO_LANDSCAPE_STATUS).toString();
-            JSONObject poststatus1 = APIUtil.sendPost(APIData.POST_STATUS_CA, requestBodyStatus1);
-            Thread.sleep(2000);
-            String id1 = poststatus1.get("id").toString();
-            Thread.sleep(2000);
-            JSONObject collectpost1 = APIUtil.sendPost(APIData.POST_FEEDS_CA, "");
-            Thread.sleep(2000);
-            String getfeeds = APIUtil.sendGetString(APIData.GET_FEEDS_CA);
-            System.out.println("Getfeeds "+ getfeeds);
-            Assert.assertTrue(getfeeds.contains("\"feedId\":" +id1));
-            APIUtil.sendDelete(APIData.DEETE_FEEDS_CA,id1,"TEXT");
-
-            // Post one portrait photo
-            String requestBodyStatus2 = jsonData.get(APIData.ADD_ONE_PHOTO_PORTRAIT_STATUS).toString();
-            JSONObject poststatus2 = APIUtil.sendPost(APIData.POST_STATUS_CA, requestBodyStatus2);
-            Thread.sleep(2000);
-            String id2 = poststatus2.get("id").toString();
-            Thread.sleep(2000);
-            JSONObject collectpost2 = APIUtil.sendPost(APIData.POST_FEEDS_CA, "");
-            Thread.sleep(2000);
-            String getfeeds1 = APIUtil.sendGetString(APIData.GET_FEEDS_CA);
-            System.out.println("Getfeeds "+ getfeeds);
-            Assert.assertTrue(getfeeds1.contains("\"feedId\":" +id2));
-            APIUtil.sendDelete(APIData.DEETE_FEEDS_CA,id2,"TEXT");
-
-            //update if pass to testlink
-            TestLink.updateResult(Testlink_ProjectName, Testlink_TestPlanName, "AND_SN_TC-28", Testlink_BuildName, null, TestLinkAPIResults.TEST_PASSED);
-        } catch (TestLinkAPIException ex) {
-            System.out.print("Can't update result to Testlink ");
-        } catch (AssertionError ex) {
-            //Test failed
-            getHelper().takeScreenshot("SN", className, "Failed_", sMethodName);
-            System.out.println("Current working dir: " + new File(Android_Sprint_02.class.getProtectionDomain().getCodeSource().getLocation().getPath()));
-            TestLink.updateResult(Testlink_ProjectName, Testlink_TestPlanName, "AND_SN_TC-28", Testlink_BuildName, null, TestLinkAPIResults.TEST_FAILED);
-            ex.printStackTrace();
-            throw new AssertionError("Failed: " + ex.getMessage());
-        } catch (Exception ex){
-            //Test failed
-            getHelper().takeScreenshot("SN", className, "Failed_", sMethodName);
-            System.out.println("Current working dir: " + new File(Android_Sprint_02.class.getProtectionDomain().getCodeSource().getLocation().getPath()));
-            TestLink.updateResult(Testlink_ProjectName, Testlink_TestPlanName, "AND_SN_TC-28", Testlink_BuildName, null, TestLinkAPIResults.TEST_FAILED);
-            ex.printStackTrace();
-            throw new Exception("Failed: " + ex.getMessage());
-        }
-    }
-
-    @Test
-    public void AND_SN_TC_29() throws Exception, TestLinkAPIException {
-        addLog("AND_SN_TC_29:Verify posting 2 photos and texts");
-        String sMethodName = new Object() {
-        }.getClass().getEnclosingMethod().getName();
-        try {
-            Thread.sleep(1000);
-            firstScreen.selectFirstAndSecondLaunching();
-            Thread.sleep(1000);
-            System.out.println("Create a post as status type");
-            // Post one landscape photo
-            String requestBodyStatus1 = jsonData.get(APIData.ADD_TWO_PHOTO_LANDSCAPE_STATUS).toString();
-            JSONObject poststatus1 = APIUtil.sendPost(APIData.POST_STATUS_CA, requestBodyStatus1);
-            Thread.sleep(2000);
-            String id1 = poststatus1.get("id").toString();
-            Thread.sleep(2000);
-            JSONObject collectpost1 = APIUtil.sendPost(APIData.POST_FEEDS_CA, "");
-            Thread.sleep(2000);
-            String getfeeds = APIUtil.sendGetString(APIData.GET_FEEDS_CA);
-            System.out.println("Getfeeds "+ getfeeds);
-            Assert.assertTrue(getfeeds.contains("\"feedId\":" +id1));
-            APIUtil.sendDelete(APIData.DEETE_FEEDS_CA,id1,"TEXT");
-
-            // Post one portrait photo
-            String requestBodyStatus2 = jsonData.get(APIData.ADD_TWO_PHOTO_PORTRAIT_STATUS).toString();
-            JSONObject poststatus2 = APIUtil.sendPost(APIData.POST_STATUS_CA, requestBodyStatus2);
-            Thread.sleep(2000);
-            String id2 = poststatus2.get("id").toString();
-            Thread.sleep(2000);
-            JSONObject collectpost2 = APIUtil.sendPost(APIData.POST_FEEDS_CA, "");
-            Thread.sleep(2000);
-            String getfeeds1 = APIUtil.sendGetString(APIData.GET_FEEDS_CA);
-            System.out.println("Getfeeds "+ getfeeds);
-            Assert.assertTrue(getfeeds1.contains("\"feedId\":" +id2));
-            APIUtil.sendDelete(APIData.DEETE_FEEDS_CA,id2,"TEXT");
-
-            //update if pass to testlink
-            TestLink.updateResult(Testlink_ProjectName, Testlink_TestPlanName, "AND_SN_TC-29", Testlink_BuildName, null, TestLinkAPIResults.TEST_PASSED);
-        } catch (TestLinkAPIException ex) {
-            System.out.print("Can't update result to Testlink ");
-        } catch (AssertionError ex) {
-            //Test failed
-            getHelper().takeScreenshot("SN", className, "Failed_", sMethodName);
-            System.out.println("Current working dir: " + new File(Android_Sprint_02.class.getProtectionDomain().getCodeSource().getLocation().getPath()));
-            TestLink.updateResult(Testlink_ProjectName, Testlink_TestPlanName, "AND_SN_TC-29", Testlink_BuildName, null, TestLinkAPIResults.TEST_FAILED);
-            ex.printStackTrace();
-            throw new AssertionError("Failed: " + ex.getMessage());
-        } catch (Exception ex){
-            //Test failed
-            getHelper().takeScreenshot("SN", className, "Failed_", sMethodName);
-            System.out.println("Current working dir: " + new File(Android_Sprint_02.class.getProtectionDomain().getCodeSource().getLocation().getPath()));
-            TestLink.updateResult(Testlink_ProjectName, Testlink_TestPlanName, "AND_SN_TC-29", Testlink_BuildName, null, TestLinkAPIResults.TEST_FAILED);
-            ex.printStackTrace();
-            throw new Exception("Failed: " + ex.getMessage());
-        }
-    }
-
-    @Test
-    public void AND_SN_TC_30() throws Exception, TestLinkAPIException {
-        addLog("AND_SN_TC_30:Verify posting 3 photos and texts");
-        String sMethodName = new Object() {
-        }.getClass().getEnclosingMethod().getName();
-        try {
-            Thread.sleep(1000);
-            firstScreen.selectFirstAndSecondLaunching();
-            Thread.sleep(1000);
-            System.out.println("Create a post as status type");
-            // Post one landscape photo
-            String requestBodyStatus1 = jsonData.get(APIData.ADD_THREE_PHOTO_LANDSCAPE_STATUS).toString();
-            JSONObject poststatus1 = APIUtil.sendPost(APIData.POST_STATUS_CA, requestBodyStatus1);
-            Thread.sleep(2000);
-            String id1 = poststatus1.get("id").toString();
-            Thread.sleep(2000);
-            JSONObject collectpost1 = APIUtil.sendPost(APIData.POST_FEEDS_CA, "");
-            Thread.sleep(2000);
-            String getfeeds = APIUtil.sendGetString(APIData.GET_FEEDS_CA);
-            System.out.println("Getfeeds "+ getfeeds);
-            Assert.assertTrue(getfeeds.contains("\"feedId\":" +id1));
-            APIUtil.sendDelete(APIData.DEETE_FEEDS_CA,id1,"TEXT");
-
-            // Post one portrait photo
-            String requestBodyStatus2 = jsonData.get(APIData.ADD_THREE_PHOTO_PORTRAIT_STATUS).toString();
-            JSONObject poststatus2 = APIUtil.sendPost(APIData.POST_STATUS_CA, requestBodyStatus2);
-            Thread.sleep(2000);
-            String id2 = poststatus2.get("id").toString();
-            Thread.sleep(2000);
-            JSONObject collectpost2 = APIUtil.sendPost(APIData.POST_FEEDS_CA, "");
-            Thread.sleep(2000);
-            String getfeeds1 = APIUtil.sendGetString(APIData.GET_FEEDS_CA);
-            System.out.println("Getfeeds "+ getfeeds);
-            Assert.assertTrue(getfeeds1.contains("\"feedId\":" +id2));
-            APIUtil.sendDelete(APIData.DEETE_FEEDS_CA,id2,"TEXT");
-
-            //update if pass to testlink
-            TestLink.updateResult(Testlink_ProjectName, Testlink_TestPlanName, "AND_SN_TC-30", Testlink_BuildName, null, TestLinkAPIResults.TEST_PASSED);
-        } catch (TestLinkAPIException ex) {
-            System.out.print("Can't update result to Testlink ");
-        } catch (AssertionError ex) {
-            //Test failed
-            getHelper().takeScreenshot("SN", className, "Failed_", sMethodName);
-            System.out.println("Current working dir: " + new File(Android_Sprint_02.class.getProtectionDomain().getCodeSource().getLocation().getPath()));
-            TestLink.updateResult(Testlink_ProjectName, Testlink_TestPlanName, "AND_SN_TC-30", Testlink_BuildName, null, TestLinkAPIResults.TEST_FAILED);
-            ex.printStackTrace();
-            throw new AssertionError("Failed: " + ex.getMessage());
-        } catch (Exception ex){
-            //Test failed
-            getHelper().takeScreenshot("SN", className, "Failed_", sMethodName);
-            System.out.println("Current working dir: " + new File(Android_Sprint_02.class.getProtectionDomain().getCodeSource().getLocation().getPath()));
-            TestLink.updateResult(Testlink_ProjectName, Testlink_TestPlanName, "AND_SN_TC-30", Testlink_BuildName, null, TestLinkAPIResults.TEST_FAILED);
-            ex.printStackTrace();
-            throw new Exception("Failed: " + ex.getMessage());
-        }
-    }
-
-    @Test
-    public void AND_SN_TC_31() throws Exception, TestLinkAPIException {
-        addLog("AND_SN_TC_31:Verify posting 4 photos and texts");
-        String sMethodName = new Object() {
-        }.getClass().getEnclosingMethod().getName();
-        try {
-            Thread.sleep(2000);
-            firstScreen.selectFirstAndSecondLaunching();
-            Thread.sleep(1000);
-            System.out.println("Create a post as status type");
-            // Post 4 landscape photos
-            String requestBodyStatus1 = jsonData.get(APIData.ADD_FOUR_PHOTO_LANDSCAPE_STATUS).toString();
-            JSONObject poststatus1 = APIUtil.sendPost(APIData.POST_STATUS_CA, requestBodyStatus1);
-            Thread.sleep(2000);
-            String id1 = poststatus1.get("id").toString();
-            Thread.sleep(2000);
-            JSONObject collectpost1 = APIUtil.sendPost(APIData.POST_FEEDS_CA, "");
-            Thread.sleep(2000);
-            String getfeeds = APIUtil.sendGetString(APIData.GET_FEEDS_CA);
-            System.out.println("Getfeeds "+ getfeeds);
-            Assert.assertTrue(getfeeds.contains("\"feedId\":" +id1));
-            APIUtil.sendDelete(APIData.DEETE_FEEDS_CA,id1,"TEXT");
-
-            // Post 4 portrait photos
-            String requestBodyStatus2 = jsonData.get(APIData.ADD_FOUR_PHOTO_PORTRAIT_STATUS).toString();
-            JSONObject poststatus2 = APIUtil.sendPost(APIData.POST_STATUS_CA, requestBodyStatus2);
-            Thread.sleep(2000);
-            String id2 = poststatus2.get("id").toString();
-            Thread.sleep(2000);
-            JSONObject collectpost2 = APIUtil.sendPost(APIData.POST_FEEDS_CA, "");
-            Thread.sleep(2000);
-            String getfeeds1 = APIUtil.sendGetString(APIData.GET_FEEDS_CA);
-            System.out.println("Getfeeds "+ getfeeds);
-            Assert.assertTrue(getfeeds1.contains("\"feedId\":" +id2));
-            APIUtil.sendDelete(APIData.DEETE_FEEDS_CA,id2,"TEXT");
-
-            //update if pass to testlink
-            TestLink.updateResult(Testlink_ProjectName, Testlink_TestPlanName, "AND_SN_TC-31", Testlink_BuildName, null, TestLinkAPIResults.TEST_PASSED);
-        } catch (TestLinkAPIException ex) {
-            System.out.print("Can't update result to Testlink ");
-        } catch (AssertionError ex) {
-            //Test failed
-            getHelper().takeScreenshot("SN", className, "Failed_", sMethodName);
-            System.out.println("Current working dir: " + new File(Android_Sprint_02.class.getProtectionDomain().getCodeSource().getLocation().getPath()));
-            TestLink.updateResult(Testlink_ProjectName, Testlink_TestPlanName, "AND_SN_TC-31", Testlink_BuildName, null, TestLinkAPIResults.TEST_FAILED);
-            ex.printStackTrace();
-            throw new AssertionError("Failed: " + ex.getMessage());
-        } catch (Exception ex){
-            //Test failed
-            getHelper().takeScreenshot("SN", className, "Failed_", sMethodName);
-            System.out.println("Current working dir: " + new File(Android_Sprint_02.class.getProtectionDomain().getCodeSource().getLocation().getPath()));
-            TestLink.updateResult(Testlink_ProjectName, Testlink_TestPlanName, "AND_SN_TC-31", Testlink_BuildName, null, TestLinkAPIResults.TEST_FAILED);
-            ex.printStackTrace();
-            throw new Exception("Failed: " + ex.getMessage());
-        }
-    }
-
-    @Test
-    public void AND_SN_TC_32() throws Exception, TestLinkAPIException {
-        addLog(" AND_SN_TC_32:Verify posting more than 4 photos and texts");
-        String sMethodName = new Object() {
-        }.getClass().getEnclosingMethod().getName();
-        try {
-            Thread.sleep(2000);
-            firstScreen.selectFirstAndSecondLaunching();
-            Thread.sleep(1000);
-            System.out.println("Create a post as status type");
-            // Post more than 4 landscape photos
-            String requestBodyStatus1 = jsonData.get(APIData.ADD_MORE_FOUR_PHOTO_LANDSCAPE_STATUS).toString();
-            JSONObject poststatus1 = APIUtil.sendPost(APIData.POST_STATUS_CA, requestBodyStatus1);
-            Thread.sleep(2000);
-            String id1 = poststatus1.get("id").toString();
-            Thread.sleep(2000);
-            JSONObject collectpost1 = APIUtil.sendPost(APIData.POST_FEEDS_CA, "");
-            Thread.sleep(2000);
-            String getfeeds = APIUtil.sendGetString(APIData.GET_FEEDS_CA);
-            System.out.println("Getfeeds "+ getfeeds);
-            Assert.assertTrue(getfeeds.contains("\"feedId\":" +id1));
-            APIUtil.sendDelete(APIData.DEETE_FEEDS_CA,id1,"TEXT");
-
-            // Post more than 4 portrait photos
-            String requestBodyStatus2 = jsonData.get(APIData.ADD_MORE_FOUR_PHOTO_PORTRAIT_STATUS).toString();
-            JSONObject poststatus2 = APIUtil.sendPost(APIData.POST_STATUS_CA, requestBodyStatus2);
-            Thread.sleep(2000);
-            String id2 = poststatus2.get("id").toString();
-            Thread.sleep(2000);
-            JSONObject collectpost2 = APIUtil.sendPost(APIData.POST_FEEDS_CA, "");
-            Thread.sleep(2000);
-            String getfeeds2 = APIUtil.sendGetString(APIData.GET_FEEDS_CA);
-            System.out.println("Getfeeds2 "+ getfeeds2);
-            Assert.assertTrue(getfeeds2.contains("\"feedId\":" +id2));
-            APIUtil.sendDelete(APIData.DEETE_FEEDS_CA,id2,"TEXT");
-
-            //update if pass to testlink
-            TestLink.updateResult(Testlink_ProjectName, Testlink_TestPlanName, "AND_SN_TC-32", Testlink_BuildName, null, TestLinkAPIResults.TEST_PASSED);
-        } catch (TestLinkAPIException ex) {
-            System.out.print("Can't update result to Testlink ");
-        } catch (AssertionError ex) {
-            //Test failed
-            getHelper().takeScreenshot("SN", className, "Failed_", sMethodName);
-            System.out.println("Current working dir: " + new File(Android_Sprint_02.class.getProtectionDomain().getCodeSource().getLocation().getPath()));
-            TestLink.updateResult(Testlink_ProjectName, Testlink_TestPlanName, "AND_SN_TC-32", Testlink_BuildName, null, TestLinkAPIResults.TEST_FAILED);
-            ex.printStackTrace();
-            throw new AssertionError("Failed: " + ex.getMessage());
-        } catch (Exception ex){
-            //Test failed
-            getHelper().takeScreenshot("SN", className, "Failed_", sMethodName);
-            System.out.println("Current working dir: " + new File(Android_Sprint_02.class.getProtectionDomain().getCodeSource().getLocation().getPath()));
-            TestLink.updateResult(Testlink_ProjectName, Testlink_TestPlanName, "AND_SN_TC-32", Testlink_BuildName, null, TestLinkAPIResults.TEST_FAILED);
-            ex.printStackTrace();
-            throw new Exception("Failed: " + ex.getMessage());
-        }
-    }
-
-    @Test
-    public void AND_SN_TC_33() throws Exception, TestLinkAPIException {
-        addLog("AND_SN_TC_33:Verify posting cannot over 30 photos");
-        String sMethodName = new Object() {
-        }.getClass().getEnclosingMethod().getName();
-        try {
-            Thread.sleep(2000);
-            Assert.assertEquals(true,true);
-
-            //update if pass to testlink
-            TestLink.updateResult(Testlink_ProjectName, Testlink_TestPlanName, "AND_SN_TC-33", Testlink_BuildName, null, TestLinkAPIResults.TEST_PASSED);
-        } catch (TestLinkAPIException ex) {
-            System.out.print("Can't update result to Testlink ");
-        } catch (AssertionError ex) {
-            //Test failed
-            getHelper().takeScreenshot("SN", className, "Failed_", sMethodName);
-            System.out.println("Current working dir: " + new File(Android_Sprint_02.class.getProtectionDomain().getCodeSource().getLocation().getPath()));
-            TestLink.updateResult(Testlink_ProjectName, Testlink_TestPlanName, "AND_SN_TC-33", Testlink_BuildName, null, TestLinkAPIResults.TEST_FAILED);
-            ex.printStackTrace();
-            throw new AssertionError("Failed: " + ex.getMessage());
-        } catch (Exception ex){
-            //Test failed
-            getHelper().takeScreenshot("SN", className, "Failed_", sMethodName);
-            System.out.println("Current working dir: " + new File(Android_Sprint_02.class.getProtectionDomain().getCodeSource().getLocation().getPath()));
-            TestLink.updateResult(Testlink_ProjectName, Testlink_TestPlanName, "AND_SN_TC-33", Testlink_BuildName, null, TestLinkAPIResults.TEST_FAILED);
-            ex.printStackTrace();
-            throw new Exception("Failed: " + ex.getMessage());
-        }
-    }
-
-
-//    @Test
-//    public void AND_SN_TC_34() throws Exception, TestLinkAPIException {
-//        addLog("swipe investigate");
-//        String sMethodName = new Object() {
-//        }.getClass().getEnclosingMethod().getName();
-//        try {
-//            firstScreen.selectFirstAndSecondLaunching();
-//            Thread.sleep(1000);
-//            homeScreen.selectFeedByName("Long Nguyen Automation Add New Status Pure Text");
-//
-//            //update if pass to testlink
-//            TestLink.updateResult(Testlink_ProjectName, Testlink_TestPlanName, "AND_SN_TC-34", Testlink_BuildName, null, TestLinkAPIResults.TEST_PASSED);
-//        } catch (TestLinkAPIException ex) {
-//            System.out.print("Can't update result to Testlink ");
-//        } catch (AssertionError ex) {
-//            //Test failed
-//            getHelper().takeScreenshot("SN", className, "Failed_", sMethodName);
-//            System.out.println("Current working dir: " + new File(Android_Sprint_02.class.getProtectionDomain().getCodeSource().getLocation().getPath()));
-//            TestLink.updateResult(Testlink_ProjectName, Testlink_TestPlanName, "AND_SN_TC-34", Testlink_BuildName, null, TestLinkAPIResults.TEST_FAILED);
-//            ex.printStackTrace();
-//        }
-//    }
 
     public void closeApp() {
         if (driver != null) {

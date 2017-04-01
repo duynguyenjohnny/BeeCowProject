@@ -7,6 +7,7 @@ import com.beecow.screen.HomeScreen;
 import com.beecow.screen.MarketScreen;
 import com.beecow.utils.Helper;
 import com.beecow.utils.TestLink;
+import com.beecow.utils.Utils;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -137,9 +138,22 @@ public class Android_Sprint_01 extends BaseTest {
         }.getClass().getEnclosingMethod().getName();
         try {
             //open application , make sure first launching appears
-            Thread.sleep(3000);
-            Assert.assertEquals(true, firstScreen.verifyScreenAppear("Hello, what interests you most?"));
+            Thread.sleep(2000);
+            //Assert.assertEquals(true, firstScreen.verifyScreenAppear("Hello, what interests you most?"));
             firstScreen.selectFirstAndSecondLaunching();
+            System.out.print("\n remove app");
+            Thread.sleep(2000);
+            closeApp();
+            driver.removeApp("com.mediastep.BeeCow");
+            Thread.sleep(2000);
+            System.out.print("\n install app");
+            driver.installApp(Utils.getPropertyValue(PROJECTPROPERTIES, "AND_APKPATH"));
+            System.out.print("\n start app");
+            Thread.sleep(2000);
+            openApp();
+            Thread.sleep(2000);
+            firstScreen.selectCategories(ActivityFirstScreen.single_cat);
+
             //exit application
 //            firstScreen.closeApp();
 //            //remove application
@@ -178,9 +192,13 @@ public class Android_Sprint_01 extends BaseTest {
         }.getClass().getEnclosingMethod().getName();
         try {
             //open application , make sure first launching
-            Thread.sleep(3000);
-            Assert.assertEquals(true, firstScreen.verifyScreenAppear("Hello, what interests you most?"));
+            Thread.sleep(2000);
             firstScreen.selectFirstAndSecondLaunching();
+            System.out.print("\n Restart apps");
+            Thread.sleep(2000);
+            resetApp();
+            Thread.sleep(2000);
+            firstScreen.selectCategories(ActivityFirstScreen.single_cat);
             //exit application
 //            firstScreen.closeApp();
 //            //start application
@@ -335,7 +353,7 @@ public class Android_Sprint_01 extends BaseTest {
             secondScreen.clickButtonDone();
             //verify app go to next screen
             Thread.sleep(1000);
-            Assert.assertEquals(true, firstScreen.verifyScreenAppear("How are you today Thein?..."));
+            homeScreen.clickHomeTabView();
 
             //update if pass to testlink
             TestLink.updateResult(Testlink_ProjectName, Testlink_TestPlanName, "AND_SN_TC-8", Testlink_BuildName, null, TestLinkAPIResults.TEST_PASSED);
@@ -449,7 +467,7 @@ public class Android_Sprint_01 extends BaseTest {
         try {
             //open application , make sure first launching
             Thread.sleep(3000);
-            Assert.assertEquals(true, firstScreen.verifyScreenAppear("Hello, what interests you most?"));
+            //Assert.assertEquals(true, firstScreen.verifyScreenAppear("Hello, what interests you most?"));
             firstScreen.selectFirstAndSecondLaunching();
 //            //exit application
 //            firstScreen.closeApp();
@@ -459,7 +477,7 @@ public class Android_Sprint_01 extends BaseTest {
             resetApp();
             Thread.sleep(3000);
             //assert apps navigates user to Home
-            Assert.assertEquals(true, firstScreen.verifyScreenAppear("How are you today Thein?..."));
+            firstScreen.selectCategories(ActivityFirstScreen.single_cat);
 
             //update if pass to testlink
             TestLink.updateResult(Testlink_ProjectName, Testlink_TestPlanName, "AND_SN_TC-11", Testlink_BuildName, null, TestLinkAPIResults.TEST_PASSED);
